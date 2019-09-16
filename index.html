@@ -17,10 +17,10 @@
 
 </head>
 <body>
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light p-0 m-0">
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
   <img src="/img/soc.jpg">
   <a class="navbar-brand" href="#">Servei d'Ocupació <br /> de Catalunya</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler d-md-none d-lg-none d-sm-block" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -37,16 +37,16 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Contacto</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item d-md-none d-lg-block">
         <a class="nav-link" href="#">Campus Virtual</a>
       </li>
-      <li class="nav-item d-md-none d-lg-inline">
+      <li class="nav-item d-md-none d-lg-block">
         <a class="nav-link" href="#">Entrar</a>
       </li>
-      <li class="nav-item d-md-none d-lg-inline">
+      <li class="nav-item d-md-none d-lg-block">
         <a class="nav-link" href="#">Registrarse</a>
       </li>
-      <li class="nav-item dropdown d-lg-none">
+      <li class="nav-item dropdown d-lg-none d-md-block d-sm-none">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           eCampus
         </a>
@@ -117,19 +117,19 @@
 		    <li class="breadcrumb-item active" aria-current="page">Home</li>	    
 		  </ol>
 		  	<div class="icones mr-2">
-		  		<span class="fa-stack fa-xs">
+		  		<span class="fa-stack fa-xs" style="color:blue">
 				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+				  <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
 				</span>
-			  	<span class="fa-stack fa-xs">
+			  	<span class="fa-stack fa-xs" style="color:rgb(0, 174, 255)">
 				  <i class="fas fa-circle fa-stack-2x"></i>
 				  <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
 				</span>
-				  <span class="fa-stack fa-xs">
+				  <span class="fa-stack fa-xs" style="color:rgb(245, 84, 84)">
 				  <i class="fas fa-circle fa-stack-2x"></i>
 				  <i class="fab fa-google-plus fa-stack-1x fa-inverse"></i>
 				</span>
-				  	<span class="fa-stack fa-xs">
+				  	<span class="fa-stack fa-xs" style="color:rgb(95, 95, 224)">
 				  <i class="fas fa-circle fa-stack-2x"></i>
 				  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
 				</span>
@@ -137,15 +137,15 @@
 				  <i class="fas fa-circle fa-stack-2x"></i>
 				  <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
 				</span>
-				  	<span class="fa-stack fa-xs">
+				  	<span class="fa-stack fa-xs"style="color:red">
 				  <i class="fas fa-circle fa-stack-2x"></i>
 				  <i class="fab fa-pinterest fa-stack-1x fa-inverse"></i>
 				</span>
 			 </div> 
 			 <div class="col-12">
 			 <h5>Novedades</h5>
-				 <div class="row"><!-- row 1 cards -->
-					  <div class="col-lg-4">	
+				 <div class="row">
+					  <div class="col-lg-4 mb-2">	
 					 	<div class="card">
 						  <img src="https://picsum.photos/seed/picsum/700/400" style="object-fit:cover">
 						  <div class="card-body">
@@ -172,9 +172,7 @@
 						  </div>
 						</div>
 					</div>
-				</div>	
-				<div class="row mt-4"> <!-- row2 cards -->
-					 <div class="col-lg-4">	
+					 <div class="col-lg-4 mb-2">	
 					 	<div class="card">
 						  <img src="https://picsum.photos/seed/picsum/700/400" style="object-fit:cover">
 						  <div class="card-body">

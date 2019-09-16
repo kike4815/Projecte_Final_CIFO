@@ -1,0 +1,44 @@
+@charset "UTF-8";
+@import url("reset.css");
+
+body{
+	padding-top: 56px;
+}
+
+nav.navbar > img{
+	position:absolute;
+	margin:0;
+	padding:0;	
+	height: 56px;	
+}
+nav{
+	margin:0 px;
+	padding:0 px;	
+	height: 56px;
+	
+}
+.bg-light{
+	background-color: #00ace6!important;
+}
+.nav-link,.navbar-brand{
+	color: white!important;
+}
+.navbar-brand{
+	padding-left: 150px;
+	font-size: 16px;
+}
+.breadcrumb {
+	display: inline-block;
+	background-color: transparent;
+}
+nav.breadcrumb > i{
+	border-radius: 50%;
+	text-align: right;	
+}
+.icones {
+	float: right;
+	margin-top: 10px;
+}
+.dropdown-menu{
+	left: -40px;
+}
