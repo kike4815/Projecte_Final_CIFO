@@ -39,3 +39,6 @@ nav.breadcrumb > i{
 	float: right;
 	margin-top: 10px;
 }
+.dropdown-menu{
+	left: -40px;
+}
