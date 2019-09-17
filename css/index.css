@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("reset.css");
+
 
 body{
 	padding-top: 56px;
@@ -41,4 +41,25 @@ nav.breadcrumb > i{
 }
 .dropdown-menu{
 	left: -40px;
+}
+footer{
+background-color:	#00ace6;
+}
+footer ul {
+	list-style: none;
+	padding-left: 0px; 
+}
+footer ul li a{
+	color: white;
+	opacity: 0.5;
+}
+footer span, p {
+	color: white;
+}
+footer  p>span {
+	opacity: 0.5;
+}
+
+.card-text {
+	color: black;
 }
