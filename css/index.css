@@ -5,8 +5,8 @@ body{
 	padding-top: 56px;
 }
 
-nav.navbar > img{
-	position:absolute;
+nav.navbar .navbar-brand > img{
+	/*position:absolute;*/
 	margin:0;
 	padding:0;	
 	height: 56px;	
@@ -24,11 +24,11 @@ nav{
 	color: white!important;
 }
 .navbar-brand{
-	padding-left: 150px;
+	/*padding-left: 150px;*/
 	font-size: 16px;
 }
 .breadcrumb {
-	display: inline-block;
+
 	background-color: transparent;
 }
 nav.breadcrumb > i{
@@ -42,8 +42,9 @@ nav.breadcrumb > i{
 .dropdown-menu{
 	left: -40px;
 }
+
 footer{
-background-color:	#00ace6;
+background-color:#00ace6;
 }
 footer ul {
 	list-style: none;
@@ -56,10 +57,17 @@ footer ul li a{
 footer span, p {
 	color: white;
 }
-footer  p>span {
+footer  p >span {
 	opacity: 0.5;
 }
 
 .card-text {
 	color: black;
+}
+a span .fa-circle:before{
+	content: none;
+}
+.btn-primary{
+	background-color:#00ace6;
+	border: none;
 }
