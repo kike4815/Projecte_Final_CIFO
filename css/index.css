@@ -76,3 +76,10 @@ a span .fa-circle:before{
 		display: none;
 	}
 }
+.list-group-item {
+	background-color: transparent;
+	border: none;
+}
+div .col-lg-7 {
+	padding: 0!important;
+}
