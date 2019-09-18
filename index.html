@@ -18,15 +18,17 @@
 </head>
 <body>
 	<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
-		<img src="/img/soc.jpg">
-		<a class="navbar-brand" href="#">Servei d'Ocupació <br /> de Catalunya</a>
-		<button class="navbar-toggler d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici"target="__blank"title="Servei Ocupació de Catalunya">
+			<img  class="d-inline-block" src="/img/soc.jpg">
+			<span style="line-height:1em;" class=" d-none d-sm-inline-block">Servei d'Ocupació <br /> de Catalunya</span>
+		</a>
+		<button class="navbar-toggler ml-auto d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-			<ul class="navbar-nav d-flex ">
+			<ul class="navbar-nav d-flex bg-light pl-2">
 				<li class="nav-item active">
-					<a class="nav-link" href="#">Centros <span class="sr-only">(current)</span></a>
+					<a class="nav-link" href="/centros/index.html">Centros <span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="#">Oferta formativa</a>
@@ -38,7 +40,7 @@
 					<a class="nav-link" href="#">Contacto</a>
 				</li>
 				<li class="nav-item d-md-none d-lg-block">
-					<a class="nav-link" href="#">Campus Virtual</a>
+					<a class="nav-link" href="campus/index.html">Campus Virtual</a>
 				</li>
 				<li class="nav-item d-md-none d-lg-block">
 					<a class="nav-link" href="#">Entrar</a>
@@ -50,14 +52,15 @@
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					eCampus
 					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+					<div class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="#">Entrar</a>
 						<a class="dropdown-item" href="#">Registrarse</a>
 					</div>
 				</li>
 			</ul>
 		</div>
-	</nav>
+</nav>
+
 
 <div class="container-fluid">
 	<div class="row">
@@ -116,33 +119,34 @@
 		  <ol class="breadcrumb">
 		    <li class="breadcrumb-item active" aria-current="page">Home</li>	    
 		  </ol>
-		  	<div class="icones mr-2">
-		  		<span class="fa-stack fa-xs" style="color:blue">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="#"><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></a>
-				</span>
-			  	<span class="fa-stack fa-xs" style="color:rgb(0, 174, 255)">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="#"><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
-				</span>
-				  <span class="fa-stack fa-xs" style="color:rgb(245, 84, 84)">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="#"><i class="fab fa-google-plus fa-stack-1x fa-inverse"></i></a>
-				</span>
-				  	<span class="fa-stack fa-xs" style="color:rgb(95, 95, 224)">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="#"><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></a>
-				</span>
-				  	<span class="fa-stack fa-xs">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="#"><i class="fab fa-instagram fa-stack-1x fa-inverse"></i></a>
-				</span>
-				  	<span class="fa-stack fa-xs"style="color:red">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="#"><i class="fab fa-pinterest fa-stack-1x fa-inverse"></i></a>
-				</span>
-			 </div> 
-			 <div class="col-12">
+		</nav>
+		  <div style="top:0px; right:0px" class="position-absolute pt-2 d-xs-none"> <!--com fem desapareixer a partir de 350px?-->	 
+			<span class="fa-stack fa-xs" style="color:blue">
+			<i class="fas fa-circle fa-stack-2x"></i>
+			<a href="https://es-es.facebook.com/cifolavioleta" target="__blank"title="facebook"><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></a>
+		  </span>
+			<span class="fa-stack fa-xs" style="color:rgb(0, 174, 255)">
+			<i class="fas fa-circle fa-stack-2x"></i>
+			<a href="https://twitter.com/cifo_barcelona" target="__blank"title="twitter"><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
+		  </span>
+			<span class="fa-stack fa-xs" style="color:rgb(245, 84, 84)">
+			<i class="fas fa-circle fa-stack-2x"></i>
+			<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"target="__blank"title="google"><i class="fab fa-google-plus fa-stack-1x fa-inverse"></i></a>
+		  </span>
+				<span class="fa-stack fa-xs" style="color:rgb(95, 95, 224)">
+			<i class="fas fa-circle fa-stack-2x"></i>
+			<a href="https://www.linkedin.com/company/cifo-la-violeta/" target="__blank"title="linkedin"><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></a>
+		  </span>
+				<span class="fa-stack fa-xs">
+			<i class="fas fa-circle fa-stack-2x"></i>
+			<a href="https://www.instagram.com/cifo_hospitalet/?hl=es"target="__blank"title="instagram"><i class="fab fa-instagram fa-stack-1x fa-inverse"></i></a>
+		  </span>
+				<span class="fa-stack fa-xs"style="color:red">
+			<i class="fas fa-circle fa-stack-2x"></i>
+			<a href="https://www.pinterest.es/"target="__blank"title="pinterest"><i class="fab fa-pinterest fa-stack-1x fa-inverse"></i></a>
+		  </span>
+	  </div> 
+			 <div class="col-12 border-top">
 			 <h5 style="padding-left:5px">Novedades</h5>
 				 <div class="row">
 					  <div class="col-lg-4 col-md-6 col-sm-12 mb-2">	
@@ -204,37 +208,37 @@
 			 <footer>
 				 <div class="row">
 					 <div class="col-lg-12 text-center mb-4">
-							<a href="#">
+							<a href="https://es-es.facebook.com/cifolavioleta"target="__blank"title="facebook">
 								<span class="fa-stack fa-xs ">
 									<i class="fal fa-circle fa-stack-2x "></i>
 									<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
 								</span>
 							</a>
-							<a href="#">
+							<a href="https://twitter.com/cifo_barcelona" target="__blank"title="twitter">
 								<span class="fa-stack fa-xs">
 									<i class="fal fa-circle fa-stack-2x"></i>
 									<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
 								</span>
 							</a>	
-							<a href="#">
+							<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"target="__blank"title="google">
 								<span class="fa-stack fa-xs">
 									<i class="fal fa-circle fa-stack-2x"></i>
 									<i class="fab fa-google-plus fa-stack-1x fa-inverse"></i>
 								</span>
 							</a>	
-							<a href="#">
+							<a href="https://www.linkedin.com/company/cifo-la-violeta/" target="__blank"title="linkedin">
 								<span class="fa-stack fa-xs">
 									<i class="fal fa-circle fa-stack-2x"></i>
 									<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
 								</span>
 							</a>
-							<a href="#">
+							<a href="https://www.instagram.com/cifo_hospitalet/?hl=es"target="__blank"title="instagram">
 								<span class="fa-stack fa-xs">
 									<i class="fal fa-circle fa-stack-2x"></i>
 									<i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
 								</span>
 							</a>
-							<a href="#">
+							<a href="https://www.pinterest.es/"target="__blank"title="pinterest">
 								<span class="fa-stack fa-xs">
 									<i class="fal fa-circle fa-stack-2x"></i>
 									<i class="fab fa-pinterest fa-stack-1x fa-inverse"></i>
@@ -244,7 +248,7 @@
 					<div class="col-lg-2 col-md-3 col-sm-12 text-center">
 						<span>DIRECTO A</span>
 						<ul>
-							<li><a href="#">Centros</a></li>
+							<li><a href="/centros/index.html">Centros</a></li>
 							<li><a href="#">Oferta <br>Formativa</a></li>
 							<li><a href="#">Biblioteca</a></li>
 							<li><a href="#">Contacto</a></li>
@@ -264,7 +268,7 @@
 						</ul>
 					</div>
 					<div class="col-lg-8 col-md-6 col-sm-12 text-center">
-						<span>SERVEI D'OCUPACIÓ DE CATALUNYA</span>
+						<a href="https://serveiocupacio.gencat.cat/ca/inici"target="__blank"title="Servei Ocupació de Catalunya"><span>SERVEI D'OCUPACIÓ DE CATALUNYA</span></a>	
 						<p style="padding:20px"><span>Aviso legal :</span> De acuerdo con el artículo 17.1 de la Ley 19/2014, la © Generalidad de Cataluña permite la reutilización de los contenidos y de los datos siempre que se cite la fuente y la fecha de actualización y que no se desnaturalice la información (artículo 8 de la Ley 37/2007) y también que no se contradiga con una licencia específica.</p>
 							<div class="row justify-content-center">
 								<div class="col-4">

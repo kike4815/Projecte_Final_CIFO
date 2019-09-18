@@ -6,7 +6,6 @@ body{
 }
 
 nav.navbar .navbar-brand > img{
-	/*position:absolute;*/
 	margin:0;
 	padding:0;	
 	height: 56px;	
@@ -70,4 +69,9 @@ a span .fa-circle:before{
 .btn-primary{
 	background-color:#00ace6;
 	border: none;
+}
+@media  (max-width: 355px){
+	nav .breadcrumb {
+		display: none;
+	}
 }
