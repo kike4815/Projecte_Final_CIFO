@@ -70,6 +70,7 @@ a span .fa-circle:before{
 	background-color:#00ace6;
 	border: none;
 }
+
 @media  (max-width: 355px){
 	nav .breadcrumb {
 		display: none;
