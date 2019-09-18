@@ -71,7 +71,7 @@ a span .fa-circle:before{
 	border: none;
 }
 
-@media  (max-width: 355px){
+@media  (max-width: 475px){ /*a partir d'aqui el breadcrump es queda per darrere de les icones, per tant es fa això*/
 	nav .breadcrumb {
 		display: none;
 	}
