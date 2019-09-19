@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
 <link rel="icon" href="/img/favicon.ico" type="image/png" >
-<title>Regsitrarse-eCIFO</title>
+<title>Contacto-eCIFO</title>
 
 </head>
 <body>
@@ -46,7 +46,7 @@
 					<a class="nav-link" href="/campus/login.html">Entrar</a>
 				</li>
 				<li class="nav-item d-md-none d-lg-block pr-3">
-					<a class="nav-link" href="#">Registrarse</a>
+					<a class="nav-link" href="/campus/register.html">Registrarse</a>
 				</li>
 				<li class="nav-item dropdown d-lg-none d-md-block d-sm-none pr-3">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,24 +54,23 @@
 					</a>
 					<div class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="/campus/login.html">Entrar</a>
-						<a class="dropdown-item" href="#">Registrarse</a>
+						<a class="dropdown-item" href="/campus/register.html">Registrarse</a>
 					</div>
 				</li>
 			</ul>
 		</div>
 </nav>
-
+<!--------------------------- breadcrump & icones de xarxes socials ---------------------------------->
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-12 p-0">
 			<nav aria-label="breadcrumb">
 			  <ol class="breadcrumb">
 			    <li class="breadcrumb-item"><i class="fas fa-home" style="color:#00ace6"></i><a href="/index.html">Home</a></li>
-			    <li class="breadcrumb-item" aria-current="page"><a href="/campus/index.html">Campus Virtual</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">Entrar</li>
+			    <li class="breadcrumb-item active" aria-current="page">Contacto</li>
 			  </ol>
 			</nav>  
-		  	<div style="top:0px; right:0px" class="position-absolute pt-2 d-xs-none"> <!--com fem desapareixer a partir de 350px?-->	 
+		  	<div style="top:0px; right:0px" class="position-absolute pt-2 d-xs-none"> 	 
 		  		<span class="fa-stack fa-xs" style="color:blue">
 				  <i class="fas fa-circle fa-stack-2x"></i>
 				  <a href="https://es-es.facebook.com/cifolavioleta" target="__blank"title="facebook"><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></a>
@@ -100,44 +99,40 @@
 		</div>
 <!-------------------------------------NAVEGACIÓ & BREADCRUMP------------------------------------------->		
 			 <div class="col-12 border-top">
-			 <h5 style="padding-left:5px">Datos de Registro</h5>
-				 <div class="row mb-3 border ml-2">
-					  <div class="col-lg-4 col-md-6 col-sm-12 border mr-5">	
+			 <h5 style="padding-left:5px">Contacto</h5>
+				 <div class="row mb-3 border">
+					  <div class="col-lg-7 col-md-6 col-sm-12 border" style="padding: 1rem!important;">	<!--posem aquest !important ja que al css li tenim tret degut al register carrousel-->
 					 	<form>
                           <div class="form-group">
-                            <label for="inputUserame">NOMBRE <i class="fas fa-asterisk" style="color:red"></i></label>
+                            <label for="inputUserame">NOMBRE COMPLETO <i class="fas fa-asterisk" style="color:red"></i></label>
                             <input type="text" id="inputUserame" class="form-control" placeholder="" required autofocus>
                           </div>
                           <div class="form-group">
-                             <label for="inputUserame">APELLIDOS <i class="fas fa-asterisk" style="color:red"></i></label>
-                             <input type="text" id="inputUserame" class="form-control" placeholder="" required autofocus>
+                             <label for="inputUserame">NUMERO DE TELÉFONO </label>
+                             <input type="tel" id="inputUserame" class="form-control" placeholder="" required autofocus>
                           </div>     
 						  <div class="form-group">
                             <label for="exampleInputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
 						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">						    
 						  </div>
-						  <div class="form-group form-check">
-						    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						    <label class="form-check-label" for="exampleCheck1"><small>Acepto los terminos legales </small><i class="fas fa-asterisk" style="color:red"></i></label>
-						  </div>
-						  <button type="submit" class="btn btn-primary offset-5 mb-4" style="display: block;">Registrarse</button>
+						  <div class="form-group">
+                                <label for="exampleFormControlTextarea1">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                          </div>
+                          <div class="border">
+                          <button type="submit" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Refrescar</button>
+                        </div>
+						  <button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
 						</form>
 					 </div>
 	<!-- en aquest carrusel li fem un background image ja que amb una img normal no s'ajusta a la columna del germà col -->
 					 <!--ATENCIÓ EL CLASS COL DEL BOOTSTRAP PORTA DE FABRICA UN PADDING DE 2, FORÇAR AMB CSS I COMENTAR  -->
-					<div class="col-lg-7 col-md-6 col-sm-12 pb-2 pt-2 h-100" >	
+					<div class="col-lg-5 col-md-6 col-sm-12  h-100" >	
                         <div class="row h-100">
-                           <div class="col-12 w-100" style="background-image:url('/media/rgistration.jpg');background-repeat: no-repeat;background-size: cover; min-height:400px;"> 
-                                <ul class="list-group">
-                                    <li class="list-group-item"><i class="fas fa-check"style="color: rgb(12, 175, 12)"></i> Inscripcion a las ofertas formativas</li>
-                                    <li class="list-group-item"><i class="fas fa-check"style="color: rgb(12, 175, 12)"></i> Acceso a los cursos matriculados</li>
-                                    <li class="list-group-item"><i class="fas fa-check"style="color: rgb(12, 175, 12)"></i> Recibir notificaciones de las nuevas ofertas</li>
-                                    <li class="list-group-item"><i class="fas fa-check"style="color: rgb(12, 175, 12)"></i> Acceso rápido a tu perfil y evaluaciones</li>
-                                    <li class="list-group-item"><i class="fas fa-check"style="color: rgb(12, 175, 12)"></i> Notificaciones por correo <small>Activación de la cuenta a través del correo electrónico</small> </li>
-                                    <li class="list-group-item"><i class="fas fa-check"style="color: rgb(12, 175, 12)"></i> Consultar horario y calendario lectivo</li>
-                                    <span style="padding-left: 25px"><small>Si ya tienes una cuenta puedes entrar <a href="/campus/login.html">aquí</a></small></span>
-                                </ul>
-                            </div> 
+                           <div class="col-12 w-100">
+                               <div class="pb-3" style="background-color: rgb(230, 227, 227);padding-left: 15px;">Mapa de <a href="/centros/index.html">centros</a></div>
+                                 <!--http://www.maestrosdelweb.com/guia-mapas-marcadores/  -->
+                           </div> 
                         </div> 
 					</div>
 				</div>
@@ -243,6 +238,7 @@
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+               
 </body>
 </html>
