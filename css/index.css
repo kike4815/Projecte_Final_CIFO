@@ -16,6 +16,14 @@ nav{
 	height: 56px;
 	
 }
+
+
+nav > div > ul > li > a:hover {
+  background-color: #77B41E;
+  color: black;
+  border-radius: 5px;
+}
+
 .bg-light{
 	background-color: #00ace6!important;
 }
