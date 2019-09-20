@@ -52,7 +52,8 @@
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 					eCampus
 					</a>
-					<div class="dropdown-menu bg-light" aria-labelledby="navbarDropdownMenuLink">
+					<div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="/campus/index.html">Campus Virtual</a>
 						<a class="dropdown-item" href="/campus/login.html">Entrar</a>
 						<a class="dropdown-item" href="/campus/register.html">Registrarse</a>
 					</div>
@@ -119,10 +120,13 @@
                                 <label for="exampleFormControlTextarea1">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
                           </div>
-                          <div class="border">
-                          <button type="submit" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Refrescar</button>
-                        </div>
-						  <button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
+                          <div class="input-group mb-3">
+							  <div class="input-group-prepend ">
+							    <button class="btn btn-outline-secondary bg-light" style="color:white" type="button" id="button-addon1"><i class="fas fa-sync-alt"style="color:white"></i> Refrescar</button>
+							  </div>
+							  <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+						  </div>
+                          <button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
 						</form>
 					 </div>
 	<!-- en aquest carrusel li fem un background image ja que amb una img normal no s'ajusta a la columna del germà col -->
@@ -181,14 +185,14 @@
 					<div class="col-lg-2 col-md-3 col-sm-12 text-center">
 						<span>DIRECTO A</span>
 						<ul>
-							<li><a href="#">Centros</a></li>
+							<li><a href="/centros/index.html">Centros</a></li>
 							<li><a href="#">Oferta <br>Formativa</a></li>
 							<li><a href="#">Biblioteca</a></li>
-							<li><a href="#">Contacto</a></li>
-							<li><a href="#">eCampus</a></li>
-							<li><a href="#">Campus Virtual</a></li>
-							<li><a href="#">Entrar</a></li>
-							<li><a href="#">Registrarse</a></li>							
+							<li><a href="/contacto/index.html">Contacto</a></li>
+							<li><a href="/campus/index.html">eCampus</a></li>
+							<li><a href="/campus/index.html">Campus Virtual</a></li>
+							<li><a href="/campus/login.html">Entrar</a></li>
+							<li><a href="/campus/register.html">Registrarse</a></li>							
 						</ul>
 					</div>
 					<div class="col-lg-2 col-md-3 col-sm-12 text-center">
