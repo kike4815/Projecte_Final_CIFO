@@ -13,10 +13,12 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
 <link rel="icon" href="/img/favicon.ico" type="image/png" >
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiQ-itSjQQ8kZ2n-3X481qIOXGKWKAq-Y&callback"></script>
+        
 <title>Contacto-eCIFO</title>
-
+<!-- <script type="text/javascript" src="//maps.google.com/maps/api/js"></script> -->
 </head>
-<body>
+<body onload="initMap()">
 <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
 		<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici"target="__blank"title="Servei Ocupació de Catalunya">
 			<img  class="d-inline-block" src="/img/soc.jpg">
@@ -129,14 +131,17 @@
                           <button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
 						</form>
 					 </div>
-	<!-- en aquest carrusel li fem un background image ja que amb una img normal no s'ajusta a la columna del germà col -->
+
 					 <!--ATENCIÓ EL CLASS COL DEL BOOTSTRAP PORTA DE FABRICA UN PADDING DE 2, FORÇAR AMB CSS I COMENTAR  -->
-					<div class="col-lg-5 col-md-6 col-sm-12  h-100" >	
+					<div class="col-lg-5 col-md-6 col-sm-12" >	
                         <div class="row h-100">
-                           <div class="col-12 w-100">
+                           <div class="col-12 w-100 h-100">
                                <div class="pb-3" style="background-color: rgb(230, 227, 227);padding-left: 15px;">Mapa de <a href="/centros/index.html">centros</a></div>
-                                 <!--http://www.maestrosdelweb.com/guia-mapas-marcadores/  -->
-                           </div> 
+								 <!--http://www.maestrosdelweb.com/guia-mapas-marcadores/  -->
+
+								 <!-- INSERCIÓ GOOGLE MAPS AMB KEY  -->
+								 <div id="mapa" style="width: 100%; min-height: 720px; overflow: hidden;"> </div>	 
+						   </div> 
                         </div> 
 					</div>
 				</div>
@@ -225,24 +230,72 @@
 		</div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
+<!-- Script per el mapa de google maps -->
+<script>
+	function initMap() {
+	 // Creamos un objeto mapa y especificamos el elemento DOM donde se va a mostrar.
+	 var map = new google.maps.Map(document.getElementById('mapa'), {
+	 center: {lat: 41.402675, lng: 2.181181}, 
+	 scrollwheel: false,
+	 zoom: 8,
+	 zoomControl: true,
+	 rotateControl : true,
+	 mapTypeControl: true,
+	 streetViewControl: false,
+	 navigationControl: true,
+	 draggable: true,
+	 });
+	 // Creem d8 marcadors.
+	 var marker1 = new google.maps.Marker({ //la violeta
+	 position: {lat: 41.4168484, lng: 2.1314468},
+	 draggable: false
+	 });
+	 var marker2 = new google.maps.Marker({ //hospitalet
+	 position: {lat: 41.359884, lng: 2.114171},
+	 draggable: false
+	 });
+	 var marker3 = new google.maps.Marker({ //santa COLOMA
+	 position: { lat:41.464582, lng:2.208681},
+	 draggable: false
+	 });
+	 var marker4 = new google.maps.Marker({//sant feliu
+	 position: { lat:41.386115, lng :2.041346},
+	 draggable: false
+	 });
+	 var marker5 = new google.maps.Marker({ //girona
+	 position: { lat:42.322059, lng:2.341132},
+	 draggable: false
+	 });
+	 var marker6 = new google.maps.Marker({//lleida
+	 position: { lat:41.624220, lng : 0.611538},
+	 draggable: false
+	 });
+	 var marker7 = new google.maps.Marker({ //tarragona
+	 position: { lat:41.126026, lng:1.280642},
+	 draggable: false
+	 });
+	 var marker8 = new google.maps.Marker({//terrassa
+	 position: { lat:41.555383, lng : 2.058496},
+	 draggable: false
+	 });
+	// Le asignamos el mapa a los marcadores.
+	marker1.setMap(map);
+	marker2.setMap(map);
+	marker3.setMap(map);
+	marker4.setMap(map);
+	marker5.setMap(map);
+	marker6.setMap(map);
+	marker7.setMap(map);
+	marker8.setMap(map);
+	}
+	</script>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 	<script
-        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-               
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	       
 </body>
 </html>
