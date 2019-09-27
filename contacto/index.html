@@ -18,284 +18,284 @@
 <title>Contacto-eCIFO</title>
 <!-- <script type="text/javascript" src="//maps.google.com/maps/api/js"></script> -->
 </head>
-<body onload="initMap()">
-<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
-		<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici"target="__blank"title="Servei Ocupació de Catalunya">
-			<img  class="d-inline-block" src="/img/soc.jpg">
-			<span style="line-height:1em;" class=" d-none d-sm-inline-block">Servei d'Ocupació <br /> de Catalunya</span>
-		</a>
-		<button class="navbar-toggler ml-auto d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-			<ul class="navbar-nav d-flex bg-light pl-2">
-				<li class="nav-item active">
-					<a class="nav-link" href="/centros/index.html">Centros <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Oferta formativa</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Biblioteca</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contacto</a>
-				</li>
-				<li class="nav-item d-md-none d-lg-block">
-					<a class="nav-link" href="/campus/index.html">Campus Virtual</a>
-				</li>
-				<li class="nav-item d-md-none d-lg-block">
-					<a class="nav-link" href="/campus/login.html">Entrar</a>
-				</li>
-				<li class="nav-item d-md-none d-lg-block pr-3">
-					<a class="nav-link" href="/campus/register.html">Registrarse</a>
-				</li>
-				<li class="nav-item dropdown d-lg-none d-md-block d-sm-none pr-3">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					eCampus
-					</a>
-					<div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" href="/campus/index.html">Campus Virtual</a>
-						<a class="dropdown-item" href="/campus/login.html">Entrar</a>
-						<a class="dropdown-item" href="/campus/register.html">Registrarse</a>
-					</div>
-				</li>
-			</ul>
-		</div>
-</nav>
-<!--------------------------- breadcrump & icones de xarxes socials ---------------------------------->
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-12 p-0">
-			<nav aria-label="breadcrumb">
-			  <ol class="breadcrumb">
-			    <li class="breadcrumb-item"><i class="fas fa-home" style="color:#00ace6"></i><a href="/index.html">Home</a></li>
-			    <li class="breadcrumb-item active" aria-current="page">Contacto</li>
-			  </ol>
-			</nav>  
-		  	<div style="top:0px; right:0px" class="position-absolute pt-2 d-xs-none"> 	 
-		  		<span class="fa-stack fa-xs" style="color:blue">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="https://es-es.facebook.com/cifolavioleta" target="__blank"title="facebook"><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></a>
-				</span>
-			  	<span class="fa-stack fa-xs" style="color:rgb(0, 174, 255)">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="https://twitter.com/cifo_barcelona" target="__blank"title="twitter"><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
-				</span>
-				  <span class="fa-stack fa-xs" style="color:rgb(245, 84, 84)">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"target="__blank"title="google"><i class="fab fa-google-plus fa-stack-1x fa-inverse"></i></a>
-				</span>
-				  	<span class="fa-stack fa-xs" style="color:rgb(95, 95, 224)">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="https://www.linkedin.com/company/cifo-la-violeta/" target="__blank"title="linkedin"><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></a>
-				</span>
-				  	<span class="fa-stack fa-xs">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="https://www.instagram.com/cifo_hospitalet/?hl=es"target="__blank"title="instagram"><i class="fab fa-instagram fa-stack-1x fa-inverse"></i></a>
-				</span>
-				  	<span class="fa-stack fa-xs"style="color:red">
-				  <i class="fas fa-circle fa-stack-2x"></i>
-				  <a href="https://www.pinterest.es/"target="__blank"title="pinterest"><i class="fab fa-pinterest fa-stack-1x fa-inverse"></i></a>
-				</span>
-			</div> 
-		</div>
-<!-------------------------------------NAVEGACIÓ & BREADCRUMP------------------------------------------->		
-			 <div class="col-12 border-top">
-			 <h5 style="padding-left:5px">Contacto</h5>
-				 <div class="row mb-3 border">
-					  <div class="col-lg-7 col-md-6 col-sm-12 border" style="padding: 1rem!important;">	<!--posem aquest !important ja que al css li tenim tret degut al register carrousel-->
-					 	<form>
-                          <div class="form-group">
-                            <label for="inputUserame">NOMBRE COMPLETO <i class="fas fa-asterisk" style="color:red"></i></label>
-                            <input type="text" id="inputUserame" class="form-control" placeholder="" required autofocus>
-                          </div>
-                          <div class="form-group">
-                             <label for="inputUserame">NUMERO DE TELÉFONO </label>
-                             <input type="tel" id="inputUserame" class="form-control" placeholder="" required autofocus>
-                          </div>     
-						  <div class="form-group">
-                            <label for="exampleInputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
-						    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">						    
-						  </div>
-						  <div class="form-group">
-                                <label for="exampleFormControlTextarea1">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-                          </div>
-                          <div class="input-group mb-3">
-							  <div class="input-group-prepend ">
-							    <button class="btn btn-outline-secondary bg-light" style="color:white" type="button" id="button-addon1"><i class="fas fa-sync-alt"style="color:white"></i> Refrescar</button>
-							  </div>
-							  <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-						  </div>
-                          <button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
-						</form>
-					 </div>
-
-					 <!--ATENCIÓ EL CLASS COL DEL BOOTSTRAP PORTA DE FABRICA UN PADDING DE 2, FORÇAR AMB CSS I COMENTAR  -->
-					<div class="col-lg-5 col-md-6 col-sm-12" >	
-                        <div class="row h-100">
-                           <div class="col-12 w-100 h-100">
-                               <div class="pb-3" style="background-color: rgb(230, 227, 227);padding-left: 15px;">Mapa de <a href="/centros/index.html">centros</a></div>
-								 <!--http://www.maestrosdelweb.com/guia-mapas-marcadores/  -->
-
-								 <!-- INSERCIÓ GOOGLE MAPS AMB KEY  -->
-								 <div id="mapa" style="width: 100%; min-height: 720px; overflow: hidden;"> </div>	 
-						   </div> 
-                        </div> 
-					</div>
-				</div>
-			 </div>	
-<!------------------------------------------------------FOOTER--------------------------------------------------------->			 
-			 <footer>
-				 <div class="row">
-					 <div class="col-lg-12 text-center mb-4">
-						<a href="https://es-es.facebook.com/cifolavioleta"target="__blank"title="facebook">
-							<span class="fa-stack fa-xs ">
-								<i class="fal fa-circle fa-stack-2x "></i>
-								<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-						<a href="https://twitter.com/cifo_barcelona" target="__blank"title="twitter">
-							<span class="fa-stack fa-xs">
-								<i class="fal fa-circle fa-stack-2x"></i>
-								<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>	
-						<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"target="__blank"title="google">
-							<span class="fa-stack fa-xs">
-								<i class="fal fa-circle fa-stack-2x"></i>
-								<i class="fab fa-google-plus fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>	
-						<a href="https://www.linkedin.com/company/cifo-la-violeta/" target="__blank"title="linkedin">
-							<span class="fa-stack fa-xs">
-								<i class="fal fa-circle fa-stack-2x"></i>
-								<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-						<a href="https://www.instagram.com/cifo_hospitalet/?hl=es"target="__blank"title="instagram">
-							<span class="fa-stack fa-xs">
-								<i class="fal fa-circle fa-stack-2x"></i>
-								<i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-						<a href="https://www.pinterest.es/"target="__blank"title="pinterest">
-							<span class="fa-stack fa-xs">
-								<i class="fal fa-circle fa-stack-2x"></i>
-								<i class="fab fa-pinterest fa-stack-1x fa-inverse"></i>
-							</span>
-						</a>
-					 </div>
-					<div class="col-lg-2 col-md-3 col-sm-12 text-center">
-						<span>DIRECTO A</span>
-						<ul>
-							<li><a href="/centros/index.html">Centros</a></li>
-							<li><a href="#">Oferta <br>Formativa</a></li>
-							<li><a href="#">Biblioteca</a></li>
-							<li><a href="/contacto/index.html">Contacto</a></li>
-							<li><a href="/campus/index.html">eCampus</a></li>
-							<li><a href="/campus/index.html">Campus Virtual</a></li>
-							<li><a href="/campus/login.html">Entrar</a></li>
-							<li><a href="/campus/register.html">Registrarse</a></li>							
-						</ul>
-					</div>
-					<div class="col-lg-2 col-md-3 col-sm-12 text-center">
-						<span>AYUDA</span>
-						<ul>
-							<li><a href="#">Sobre Gencat</a></li>
-							<li><a href="#">Accessibilitat</a></li>
-							<li><a href="#">Mapa Web</a></li>
-							<li><a href="#">Aviso Legal</a></li>
-						</ul>
-					</div>
-					<div class="col-lg-8 col-md-6 col-sm-12 text-center">
-					<a href="https://serveiocupacio.gencat.cat/ca/inici"target="__blank"title="Servei Ocupació de Catalunya"><span>SERVEI D'OCUPACIÓ DE CATALUNYA</span></a>	
-						<p style="padding:20px"><span>Aviso legal :</span> De acuerdo con el artículo 17.1 de la Ley 19/2014, la © Generalidad de Cataluña permite la reutilización de los contenidos y de los datos siempre que se cite la fuente y la fecha de actualización y que no se desnaturalice la información (artículo 8 de la Ley 37/2007) y también que no se contradiga con una licencia específica.</p>
-							<div class="row justify-content-center">
-								<div class="col-4">
-									<img src="/img/sepelogotip.jpg" class=w-100 style="object-fit:cover">
-								</div>
-								<div class="col-4">
-									<img src="/img/logotip_Iniciativaocupaciojuvenil_bn.jpg"class=w-100 style="object-fit:cover">
-								</div>
+	<body onload="initMap()">
+		<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
+				<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya">
+					<img  class="d-inline-block" src="/img/soc.jpg" alt="Smiley face">
+					<span style="line-height:1em;" class=" d-none d-sm-inline-block">Servei d'Ocupació <br /> de Catalunya</span>
+				</a>
+				<button class="navbar-toggler ml-auto d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+					<ul class="navbar-nav d-flex bg-light pl-2">
+						<li class="nav-item active">
+							<a class="nav-link" href="/centros/index.html">Centros <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Oferta formativa</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Biblioteca</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contacto</a>
+						</li>
+						<li class="nav-item d-md-none d-lg-block">
+							<a class="nav-link" href="/campus/index.html">Campus Virtual</a>
+						</li>
+						<li class="nav-item d-md-none d-lg-block">
+							<a class="nav-link" href="/campus/login.html">Entrar</a>
+						</li>
+						<li class="nav-item d-md-none d-lg-block pr-3">
+							<a class="nav-link" href="/campus/register.html">Registrarse</a>
+						</li>
+						<li class="nav-item dropdown d-lg-none d-md-block d-sm-none pr-3">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							eCampus
+							</a>
+							<div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
+								<a class="dropdown-item" href="/campus/index.html">Campus Virtual</a>
+								<a class="dropdown-item" href="/campus/login.html">Entrar</a>
+								<a class="dropdown-item" href="/campus/register.html">Registrarse</a>
 							</div>
-					</div>
-					<div class="col-12 text-center">
-						<span>Copyright © Cifo 2018</span>
-					</div>	 	
-				 </div>
-			 </footer>
-		
-		</div>
-</div>
+						</li>
+					</ul>
+				</div>
+		</nav>
+	<!--------------------------- breadcrump & icones de xarxes socials ---------------------------------->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 p-0">
+					<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><i class="fas fa-home" style="color:#00ace6"></i><a href="/index.html">Home</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Contacto</li>
+					</ol>
+					</nav>  
+					<div style="top:0px; right:0px" class="position-absolute pt-2 d-xs-none"> 	 
+						<span class="fa-stack fa-xs" style="color:blue">
+						<i class="fas fa-circle fa-stack-2x"></i>
+						<a href="https://es-es.facebook.com/cifolavioleta" target="_blank" title="facebook"><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></a>
+						</span>
+						<span class="fa-stack fa-xs" style="color:rgb(0, 174, 255)">
+						<i class="fas fa-circle fa-stack-2x"></i>
+						<a href="https://twitter.com/cifo_barcelona" target="_blank" title="twitter"><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
+						</span>
+						<span class="fa-stack fa-xs" style="color:rgb(245, 84, 84)">
+						<i class="fas fa-circle fa-stack-2x"></i>
+						<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" title="google"><i class="fab fa-google-plus fa-stack-1x fa-inverse"></i></a>
+						</span>
+							<span class="fa-stack fa-xs" style="color:rgb(95, 95, 224)">
+						<i class="fas fa-circle fa-stack-2x"></i>
+						<a href="https://www.linkedin.com/company/cifo-la-violeta/" target="_blank" title="linkedin"><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></a>
+						</span>
+							<span class="fa-stack fa-xs">
+						<i class="fas fa-circle fa-stack-2x"></i>
+						<a href="https://www.instagram.com/cifo_hospitalet/?hl=es" target="_blank" title="instagram"><i class="fab fa-instagram fa-stack-1x fa-inverse"></i></a>
+						</span>
+							<span class="fa-stack fa-xs" style="color:red">
+						<i class="fas fa-circle fa-stack-2x"></i>
+						<a href="https://www.pinterest.es/" target="_blank" title="pinterest"><i class="fab fa-pinterest fa-stack-1x fa-inverse"></i></a>
+						</span>
+					</div> 
+				</div>
+		<!-------------------------------------NAVEGACIÓ & BREADCRUMP------------------------------------------->		
+					<div class="col-12 border-top">
+					<h5 style="padding-left:5px">Contacto</h5>
+						<div class="row mb-3 border">
+							<div class="col-lg-7 col-md-6 col-sm-12 border" style="padding: 1rem!important;">	<!--posem aquest !important ja que al css li tenim tret degut al register carrousel-->
+								<form>
+								<div class="form-group">
+									<label for="inputUserame">NOMBRE COMPLETO <i class="fas fa-asterisk" style="color:red"></i></label>
+									<input type="text" id="inputUserame" class="form-control" placeholder="" required autofocus>
+								</div>
+								<div class="form-group">
+									<label for="inputUserphone">NUMERO DE TELÉFONO </label>
+									<input type="tel" id="inputUserphone" class="form-control" placeholder="" required autofocus>
+								</div>     
+								<div class="form-group">
+									<label for="exampleInputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
+									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">						    
+								</div>
+								<div class="form-group">
+										<label for="exampleFormControlTextarea1">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
+										<textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+								</div>
+								<div class="input-group mb-3">
+									<div class="input-group-prepend ">
+										<button class="btn btn-outline-secondary bg-light" style="color:white" type="button" id="button-addon1"><i class="fas fa-sync-alt" style="color:white"></i> Refrescar</button>
+									</div>
+									<input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+								</div>
+								<button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
+								</form>
+							</div>
 
-<!-- Script per el mapa de google maps -->
-<script>
-	function initMap() {
-	 // Creamos un objeto mapa y especificamos el elemento DOM donde se va a mostrar.
-	 var map = new google.maps.Map(document.getElementById('mapa'), {
-	 center: {lat: 41.402675, lng: 2.181181}, 
-	 scrollwheel: false,
-	 zoom: 8,
-	 zoomControl: true,
-	 rotateControl : true,
-	 mapTypeControl: true,
-	 streetViewControl: false,
-	 navigationControl: true,
-	 draggable: true,
-	 });
-	 // Creem d8 marcadors.
-	 var marker1 = new google.maps.Marker({ //la violeta
-	 position: {lat: 41.4168484, lng: 2.1314468},
-	 draggable: false
-	 });
-	 var marker2 = new google.maps.Marker({ //hospitalet
-	 position: {lat: 41.359884, lng: 2.114171},
-	 draggable: false
-	 });
-	 var marker3 = new google.maps.Marker({ //santa COLOMA
-	 position: { lat:41.464582, lng:2.208681},
-	 draggable: false
-	 });
-	 var marker4 = new google.maps.Marker({//sant feliu
-	 position: { lat:41.386115, lng :2.041346},
-	 draggable: false
-	 });
-	 var marker5 = new google.maps.Marker({ //girona
-	 position: { lat:42.322059, lng:2.341132},
-	 draggable: false
-	 });
-	 var marker6 = new google.maps.Marker({//lleida
-	 position: { lat:41.624220, lng : 0.611538},
-	 draggable: false
-	 });
-	 var marker7 = new google.maps.Marker({ //tarragona
-	 position: { lat:41.126026, lng:1.280642},
-	 draggable: false
-	 });
-	 var marker8 = new google.maps.Marker({//terrassa
-	 position: { lat:41.555383, lng : 2.058496},
-	 draggable: false
-	 });
-	// Le asignamos el mapa a los marcadores.
-	marker1.setMap(map);
-	marker2.setMap(map);
-	marker3.setMap(map);
-	marker4.setMap(map);
-	marker5.setMap(map);
-	marker6.setMap(map);
-	marker7.setMap(map);
-	marker8.setMap(map);
-	}
-	</script>
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	       
-</body>
+							<!--ATENCIÓ EL CLASS COL DEL BOOTSTRAP PORTA DE FABRICA UN PADDING DE 2, FORÇAR AMB CSS I COMENTAR  -->
+							<div class="col-lg-5 col-md-6 col-sm-12" >	
+								<div class="row h-100">
+								<div class="col-12 w-100 h-100">
+									<div class="pb-3" style="background-color: rgb(230, 227, 227);padding-left: 15px;">Mapa de <a href="/centros/index.html">centros</a></div>
+										<!--http://www.maestrosdelweb.com/guia-mapas-marcadores/  -->
+
+										<!-- INSERCIÓ GOOGLE MAPS AMB KEY  -->
+										<div id="mapa" style="width: 100%; min-height: 720px; overflow: hidden;"> </div>	 
+								</div> 
+								</div> 
+							</div>
+						</div>
+					</div>	
+		<!------------------------------------------------------FOOTER--------------------------------------------------------->			 
+					<footer>
+						<div class="row">
+							<div class="col-lg-12 text-center mb-4">
+								<a href="https://es-es.facebook.com/cifolavioleta" target="_blank" title="facebook">
+									<span class="fa-stack fa-xs ">
+										<i class="fal fa-circle fa-stack-2x "></i>
+										<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="https://twitter.com/cifo_barcelona" target="_blank" title="twitter">
+									<span class="fa-stack fa-xs">
+										<i class="fal fa-circle fa-stack-2x"></i>
+										<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>	
+								<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" title="google">
+									<span class="fa-stack fa-xs">
+										<i class="fal fa-circle fa-stack-2x"></i>
+										<i class="fab fa-google-plus fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>	
+								<a href="https://www.linkedin.com/company/cifo-la-violeta/" target="_blank" title="linkedin">
+									<span class="fa-stack fa-xs">
+										<i class="fal fa-circle fa-stack-2x"></i>
+										<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="https://www.instagram.com/cifo_hospitalet/?hl=es" target="_blank" title="instagram">
+									<span class="fa-stack fa-xs">
+										<i class="fal fa-circle fa-stack-2x"></i>
+										<i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+								<a href="https://www.pinterest.es/" target="_blank" title="pinterest">
+									<span class="fa-stack fa-xs">
+										<i class="fal fa-circle fa-stack-2x"></i>
+										<i class="fab fa-pinterest fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</div>
+							<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+								<span>DIRECTO A</span>
+								<ul>
+									<li><a href="/centros/index.html">Centros</a></li>
+									<li><a href="#">Oferta <br>Formativa</a></li>
+									<li><a href="#">Biblioteca</a></li>
+									<li><a href="/contacto/index.html">Contacto</a></li>
+									<li><a href="/campus/index.html">eCampus</a></li>
+									<li><a href="/campus/index.html">Campus Virtual</a></li>
+									<li><a href="/campus/login.html">Entrar</a></li>
+									<li><a href="/campus/register.html">Registrarse</a></li>							
+								</ul>
+							</div>
+							<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+								<span>AYUDA</span>
+								<ul>
+									<li><a href="#">Sobre Gencat</a></li>
+									<li><a href="#">Accessibilitat</a></li>
+									<li><a href="#">Mapa Web</a></li>
+									<li><a href="#">Aviso Legal</a></li>
+								</ul>
+							</div>
+							<div class="col-lg-8 col-md-6 col-sm-12 text-center">
+							<a href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya"><span>SERVEI D'OCUPACIÓ DE CATALUNYA</span></a>	
+								<p style="padding:20px"><span>Aviso legal :</span> De acuerdo con el artículo 17.1 de la Ley 19/2014, la © Generalidad de Cataluña permite la reutilización de los contenidos y de los datos siempre que se cite la fuente y la fecha de actualización y que no se desnaturalice la información (artículo 8 de la Ley 37/2007) y también que no se contradiga con una licencia específica.</p>
+									<div class="row justify-content-center">
+										<div class="col-4">
+											<img src="/img/sepelogotip.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
+										</div>
+										<div class="col-4">
+											<img src="/img/logotip_Iniciativaocupaciojuvenil_bn.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
+										</div>
+									</div>
+							</div>
+							<div class="col-12 text-center">
+								<span>Copyright © Cifo 2018</span>
+							</div>	 	
+						</div>
+					</footer>
+				
+				</div>
+		</div>
+
+	<!-- Script per el mapa de google maps -->
+		<script>
+			function initMap() {
+			// Creamos un objeto mapa y especificamos el elemento DOM donde se va a mostrar.
+			var map = new google.maps.Map(document.getElementById('mapa'), {
+			center: {lat: 41.402675, lng: 2.181181}, 
+			scrollwheel: false,
+			zoom: 8,
+			zoomControl: true,
+			rotateControl : true,
+			mapTypeControl: true,
+			streetViewControl: false,
+			navigationControl: true,
+			draggable: true,
+			});
+			// Creem d8 marcadors.
+			var marker1 = new google.maps.Marker({ //la violeta
+			position: {lat: 41.4168484, lng: 2.1314468},
+			draggable: false
+			});
+			var marker2 = new google.maps.Marker({ //hospitalet
+			position: {lat: 41.359884, lng: 2.114171},
+			draggable: false
+			});
+			var marker3 = new google.maps.Marker({ //santa COLOMA
+			position: { lat:41.464582, lng:2.208681},
+			draggable: false
+			});
+			var marker4 = new google.maps.Marker({//sant feliu
+			position: { lat:41.386115, lng :2.041346},
+			draggable: false
+			});
+			var marker5 = new google.maps.Marker({ //girona
+			position: { lat:42.322059, lng:2.341132},
+			draggable: false
+			});
+			var marker6 = new google.maps.Marker({//lleida
+			position: { lat:41.624220, lng : 0.611538},
+			draggable: false
+			});
+			var marker7 = new google.maps.Marker({ //tarragona
+			position: { lat:41.126026, lng:1.280642},
+			draggable: false
+			});
+			var marker8 = new google.maps.Marker({//terrassa
+			position: { lat:41.555383, lng : 2.058496},
+			draggable: false
+			});
+			// Le asignamos el mapa a los marcadores.
+			marker1.setMap(map);
+			marker2.setMap(map);
+			marker3.setMap(map);
+			marker4.setMap(map);
+			marker5.setMap(map);
+			marker6.setMap(map);
+			marker7.setMap(map);
+			marker8.setMap(map);
+			}
+		</script>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+			
+	</body>
 </html>
