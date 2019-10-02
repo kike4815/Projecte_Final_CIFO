@@ -105,22 +105,22 @@
 					<h5 style="padding-left:5px">Contacto</h5>
 						<div class="row mb-3 border">
 							<div class="col-lg-7 col-md-6 col-sm-12 border" style="padding: 1rem!important;">	<!--posem aquest !important ja que al css li tenim tret degut al register carrousel-->
-								<form>
+							  <form class="needs-validation" novalidate>
 								<div class="form-group">
 									<label for="inputUserame">NOMBRE COMPLETO <i class="fas fa-asterisk" style="color:red"></i></label>
-									<input type="text" id="inputUserame" class="form-control" placeholder="" required autofocus>
+									<input type="text" id="inputUserame" class="form-control" placeholder="" required>
 								</div>
 								<div class="form-group">
 									<label for="inputUserphone">NUMERO DE TELÉFONO </label>
-									<input type="tel" id="inputUserphone" class="form-control" placeholder="" required autofocus>
+									<input type="tel" id="inputUserphone" class="form-control" placeholder="">
 								</div>     
 								<div class="form-group">
 									<label for="exampleInputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
-									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">						    
+									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>						    
 								</div>
 								<div class="form-group">
 										<label for="exampleFormControlTextarea1">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
-										<textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+										<textarea class="form-control" id="exampleFormControlTextarea1" rows="6" required></textarea>
 								</div>
 								<div class="input-group mb-3">
 									<div class="input-group-prepend ">
@@ -128,10 +128,16 @@
 									</div>
 									<input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
 								</div>
-								<button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
-								</form>
+								<button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" id = "btnMessage" style = "display: block;">Enviar Mensaje</button>
+							  </form>
 							</div>
+							<script>
+							document.getElementById("btnMessage").onclick = function(){
+							var nombre = document.getElementById("inputUserame").value;	
 
+							}
+							
+							</script>
 							<!--ATENCIÓ EL CLASS COL DEL BOOTSTRAP PORTA DE FABRICA UN PADDING DE 2, FORÇAR AMB CSS I COMENTAR  -->
 							<div class="col-lg-5 col-md-6 col-sm-12" >	
 								<div class="row h-100">
