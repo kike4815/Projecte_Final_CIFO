@@ -108,7 +108,7 @@
 							  <form class="needs-validation" novalidate>
 								<div class="form-row">  
 									<div class="col-md-12 mb-3">
-											<label for="validationCustom01">NOMBRE COMPLETO </label>
+											<label for="inputUserame">NOMBRE COMPLETO <i class="fas fa-asterisk" style="color:red"></i></label>
 											<input type="text" class="form-control" id="inputUserame" placeholder="Nombre y Apellidos" value="" required>
 											<div class="valid-feedback">
 											  ¡Correcto!
@@ -117,11 +117,12 @@
 											  Debes poner Nombre y Apellidos
 											</div>
 									</div>
+									<div class="col-md-12 mb-3">
+										<label for="inputUserphone">TELÉFONO  </label>
+										<input type="tel" id="inputUserphone" class="form-control" placeholder="">
+									</div>     
+	
 								</div>	
-								<div class="form-group">
-									<label for="inputUserphone">NUMERO DE TELÉFONO </label>
-									<input type="tel" id="inputUserphone" class="form-control" placeholder="">
-								</div>     
 								<div class="form-group">
 									<label for="exampleInputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
 									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>						    
@@ -142,13 +143,17 @@
 							<script>
 							//------------------------NOM I COGNOMS COMPROVACIÓ---------------------------------		
 							document.getElementById("btnMessage").onclick = function(evt){
-							evt.preventDefault();	
+							evt.preventDefault();
+							//netegem clases de estils is-valid / is-invalid
+							document.getElementById("inputUserame").className = document.getElementById("inputUserame").className.replace(/(is-valid|is-invalid)/g,"");	
 							var nombre = document.getElementById("inputUserame").value;	
-							var regexp = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/;
+							var regexp = /^([a-z ñáéíóú]{2,60})$/i;
 							regexp.test(nombre)? document.getElementById("inputUserame").className += " is-valid" : document.getElementById("inputUserame").className += " is-invalid"	
 							}
 							//----------------------REFRESCAR LA PÀGINA ----------------------------------------
-							document.getElementById("button-refresh").onclick = function (){"location.reload(true)";}
+							document.getElementById("button-refresh").onclick = function (){
+							window.location.reload();
+							}
 							</script>
 							
 							<!--ATENCIÓ EL CLASS COL DEL BOOTSTRAP PORTA DE FABRICA UN PADDING DE 2, FORÇAR AMB CSS I COMENTAR  -->
