@@ -121,12 +121,17 @@
 										<label for="inputUserphone">TELÉFONO  </label>
 										<input type="tel" id="inputUserphone" class="form-control" placeholder="">
 									</div>     
-	
+									<div class="col-md-12 mb-3">
+										<label for="inputemail">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
+										<input type="text" class = "form-control" id = "inputemail" placeholder = "name@example.com" value="" required>
+										<div class="valid-feedback">
+										  ¡Correcto!
+										</div>
+										<div class="invalid-feedback">
+										  Debes poner un email correcto
+										</div>
+									</div>	
 								</div>	
-								<div class="form-group">
-									<label for="exampleInputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
-									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>						    
-								</div>
 								<div class="form-group">
 										<label for="exampleFormControlTextarea1">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
 										<textarea class="form-control" id="exampleFormControlTextarea1" rows="6" required></textarea>
