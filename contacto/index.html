@@ -106,10 +106,18 @@
 						<div class="row mb-3 border">
 							<div class="col-lg-7 col-md-6 col-sm-12 border" style="padding: 1rem!important;">	<!--posem aquest !important ja que al css li tenim tret degut al register carrousel-->
 							  <form class="needs-validation" novalidate>
-								<div class="form-group">
-									<label for="inputUserame">NOMBRE COMPLETO <i class="fas fa-asterisk" style="color:red"></i></label>
-									<input type="text" id="inputUserame" class="form-control" placeholder="" required>
-								</div>
+								<div class="form-row">  
+									<div class="col-md-12 mb-3">
+											<label for="validationCustom01">NOMBRE COMPLETO </label>
+											<input type="text" class="form-control" id="inputUserame" placeholder="Nombre y Apellidos" value="" required>
+											<div class="valid-feedback">
+											  ¡Correcto!
+											</div>
+											<div class="invalid-feedback">
+											  Debes poner Nombre y Apellidos
+											</div>
+									</div>
+								</div>	
 								<div class="form-group">
 									<label for="inputUserphone">NUMERO DE TELÉFONO </label>
 									<input type="tel" id="inputUserphone" class="form-control" placeholder="">
@@ -124,7 +132,7 @@
 								</div>
 								<div class="input-group mb-3">
 									<div class="input-group-prepend ">
-										<button class="btn btn-outline-secondary bg-light" style="color:white" type="button" id="button-addon1"><i class="fas fa-sync-alt" style="color:white"></i> Refrescar</button>
+										<button class="btn btn-outline-secondary bg-light" style="color:white" type="button" id="button-refresh"><i class="fas fa-sync-alt" style="color:white"></i> Refrescar</button>
 									</div>
 									<input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
 								</div>
@@ -132,12 +140,17 @@
 							  </form>
 							</div>
 							<script>
-							document.getElementById("btnMessage").onclick = function(){
+							//------------------------NOM I COGNOMS COMPROVACIÓ---------------------------------		
+							document.getElementById("btnMessage").onclick = function(evt){
+							evt.preventDefault();	
 							var nombre = document.getElementById("inputUserame").value;	
-
+							var regexp = /^([A-ZÁÉÍÓÚ]{1}[a-zñáéíóú]+[\s]*)+$/;
+							regexp.test(nombre)? document.getElementById("inputUserame").className += " is-valid" : document.getElementById("inputUserame").className += " is-invalid"	
 							}
-							
+							//----------------------REFRESCAR LA PÀGINA ----------------------------------------
+							document.getElementById("button-refresh").onclick = function (){"location.reload(true)";}
 							</script>
+							
 							<!--ATENCIÓ EL CLASS COL DEL BOOTSTRAP PORTA DE FABRICA UN PADDING DE 2, FORÇAR AMB CSS I COMENTAR  -->
 							<div class="col-lg-5 col-md-6 col-sm-12" >	
 								<div class="row h-100">
