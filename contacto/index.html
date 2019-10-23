@@ -105,22 +105,36 @@
 					<h5 style="padding-left:5px">Contacto</h5>
 						<div class="row mb-3 border">
 							<div class="col-lg-7 col-md-6 col-sm-12 border" style="padding: 1rem!important;">	<!--posem aquest !important ja que al css li tenim tret degut al register carrousel-->
-								<form>
+								<form novalidate>
 								<div class="form-group">
 									<label for="inputUserame">NOMBRE COMPLETO <i class="fas fa-asterisk" style="color:red"></i></label>
-									<input type="text" id="inputUserame" class="form-control" placeholder="" required autofocus>
+									<input type="text" id="inputUserame" class="form-control" placeholder="" required >
+									<div class="valid-feedback">Correcto!</div>
+									<div class="invalid-feedback">Por favor no deje en blanco ni ponga números en el nombre</div>
 								</div>
 								<div class="form-group">
 									<label for="inputUserphone">NUMERO DE TELÉFONO </label>
-									<input type="tel" id="inputUserphone" class="form-control" placeholder="" required autofocus>
+									<input type="tel" id="inputUserphone" class="form-control" placeholder="">
 								</div>     
 								<div class="form-group">
-									<label for="exampleInputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
-									<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">						    
+									<label for="InputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
+									<input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" required>	
+									<div class="valid-feedback">
+									Correcto!
+									</div>
+									<div class="invalid-feedback">
+									Debe poner un correo válido.
+									</div>					    
 								</div>
 								<div class="form-group">
-										<label for="exampleFormControlTextarea1">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
-										<textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+										<label for="mensajeDeTexto">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
+										<textarea class="form-control" id="mensajeDeTexto" rows="6"></textarea>
+										<div class="valid-feedback">
+												Correcto!
+											  </div>
+										 <div class="invalid-feedback">
+												Por favor introduzca un comentario y con una longitud máxima de 50 palabras
+										</div>
 								</div>
 								<div class="input-group mb-3">
 									<div class="input-group-prepend ">
@@ -128,7 +142,9 @@
 									</div>
 									<input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
 								</div>
-								<button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
+								<button type="submit" id="enviar" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
+								<div class="alert alert-success" id="alertaRight" role="alert"style= "display:none">¡Datos Enviados!</div>
+								<div class="alert alert-danger" id="alertaWarning" role="alert"style= "display:none">¡Rellene todos los datos!</div>
 								</form>
 							</div>
 
@@ -229,6 +245,14 @@
 				
 				</div>
 		</div>
+				<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 	<!-- Script per el mapa de google maps -->
 		<script>
@@ -289,13 +313,70 @@
 			marker8.setMap(map);
 			}
 		</script>
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+			
+		<script>
+
+		//------------------------VALIDEM TOTS ELS FORMULARIS CADA VEGADA QUE PERDEM EL FOCUS DELS INPUTS----------------	
+			  var totOk = false; //aquesta variable la utilitzarem per fer comprovar al final quan fem el submit si totes les opcions required del form són correctes
+					//--------------comprovem el nom ---------------
+			document.getElementById("inputUserame").onblur=function(){
+				console.log(this);
+				this.className=this.className.replace(/(is-valid|is-invalid)/g,'');
+				this.value=this.value.trim();
+				var nombreString=this.value;
+				var nombrePattern=/\D/g;
+						if( !nombrePattern.test(nombreString) || nombreString == "" ){
+							this.className+=" is-invalid ";
+							totOk=false;
+						}else{
+							this.className+=" is-valid ";
+							totOk = true;
+						}
+			}
+				//------------comprovem el mail i veiem si compleix la condició assignada -------------------------------
+			document.getElementById("InputEmail1").onblur=function(){
+				this.className=this.className.replace(/(is-valid|is-invalid)/g,''); 
+				var emailString=this.value;
+				var emailpattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+					if( !emailpattern.test(emailString) || emailString == " " ){
+						this.className+=" is-invalid ";
+						totOk=false;
+					}else{
+						this.className+=" is-valid ";
+						totOk = true;
+					}
+			}
+			//----------- el missatge de text hem posat una validació de mínim una paraula i maxima 50 perquè no quedi en blanc
+			document.getElementById("mensajeDeTexto").onblur=function(){  
+				this.className=this.className.replace(/(is-valid|is-invalid)/g,'');
+				var comentariosString=this.value;
+				var comentariosMax = 50;
+				var comentariosPattern=/(\<|\>)/;
+					if( comentariosPattern.test(comentariosString) || comentariosString == "" || comentariosString.length > comentariosMax ){
+						this.className+=" is-invalid ";
+						totOk=false;
+					}else{
+						this.className+=" is-valid ";
+						totOk = true;
+					}
+		   }
+
+		   //----------aqui la funció varia ja que l'event funciona quan apretem el botó,anullem el submit i ho substituim per un alert del bootstrap 
+
+		   document.getElementById("enviar").onclick = function (evt){
+			evt.preventDefault();
+			document.getElementById("alertaRight").style.display="none" //COM MILLORAR AIXÒ?
+			document.getElementById("alertaWarning").style.display="none"
+			var validacio = this.form.querySelectorAll("[class~=is-valid]") // fem un array de tots els elements que continguin la class is-valid i fem una comprovació per veure si compleix tots els requisits
+			var auxiliarValidacio = 3;
+				if (totOk == true && validacio.length == auxiliarValidacio){ 
+					document.getElementById("alertaRight").style.display="block";
+			}  else {
+				document.getElementById("alertaWarning").style.display="block";
+			}
+		}
+
+		</script>	
 			
 	</body>
 </html>
