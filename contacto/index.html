@@ -17,6 +17,11 @@
         
 <title>Contacto-eCIFO</title>
 <!-- <script type="text/javascript" src="//maps.google.com/maps/api/js"></script> -->
+
+<!--================reCAPTCHA v3 link ===================-->
+<!-- Llibreria proporcionada per Google per a fer-hi us d'aquest sistema-->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 	<body onload="initMap()">
 		<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
@@ -131,16 +136,18 @@
 										<textarea class="form-control" id="mensajeDeTexto" rows="6"></textarea>
 										<div class="valid-feedback">
 												Correcto!
-											  </div>
-										 <div class="invalid-feedback">
+										</div>
+										<div class="invalid-feedback">
 												Por favor introduzca un comentario y con una longitud máxima de 50 palabras
 										</div>
 								</div>
 								<div class="input-group mb-3">
-									<div class="input-group-prepend ">
-										<button class="btn btn-outline-secondary bg-light" style="color:white" type="button" id="button-addon1"><i class="fas fa-sync-alt" style="color:white"></i> Refrescar</button>
-									</div>
-									<input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+							<!--================reCAPTCHA v3===================-->
+								<!-- S'ha registrat la web en l'administració de reCaptcha i s'ha optes una clau vinculada en el comte de Google (dominio:localohst; 127.0.0.1)-->
+
+									<div class="g-recaptcha" data-sitekey="6LcVE78UAAAAALIkZPE9EtN2_nr-6w8hafV1stTp">
+									</div>	
+								<!--================reCAPTCHA v3===================-->
 								</div>
 								<button type="submit" id="enviar" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
 								<div class="alert alert-success" id="alertaRight" role="alert"style= "display:none">¡Datos Enviados!</div>
