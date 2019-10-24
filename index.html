@@ -3,16 +3,15 @@
 <head>
 <!-- Required meta tags -->
 <meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
 <link rel="icon" href="img/favicon.ico" type="image/png" >
+
 <title>eCIFO</title>
 
 </head>
@@ -283,28 +282,42 @@
 					<div class="col-12 text-center">
 						<span>Copyright © Cifo 2018</span>
 					</div>	 	
-				 </div>
-			 </footer>
+				</div>
+			</footer>
 		</div>
 	</div>
 </div>
 
+<!-- Modal -->
 
-
-
-
-
-
-
-
-
+<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle" style="color: #00ace6;">Ús de cookies</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                Fem ús de cookies pròpies i de tercers per proporcionar una millor experiència d'usuari. En seguir navegant entenem que accepta la nostra <a href="#" style="color: #00ace6;">Política de Cookies</a>
+            </div>
+            <div class="modal-footer">
+                <button id="btnRGPD" type="button" class="btn btn-primary" style="background-color: #77B41E;">Estic d'acord</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="jquery.includeHTML.min.js"></script>
+    <script src="cookies.js"></script>
+    <script>
+        $('#boxRGPD').modal('show');
+    </script>
 </body>
 </html>
