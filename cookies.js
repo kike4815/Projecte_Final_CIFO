@@ -58,15 +58,18 @@
 
         if (detectCookie("okRGPD")) {
             if (getCookie("okRGPD")=="ok") {
-            //if (window.localStorage.getItem("okRGPD")=="ok") {
-            var objBoxRGPD=document.getElementById("boxRGPD");
-            objBoxRGPD.parentNode.removeChild(objBoxRGPD);
+                //if (window.localStorage.getItem("okRGPD")=="ok") {
+                // var objBoxRGPD=document.getElementById("boxRGPD");
+                // objBoxRGPD.parentNode.removeChild(objBoxRGPD);
             }
+
         } else {
-        document.getElementById("btnRGPD").onclick=function() {
-            setCookie("okRGPD","ok", 365);
-            //window.localStorage.setItem("okRGPD","ok");
-            var objBoxRGPD=document.getElementById("boxRGPD");
-            objBoxRGPD.parentNode.removeChild(objBoxRGPD);
+            document.getElementById("btnRGPD").onclick=function() {
+                setCookie("okRGPD","ok", 365);
+                //window.localStorage.setItem("okRGPD","ok");
+                // var objBoxRGPD=document.getElementById("boxRGPD");
+                // objBoxRGPD.parentNode.removeChild(objBoxRGPD);
+                $('#boxRGPD').modal('hide');
             }
+            $('#boxRGPD').modal('show');
         }
