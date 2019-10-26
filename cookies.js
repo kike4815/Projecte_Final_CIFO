@@ -71,5 +71,10 @@
                 // objBoxRGPD.parentNode.removeChild(objBoxRGPD);
                 $('#boxRGPD').modal('hide');
             }
+
+            /* Bootstrap ofereix métodes jQuery per mostrar el contingut d'un modal.
+            Hi han 6: .modal(options), .modal('toggle'), .modal('show'), .modal('hide'), 
+            .modal('handleUpdate') i .modal('dispose'). */
+
             $('#boxRGPD').modal('show');
         }

@@ -18,7 +18,7 @@
 <body>
 	<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
 		<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya">
-			<img  class="d-inline-block" src="img/soc.jpg" alt="Smiley face">
+			<img  class="d-inline-block" src="img/soc.png" alt="Smiley face">
 			<span style="line-height:1em;" class=" d-none d-sm-inline-block">Servei d'Ocupació <br /> de Catalunya</span>
 		</a>
 		<button class="navbar-toggler ml-auto d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -288,7 +288,25 @@
 	</div>
 </div>
 
-<!-- Modal -->
+<!--
+	COOKIES
+
+	Utilitzem un component predefinit de Bootstrap anomenat Vertically centered.
+	Esborrem la activació del modal des de un button i l'iniciem des del moment 
+	en el que es carrega l'html.
+
+	Bootstrap també ofereix métodes jQuery per aquests casos; en el nostre cas utilitxem:
+	$('#boxRGPD').modal('show');
+
+	Que s'inclou a cookies.js on elaborem la resta de funcions js.
+
+	Em cambiat colors de lletres i botó amb atributs style dintre del própi html,
+	així què tingui total coherencia gráfica coorporativa.
+
+	Linquem "Política de Cookies" a una página on es detallen legalment aquestes.
+-->
+
+<!-- Inici del Modal (Vertically Centered) de Bootstrap -->
 
 	<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document" >
@@ -300,14 +318,16 @@
             </button>
             </div>
             <div class="modal-body">
-                Fem ús de cookies pròpies i de tercers per proporcionar una millor experiència d'usuari. En seguir navegant entenem que accepta la nostra <a href="#" style="color: #00ace6;">Política de Cookies</a>
+                Fem ús de cookies pròpies i de tercers per proporcionar una millor experiència d'usuari. En seguir navegant entenem que accepta la nostra <a href="politica.html" style="color: #00ace6;">Política de Cookies</a>
             </div>
             <div class="modal-footer">
                 <button id="btnRGPD" type="button" class="btn btn-primary" style="background-color: #77B41E;">Estic d'acord</button>
             </div>
         </div>
         </div>
-    </div>
+	</div>
+
+<!-- Final del Modal (Vertically Centered) de Bootstrap -->
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
