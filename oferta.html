@@ -131,11 +131,11 @@
                                     <div class="card-body">
                                       <form> 
                                         <fieldset class="form-group mb-4">
-                                            <label for="exampleFormControlInput1">Familia Profesional</label>
-                                            <select class="form-control"id="exampleFormControlInput1">
+                                            <label for="familiaProfesional">Familia Profesional</label>
+                                            <select class="form-control"id="familiaProfesional">
                                                 <option>-- Elija una opcion --</option>
                                             </select>
-                                            <small id="exampleFormControlInput1" class="form-text text-muted">Lista de Familias profesionales</small>
+                                            <small id="familiaProfesional" class="form-text text-muted">Lista de Familias profesionales</small>
                                         </fieldset>    
                                         <fieldset class="form-group mb-4">
                                                 <label for="exampleFormControlInput1">Cursos</label>
@@ -271,7 +271,29 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="../cookies.js"></script>
+		<script src="../cookies.js"></script>
+		
+		<script>
+		//----------------------------iniciem codi per cridar al AJAX ----------------------------
+		var xhr
+		if(window.XMLHttpRequest){
+			xhr = new XMLHttpRequest();
+		}
+		else {
+			xhr = new ActiveXObject("Microsoft.XMLHTTP")
+		}
+		document.getElementById("familiaProfesional").onclick = function(){
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4 && xhr.status == 200){
+					var ofertaFormativa = JSON.parse(xhr.responseText)
+					console.log(ofertaFormativa)
+				}
+			}
+			xhr.open("GET","http://app.cifo.local/api/public/formacion/areas.php", true);
+			xhr.send();
+		}
+
+		</script>
 
 </body>
 </html>    
