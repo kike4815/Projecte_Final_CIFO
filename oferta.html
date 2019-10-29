@@ -109,11 +109,11 @@
                                 <div class="card mb-2">
                                   <div class="card-header bg-light" id="headingOne">
                                     <h2 class="mb-0">
-                                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne" style="color:white"><i class="fas fa-search"></i> Buscar</button>
+                                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseuno" aria-expanded="false" aria-controls="collapseuno" style="color:white"><i class="fas fa-search"></i> Buscar</button>
                                     </h2>
                                   </div>
                               
-                                  <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                  <div id="col·lapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="card-body">
                                         <input type="text" class="form-control" placeholder="Escriba aqui ..." aria-label="Username" aria-describedby="addon-wrapping">
                                     </div>
@@ -164,7 +164,7 @@
 				 </div>
                 <div class="col-lg-8 text-center">
 					<h3>Cursos</h3>
-					<table id= "taulaCursos"class="display" style="width:100%">
+					<table id= "taulaCursos"class="display table-striped table-bordered" style="width:100%">
 					  	<thead>
 						  <tr>
 							  <th>Codigo</th>
@@ -280,9 +280,72 @@
             </div>
             </div>
     </div>
-    
+	
+	<!--creem el modal per quan fem el onclick de la funció de JS per veure el detall de les ofertes------------------------>	
+
+	<div class="modal fade bd-ofertamodal-modal-lg" id="ofertamodal" tabindex="-1" role="dialog" aria-labelledby="ofertamodalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <h5 class="modal-title" id="ofertamodalLabel">Oferta</h5>
+				  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				  </button>
+				</div>
+				<div class="modal-body">
+						<div class="accordion" id="objetivos">
+								<div class="card">
+								  <div class="card-header" id="headingOne">
+									<h5 class="mb-0">
+									  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+										Objetivos
+									  </button>
+									</h5>
+								</div>
+							  
+								  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#objetivos">
+									<div class="card-body">
+									</div>
+								  </div>
+								</div>
+								<div class="card">
+								  <div class="card-header" id="programa">
+									<h5 class="mb-0">
+									  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+										Programa
+									  </button>
+									</h5>
+								  </div>
+								  <div id="collapse2" class="collapse" aria-labelledby="programa" data-parent="#accordionExample">
+									<div class="card-body">
+									</div>
+								  </div>
+								</div>
+								<div class="card">
+								  <div class="card-header" id="centros">
+									<h5 class="mb-0">
+									  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+										Centros
+									  </button>
+									</h5>
+								  </div>
+								  <div id="collapseThree" class="collapse" aria-labelledby="centros" data-parent="#accordionExample">
+									<div class="card-body">
+									</div>
+								  </div>
+								</div>
+						</div>
+				</div>
+				<div class="modal-footer">
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			</div>
+	 </div>
+
+
         <!-- jQuery first, then Popper.js, then Bootstrap JS && Datatable for Bootstrap 4-->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
@@ -361,14 +424,22 @@
 			
 			//--------------------creem la taula amb les dades del tercer objecte---------------------------
 
+			function cursClick (id){
+
+				xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ id +"/", true);
+				xhrOferta.send(null);
+				
+				$('#ofertamodal').modal('show')
+			}
+
 			xhrOferta.onreadystatechange = function(){
 				if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // comprovem que la connexió estigui establerta i sense errors
 					var oferta = JSON.parse(xhrOferta.responseText) //traduim el que ens arriba de la API
 					var arrayOferta = oferta.records
 					console.log(arrayOferta)
-					arrayOferta.forEach(element => {
+					arrayOferta.forEach(element => { //fem un bucle per 
 						var sumaValorsTaula = "<tr>";
-						sumaValorsTaula += "<td>"+ element.codigoferta+"</td>";
+						sumaValorsTaula += "<td>"+ '<a href="javascript:void(0)" onclick="cursClick('+element.codigoferta+')">'+ element.codigoferta + '</a>'+"</td>";
 						sumaValorsTaula +="<td>" + element.curso + "</td>";
 						sumaValorsTaula += "<td>"+ element.area + "</td>";
 						sumaValorsTaula += "<td>"+ element.centro + "</td>";
@@ -381,9 +452,9 @@
 					tabla = $("#taulaCursos").dataTable({
 				//aqui podem posar totes les opcions que volem modificar, ja sigui el language, columnes, rows, etc
 						language : {
-							url: "lan"		
+							url: "languaje.json"		
 						}
-					})
+					});
  				} 	 
 			}	
 
@@ -391,8 +462,7 @@
 			xhrOferta.send(null);
 		
 
-			//-------------------inicialitzem el DATATABLE i el vinculem al ID de la taula que hem creat-------------------
- 
+			
 
 		</script>
 
