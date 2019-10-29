@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="../css/index.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
 <link rel="icon" href="../img/favicon.ico" type="image/png" >
 <title>Ofertas-eCIFO</title>
 
@@ -138,18 +139,18 @@
                                             <small id="familiaProfesional" class="form-text text-muted">Lista de Familias profesionales</small>
                                         </fieldset>    
                                         <fieldset class="form-group mb-4">
-                                                <label for="exampleFormControlInput1">Cursos</label>
-                                                <select class="form-control"id="exampleFormControlInput1">
+                                                <label for="llistaCursos">Cursos</label>
+                                                <select class="form-control"id="llistaCursos">
                                                     <option>-- Elija una opcion --</option>
                                                 </select>
-                                                <small id="exampleFormControlInput1" class="form-text text-muted">Lista de Cursos</small>
+                                                <small id="llistaCursos" class="form-text text-muted">Lista de Cursos</small>
                                         </fieldset>
                                         <fieldset class="form-group mb-4">
-                                                <label for="exampleFormControlInput1">Centros de Formacion</label>
-                                                <select class="form-control"id="exampleFormControlInput1">
+                                                <label for="centrosFormacion">Centros de Formacion</label>
+                                                <select class="form-control"id="centrosFormacion">
                                                     <option>-- Elija una opcion --</option>
                                                 </select>
-                                                <small id="exampleFormControlInput1" class="form-text text-muted">Lista de Centros de Formacion</small>
+                                                <small id="centrosFormacion" class="form-text text-muted">Lista de Centros de Formacion</small>
                                         </fieldset>
                                         <div class="d-flex justify-content-center">    
                                             <button type="button" class="btn btn-danger mr-2">Borrar</button>
@@ -160,10 +161,23 @@
                                   </div>
                                 </div>
                         </div>
-
-            </div>
-                <div class="col-lg-8">
-
+				 </div>
+                <div class="col-lg-8 text-center">
+					<h3>Cursos</h3>
+					<table id= "taulaCursos"class="display" style="width:100%">
+					  	<thead>
+						  <tr>
+							  <th>Codigo</th>
+							  <th>Curso</th>
+							  <th>Area</th>
+							  <th>Centro</th>
+							  <th>Inicio</th>
+							  <th>Fin</th>
+						  </tr>
+					  	</thead>
+					  	<tbody>
+						</tbody>
+					</table>
                 </div>
 
             <!-------------------------------------------FOOTER------------------------------------------------------->
@@ -245,7 +259,7 @@
 							<span>Copyright © Cifo 2018</span>
 						</div>	 	
 					</div>
-				</footer>
+			</footer>
 		</div>
 	</div>
     <div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -267,31 +281,118 @@
             </div>
     </div>
     
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS && Datatable for Bootstrap 4-->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
 		<script src="../cookies.js"></script>
 		
 		<script>
 		//----------------------------iniciem codi per cridar al AJAX ----------------------------
 		var xhr
-		if(window.XMLHttpRequest){
+		var xhrBis;
+		var xhrOferta;
+		var tabla;
+
+			//tenim 3 objectes diferents, un amb l'ambit profesional,l'altre amb centres i l'altre amb la Oferta Formativa
+
+		if(window.XMLHttpRequest){  
 			xhr = new XMLHttpRequest();
 		}
 		else {
 			xhr = new ActiveXObject("Microsoft.XMLHTTP")
 		}
-		document.getElementById("familiaProfesional").onclick = function(){
+
+		if(window.XMLHttpRequest){
+			xhrBis = new XMLHttpRequest();
+		}
+		else {
+			xhrBis = new ActiveXObject("Microsoft.XMLHTTP")
+		}
+		if(window.XMLHttpRequest){
+			xhrOferta = new XMLHttpRequest();
+		}
+		else {
+			xhrOferta = new ActiveXObject("Microsoft.XMLHTTP")
+		}
+
+		//--------------------------- carreguem totes les àrees dels cursos al primer menú de selecció
 			xhr.onreadystatechange = function(){
-				if(xhr.readyState == 4 && xhr.status == 200){
-					var ofertaFormativa = JSON.parse(xhr.responseText)
-					console.log(ofertaFormativa)
+				if(xhr.readyState == 4 && xhr.status == 200){ // comprovem que la connexió estigui establerta i sense errors
+					var ofertaFormativa = JSON.parse(xhr.responseText) //traduim el que ens arriba de la API
+					var arrayAreas = ofertaFormativa.records
+					console.log(arrayAreas)
+						arrayAreas.forEach(element => { // ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+							document.getElementById("familiaProfesional").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+						});
 				}
 			}
-			xhr.open("GET","http://app.cifo.local/api/public/formacion/areas.php", true);
-			xhr.send();
+			xhr.open("GET","http://app.cifo.local/api/public/formacion/areas/"+'?nocache='+Math.random(), true);
+			xhr.send(null);
+		
+		//------------------------ una vegada seleccionat la àrea que ens interesa, filtrem per curs	
+		document.getElementById("familiaProfesional").onchange = function(){
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4 && xhr.status == 200){ // comprovem que la connexió estigui establerta i sense errors
+					var objCursos = JSON.parse(xhr.responseText)
+					var arrayCursos = objCursos.records
+					arrayCursos.forEach(element => { // ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+						document.getElementById("llistaCursos").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+					});
+				}	
+			}
+			xhr.open("GET","http://app.cifo.local/api/public/formacion/cursos/area/"+this.value +"/", true);
+			xhr.send(null);
 		}
+		//------------------------------cridem el segon objecte per carregar els CIFO's---------------------------------------
+			xhrBis.onreadystatechange = function(){
+				if(xhrBis.readyState == 4 && xhrBis.status == 200){ // comprovem que la connexió estigui establerta i sense errors
+					var objCentros = JSON.parse(xhrBis.responseText)
+					var arrayCentros = objCentros.records
+					arrayCentros.forEach(element => { // ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+						document.getElementById("centrosFormacion").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+					});
+				}
+			}		
+			xhrBis.open("GET","http://app.cifo.local/api/public/formacion/centros/", true);
+			xhrBis.send(null);
+			
+			//--------------------creem la taula amb les dades del tercer objecte---------------------------
+
+			xhrOferta.onreadystatechange = function(){
+				if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // comprovem que la connexió estigui establerta i sense errors
+					var oferta = JSON.parse(xhrOferta.responseText) //traduim el que ens arriba de la API
+					var arrayOferta = oferta.records
+					console.log(arrayOferta)
+					arrayOferta.forEach(element => {
+						var sumaValorsTaula = "<tr>";
+						sumaValorsTaula += "<td>"+ element.codigoferta+"</td>";
+						sumaValorsTaula +="<td>" + element.curso + "</td>";
+						sumaValorsTaula += "<td>"+ element.area + "</td>";
+						sumaValorsTaula += "<td>"+ element.centro + "</td>";
+						sumaValorsTaula += "<td>"+ element.datainicio + "</td>";
+						sumaValorsTaula += "<td>"+ element.datafin +"</td>";
+						sumaValorsTaula += "</tr>"
+					 document.querySelector("#taulaCursos tbody").innerHTML += sumaValorsTaula 
+
+					});
+					tabla = $("#taulaCursos").dataTable({
+				//aqui podem posar totes les opcions que volem modificar, ja sigui el language, columnes, rows, etc
+						language : {
+							url: "lan"		
+						}
+					})
+ 				} 	 
+			}	
+
+			xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/", true);
+			xhrOferta.send(null);
+		
+
+			//-------------------inicialitzem el DATATABLE i el vinculem al ID de la taula que hem creat-------------------
+ 
 
 		</script>
 
