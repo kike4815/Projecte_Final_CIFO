@@ -293,8 +293,40 @@
 				  </button>
 				</div>
 				<div class="modal-body">
+						<form id="celesModal">
+								<div class="form-group row">
+									<label for="textcodi" class="col-sm-2 col-form-label">Código Oferta</label>
+									<div class="col-sm-10 pb-2">
+										<input type="text" class="form-control" id="textcodi" placeholder="" style="background:#8080804a"> 
+									</div>
+									<label for="textcurs" class="col-sm-2 col-form-label">Curso</label>
+									<div class="col-sm-10 pb-2">
+										<input type="text" class="form-control" id="textcurs" placeholder="" style="background:#8080804a">
+									</div>
+									<label for="textfechaIn" class="col-sm-2 col-form-label">Fecha Inicio</label>
+									<div class="col-sm-10 pb-2">
+										<input type="text" class="form-control" id="textfechaIn" placeholder="" style="background:#8080804a">
+									</div>
+									<label for="textFechaOff" class="col-sm-2 col-form-label">Fecha Fin</label>
+									<div class="col-sm-10 pb-2">
+										<input type="text" class="form-control" id="textFechaOff" placeholder="" style="background:#8080804a">
+									</div>
+									<label for="textplazas" class="col-sm-2 col-form-label">Plazas</label>
+									<div class="col-sm-10 pb-2">
+										<input type="text" class="form-control" id="textplazas" placeholder="" style="background:#8080804a">
+									</div>
+									<label for="textProfesor" class="col-sm-2 col-form-label">Profesor</label>
+									<div class="col-sm-10 pb-2">
+										<input type="text" class="form-control" id="textProfesor" placeholder="" style="background:#8080804a">
+									</div>
+									<label for="textDuracion" class="col-sm-2 col-form-label">Duración</label>
+									<div class="col-sm-10 pb-2">
+										<input type="text" class="form-control" id="textDuracion" placeholder="" style="background:#8080804a">
+									</div>
+								</div>
+						</form>
 						<div class="accordion" id="objetivos">
-								<div class="card">
+							<div class="card">
 								  <div class="card-header" id="headingOne">
 									<h5 class="mb-0">
 									  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
@@ -303,41 +335,73 @@
 									</h5>
 								</div>
 							  
-								  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#objetivos">
-									<div class="card-body">
+								<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#objetivos">
+									<div class="card-body" id="bodyObjetivos"></div>
+									<div class="modal-footer" style="border: none;">
+										<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Cerrar
+										</button>
 									</div>
-								  </div>
 								</div>
-								<div class="card">
+							</div>
+
+							<div class="card">
 								  <div class="card-header" id="programa">
 									<h5 class="mb-0">
-									  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+									  <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
 										Programa
 									  </button>
 									</h5>
 								  </div>
-								  <div id="collapse2" class="collapse" aria-labelledby="programa" data-parent="#accordionExample">
-									<div class="card-body">
-									</div>
+								  <div id="collapse2" class="collapse" aria-labelledby="programa" data-parent="#programa">
+									<div class="card-body" id="bodyPrograma"></div>
+									<div class="modal-footer" style="border: none;">
+										<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Cerrar
+										</button>
+									</div>	
 								  </div>
-								</div>
-								<div class="card">
+							</div>
+
+							<div class="card">
 								  <div class="card-header" id="centros">
 									<h5 class="mb-0">
-									  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+									  <button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 										Centros
 									  </button>
 									</h5>
 								  </div>
-								  <div id="collapseThree" class="collapse" aria-labelledby="centros" data-parent="#accordionExample">
+								  <div id="collapseThree" class="collapse" aria-labelledby="centros" data-parent="#centros">
 									<div class="card-body">
+										<div class="row">
+											<div class="col-6" id="imatgeCentros"></div>
+											<div class="col-6">
+													<div class="card-body">
+															<h5 class="card-title" style="color:#00ace6" id="nombreCentre"></h5>
+															<p class="card-text border-top" >
+																<i class="fas fa-phone"></i>
+																<a href="tel:935241700" id="telefonCentre"></a><br />
+																<i class="fas fa-envelope"></i>
+																<a href="mailto:webmaster@example.com" id="mailCentre"></a><br />
+																<i class="fas fa-calendar"></i>
+																<span id="horariCentre"></span><br />
+																<a href="https://goo.gl/maps/6WQaRYaVmLTrj6oJA" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+																<span id="direccioCentre"></span>
+															</p>
+															<p class="card-text border-top">
+																	<i class="fas fa-map-marked-alt"></i>
+																	<span>Acceso</span>
+																	<span id="accesCentre"></span>						     		
+															</p>
+													</div>
+											</div>
+											<a href="#" class="btn btn-primary offset-4">Más Información...</a>
+										</div>
 									</div>
 								  </div>
-								</div>
+							</div>
 						</div>
 				</div>
 				<div class="modal-footer">
-				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 				</div>
 			  </div>
 			</div>
@@ -379,6 +443,40 @@
 		}
 		else {
 			xhrOferta = new ActiveXObject("Microsoft.XMLHTTP")
+		}
+
+		function cursClick (id){ //definim la funció per després fer la crida amb el modal de la oferta
+ 			xhrOferta.onreadystatechange = function(){
+				if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // comprovem que la connexió estigui establerta
+				var ofertaParticular = JSON.parse(xhrOferta.responseText)
+				var arrayOfertaParticular = ofertaParticular.record
+				var objectius = arrayOfertaParticular.curso.objetivos //agafem el valor de l'atribut objetivos, el guardem a una variable i després li enviem al body del accordion de l'objectiu linia 339
+				var programa = arrayOfertaParticular.curso.programa // el mateix amb programa
+				var imatgeCentre = arrayOfertaParticular.centro.media //guardem la imatge a una variable
+				var imatgeGrafica = '<img src="'+ imatgeCentre +'" class="w-100" style="object-fit:cover">' 
+					console.log(arrayOfertaParticular.curso)
+				document.getElementById("bodyObjetivos").innerHTML = objectius	
+				document.getElementById("bodyPrograma").innerHTML = programa
+				document.getElementById("nombreCentre").innerHTML = arrayOfertaParticular.centro.nombre
+				document.getElementById("telefonCentre").innerHTML = arrayOfertaParticular.centro.telefono
+				document.getElementById("mailCentre").innerHTML = arrayOfertaParticular.centro.buzon
+				document.getElementById("horariCentre").innerHTML = arrayOfertaParticular.centro.horario
+				document.getElementById("direccioCentre").innerHTML = arrayOfertaParticular.centro.direccion
+				document.getElementById("accesCentre").innerHTML = arrayOfertaParticular.centro.acceso
+				document.querySelector('#imatgeCentros').innerHTML = imatgeGrafica	
+				document.getElementById("textcodi").placeholder = arrayOfertaParticular.codigoferta	
+				document.getElementById("textcurs").placeholder = arrayOfertaParticular.curso.nombre	
+				document.getElementById("textfechaIn").placeholder = arrayOfertaParticular.datainicio	
+				document.getElementById("textFechaOff").placeholder = arrayOfertaParticular.datafin	
+				document.getElementById("textplazas").placeholder = arrayOfertaParticular.plazas	
+				document.getElementById("textProfesor").placeholder = arrayOfertaParticular.profesor.nombre	
+				document.getElementById("textDuracion").placeholder = arrayOfertaParticular.curso.duracion	
+				}
+			}
+			xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ id +"/", true);
+			xhrOferta.send(null);
+ 
+			$('#ofertamodal').modal('show')
 		}
 
 		//--------------------------- carreguem totes les àrees dels cursos al primer menú de selecció
@@ -424,13 +522,7 @@
 			
 			//--------------------creem la taula amb les dades del tercer objecte---------------------------
 
-			function cursClick (id){
 
-				xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ id +"/", true);
-				xhrOferta.send(null);
-				
-				$('#ofertamodal').modal('show')
-			}
 
 			xhrOferta.onreadystatechange = function(){
 				if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // comprovem que la connexió estigui establerta i sense errors
@@ -439,7 +531,7 @@
 					console.log(arrayOferta)
 					arrayOferta.forEach(element => { //fem un bucle per 
 						var sumaValorsTaula = "<tr>";
-						sumaValorsTaula += "<td>"+ '<a href="javascript:void(0)" onclick="cursClick('+element.codigoferta+')">'+ element.codigoferta + '</a>'+"</td>";
+						sumaValorsTaula += "<td>"+ '<a href="javascript:void(0)" onclick="cursClick('+element.id+')">'+ element.codigoferta + '</a>'+"</td>";
 						sumaValorsTaula +="<td>" + element.curso + "</td>";
 						sumaValorsTaula += "<td>"+ element.area + "</td>";
 						sumaValorsTaula += "<td>"+ element.centro + "</td>";
