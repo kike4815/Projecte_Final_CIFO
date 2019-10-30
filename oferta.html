@@ -154,7 +154,7 @@
                                         </fieldset>
                                         <div class="d-flex justify-content-center">    
                                             <button type="button" class="btn btn-danger mr-2">Borrar</button>
-                                            <button type="button" class="btn btn bg-light" style="color:white">Filtrar</button>
+                                            <button type="button" onclick=buttonfiltrar() class="btn btn bg-light" style="color:white">Filtrar</button>
                                         </div>
                                       </form> 
                                     </div>
@@ -454,7 +454,7 @@
 				var programa = arrayOfertaParticular.curso.programa // el mateix amb programa
 				var imatgeCentre = arrayOfertaParticular.centro.media //guardem la imatge a una variable
 				var imatgeGrafica = '<img src="'+ imatgeCentre +'" class="w-100" style="object-fit:cover">' 
-					console.log(arrayOfertaParticular.curso)
+
 				document.getElementById("bodyObjetivos").innerHTML = objectius	
 				document.getElementById("bodyPrograma").innerHTML = programa
 				document.getElementById("nombreCentre").innerHTML = arrayOfertaParticular.centro.nombre
@@ -528,8 +528,8 @@
 				if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // comprovem que la connexió estigui establerta i sense errors
 					var oferta = JSON.parse(xhrOferta.responseText) //traduim el que ens arriba de la API
 					var arrayOferta = oferta.records
-					console.log(arrayOferta)
-					arrayOferta.forEach(element => { //fem un bucle per 
+					//console.log(arrayOferta)
+					arrayOferta.forEach(element => { //fem un bucle per crear la taula amb tots els elements
 						var sumaValorsTaula = "<tr>";
 						sumaValorsTaula += "<td>"+ '<a href="javascript:void(0)" onclick="cursClick('+element.id+')">'+ element.codigoferta + '</a>'+"</td>";
 						sumaValorsTaula +="<td>" + element.curso + "</td>";
@@ -541,7 +541,7 @@
 					 document.querySelector("#taulaCursos tbody").innerHTML += sumaValorsTaula 
 
 					});
-					tabla = $("#taulaCursos").dataTable({
+					tabla = $("#taulaCursos").DataTable({
 				//aqui podem posar totes les opcions que volem modificar, ja sigui el language, columnes, rows, etc
 						language : {
 							url: "languaje.json"		
@@ -553,8 +553,20 @@
 			xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/", true);
 			xhrOferta.send(null);
 		
+			//----------------------butó filtrar------------------------------
+			function buttonfiltrar(){
+				console.log(tabla)
+				tabla.clear().draw(); 
 
-			
+				if(xhrOferta.readyState == 4 && xhrOferta.status == 200){
+					var oferta = JSON.parse(xhrOferta.responseText) //traduim el que ens arriba de la API
+					var arrayOferta = oferta.records
+					console.log(tabla)
+
+				}
+				// xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ XXXX +"/", true);
+				// xhrOferta.send(null);
+			}
 
 		</script>
 
