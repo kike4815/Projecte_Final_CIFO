@@ -47,7 +47,7 @@
 						<a class="nav-link" href="contacto/index.html">Contacto</a>
 					</li>
 					<li class="nav-item d-md-none d-lg-block">
-						<a class="nav-link" href="index.html">Campus Virtual</a>
+						<a class="nav-link" href="campus/index.html">Campus Virtual</a>
 					</li>
 					<li class="nav-item d-md-none d-lg-block">
 						<a class="nav-link" href="campus/login.html">Entrar</a>
@@ -60,9 +60,9 @@
 						eCampus
 						</a>
 						<div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="index.html">Campus Virtual</a>
-							<a class="dropdown-item" href="login.html">Entrar</a>
-							<a class="dropdown-item" href="#">Registrarse</a>
+							<a class="dropdown-item" href="../campus/index.html">Campus Virtual</a>
+							<a class="dropdown-item" href="../campus/login.html">Entrar</a>
+							<a class="dropdown-item" href="../register.html">Registrarse</a>
 						</div>
 					</li>
 				</ul>
@@ -343,43 +343,49 @@
 						</div>
 						<div class="modal-body">
 								<form id="celesModal">
-										<div class="form-group row">
-											<label for="textisbn" class="col-sm-2 col-form-label">Isbn</label>
-											<div class="col-sm-10 pb-2">
-												<input type="text" class="form-control" id="textisbn" placeholder="" style="background:#8080804a"> 
+										<div class="row">
+
+											<div class="col-sm-8">
+												<div class="form-group row">
+													<label for="textisbn" class="col-sm-2 col-form-label">Isbn</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textisbn" placeholder="" style="background:#8080804a"> 
+													</div>
+													<label for="texttitulo" class="col-sm-2 col-form-label">Título</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="texttitulo" placeholder="" style="background:#8080804a"> 
+													</div>
+													<label for="textsubtitulo" class="col-sm-2 col-form-label">Subtítulo</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textsubtitulo" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="textnumpaginas" class="col-sm-2 col-form-label">Nº Páginas</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textnumpaginas" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="texteditoriales" class="col-sm-2 col-form-label">Editorial</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="texteditoriales" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="textpublicacion" class="col-sm-2 col-form-label">Año publicación</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textpublicacion" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="texttemas" class="col-sm-2 col-form-label">Tema</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="texttemas" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="textsecciones" class="col-sm-2 col-form-label">Sección</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textsecciones" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="textnivel" class="col-sm-2 col-form-label">Nivel</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textnivel" placeholder="" style="background:#8080804a">
+													</div>
+												</div>
 											</div>
-											<label for="texttitulo" class="col-sm-2 col-form-label">Título</label>
-											<div class="col-sm-10 pb-2">
-												<input type="text" class="form-control" id="texttitulo" placeholder="" style="background:#8080804a"> 
-											</div>
-											<label for="textsubtitulo" class="col-sm-2 col-form-label">Subtítulo</label>
-											<div class="col-sm-10 pb-2">
-												<input type="text" class="form-control" id="textsubtitulo" placeholder="" style="background:#8080804a">
-											</div>
-											<label for="textnumpaginas" class="col-sm-2 col-form-label">Nº Páginas</label>
-											<div class="col-sm-10 pb-2">
-												<input type="text" class="form-control" id="textnumpaginas" placeholder="" style="background:#8080804a">
-											</div>
-											<label for="texteditoriales" class="col-sm-2 col-form-label">Editorial</label>
-											<div class="col-sm-10 pb-2">
-												<input type="text" class="form-control" id="texteditoriales" placeholder="" style="background:#8080804a">
-											</div>
-											<label for="textpublicacion" class="col-sm-2 col-form-label">Año publicación</label>
-											<div class="col-sm-10 pb-2">
-												<input type="text" class="form-control" id="textpublicacion" placeholder="" style="background:#8080804a">
-											</div>
-											<label for="texttemas" class="col-sm-2 col-form-label">Tema</label>
-											<div class="col-sm-10 pb-2">
-												<input type="text" class="form-control" id="texttemas" placeholder="" style="background:#8080804a">
-											</div>
-											<label for="textsecciones" class="col-sm-2 col-form-label">Sección</label>
-											<div class="col-sm-10 pb-2">
-												<input type="text" class="form-control" id="textsecciones" placeholder="" style="background:#8080804a">
-											</div>
-											<label for="textnivel" class="col-sm-2 col-form-label">Nivel</label>
-											<div class="col-sm-10 pb-2">
-												<input type="text" class="form-control" id="textnivel" placeholder="" style="background:#8080804a">
-											</div>
+											<div class="col-sm-4" id="ImagenLibro"></div>
 										</div>
 								</form>
 								<div class="accordion" id="objetivos">
@@ -410,17 +416,8 @@
 											</h5>
 										</div>
 										<div id="collapse2" class="collapse" aria-labelledby="autores" data-parent="#autores">
-											<div class="card-body" id="bodyautores">
-												<div class="row">
-
-													<div class="col-lg-2">
-														<img src="" alt="">
-													</div>
-													<div class="col-lg-10">
-														<h5></h5>
-														<h5></h5>
-														<p class="text-dark"></p>
-													</div>
+											<div class="card-body">
+												<div class="row" id="bodyautores">
 
 												</div>
 											</div>
@@ -511,18 +508,32 @@
 						var arrAutores = arrayLibroParticular.autores
 						console.log(arrAutores);
 
+						var ImagenLibro = arrayLibroParticular.cubierta //guardem la imatge a una variable
+						var imgLibro = '<img src="'+ ImagenLibro +'" class="w-100" style="object-fit:cover">' 
 
 
-						// Templates literals Js
+						// Template literal Js Autores
 
+						var autores = arrayLibroParticular.autores
+						// console.log(autores);
+						// debugger;
 
-						
-						var autoresCognom = arrayLibroParticular.autores[0].apellido
-						
-						// Agafem el valor de l'atribut autores, el guardem a una variable i després li enviem al body del accordion de descripción (linia 493)
+						document.getElementById("bodyautores").innerHTML = "";
 
-						// var imatgeCentre = arrayLibroParticular.centro.media //guardem la imatge a una variable
-						// var imatgeGrafica = '<img src="'+ imatgeCentre +'" class="w-100" style="object-fit:cover">' 
+						for(var i=0; i < autores.length; i++) {
+							console.log( autores[i].nombre );
+							var cardautores = `
+								<div class="col-lg-2">
+									<img src="${autores[i].foto}" alt="" style="width: 100%"">
+								</div>
+								<div class="col-lg-10">
+									<h5>${autores[i].nombre}</h5>
+									<h5>${autores[i].apellidos}</h5>
+									<p class="text-dark">${autores[i].biografia}</p>
+								</div>
+							`
+							document.getElementById("bodyautores").innerHTML += cardautores;
+						}
 
 						document.getElementById("textisbn").placeholder = arrayLibroParticular.isbn
 						document.getElementById("texttitulo").placeholder = arrayLibroParticular.titulo	
@@ -534,6 +545,8 @@
 						document.getElementById("textsecciones").placeholder = arrayLibroParticular.seccion.nombre
 						document.getElementById("textnivel").placeholder = arrayLibroParticular.nivel
 						document.getElementById("bodydescripcion").innerHTML = arrayLibroParticular.descripcion
+						document.getElementById("ImagenLibro").innerHTML = imgLibro
+						// document.getElementById("bodyautores").innerHTML = cardautores
 
 						// document.getElementById("autoresImg").innerHTML = arrAutores[0].foto
 						// document.getElementById("autoresNom").innerHTML = arrAutores[0].nombre
@@ -542,6 +555,7 @@
 
 						}
 					}
+					
 					xhr3.open("GET","http://app.cifo.local/api/public/biblioteca/libros/"+ id +"/", true);
 					xhr3.send(null);
 		
