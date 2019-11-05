@@ -44,7 +44,7 @@
 							<a class="nav-link" href="../biblioteca.html">Biblioteca</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Contacto</a>
+							<a class="nav-link" href="index.html">Contacto</a>
 						</li>
 						<li class="nav-item d-md-none d-lg-block">
 							<a class="nav-link" href="../campus/index.html">Campus Virtual</a>
@@ -107,7 +107,7 @@
 				</div>
 		<!-------------------------------------NAVEGACIÓ & BREADCRUMP------------------------------------------->		
 					<div class="col-12 border-top">
-					<h5 style="padding-left:5px">Contacto</h5>
+					<h3 style="padding-left:5px">Contacto</h3>
 						<div class="row mb-3 border">
 							<div class="col-lg-7 col-md-6 col-sm-12 border" style="padding: 1rem!important;">	<!--posem aquest !important ja que al css li tenim tret degut al register carrousel-->
 								<form novalidate>
@@ -214,9 +214,9 @@
 								<span>DIRECTO A</span>
 								<ul>
 									<li><a href="../centros/index.html">Centros</a></li>
-									<li><a href="#">Oferta <br>Formativa</a></li>
-									<li><a href="#">Biblioteca</a></li>
-									<li><a href="contacto/index.html">Contacto</a></li>
+									<li><a href="../oferta.html">Oferta <br>Formativa</a></li>
+									<li><a href="../biblioteca.html">Biblioteca</a></li>
+									<li><a href="index.html">Contacto</a></li>
 									<li><a href="../campus/index.html">eCampus</a></li>
 									<li><a href="../campus/index.html">Campus Virtual</a></li>
 									<li><a href="../campus/login.html">Entrar</a></li>
@@ -253,9 +253,26 @@
 				</div>
 		</div>
 
-<!-- Modal -->
+	<!-- COOKIES
 
-<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	Utilitzem un component predefinit de Bootstrap anomenat Vertically centered.
+	Esborrem la activació del modal des de un button i l'iniciem des del moment 
+	en el que es carrega l'html.
+
+	Bootstrap també ofereix métodes jQuery per aquests casos; en el nostre cas utilitxem:
+	$('#boxRGPD').modal('show');
+
+	Que s'inclou a cookies.js on elaborem la resta de funcions js.
+
+	Em cambiat colors de lletres i botó amb atributs style dintre del própi html,
+	així què tingui total coherencia gráfica coorporativa.
+
+	Linquem "Política de Cookies" a una página on es detallen legalment aquestes.
+	-->
+
+	<!-- Inici del Modal (Vertically Centered) de Bootstrap per les cookies -->
+
+	<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

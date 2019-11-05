@@ -48,7 +48,7 @@
 						<a class="nav-link" href="login.html">Entrar</a>
 					</li>
 					<li class="nav-item d-md-none d-lg-block pr-3">
-						<a class="nav-link" href="#">Registrarse</a>
+						<a class="nav-link" href="register.html">Registrarse</a>
 					</li>
 					<li class="nav-item dropdown d-lg-none d-md-block d-sm-none pr-3">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -57,7 +57,7 @@
 						<div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="index.html">Campus Virtual</a>
 							<a class="dropdown-item" href="login.html">Entrar</a>
-							<a class="dropdown-item" href="#">Registrarse</a>
+							<a class="dropdown-item" href="register.html">Registrarse</a>
 						</div>
 					</li>
 				</ul>
@@ -103,7 +103,7 @@
 			</div>
 	<!-------------------------------------FORMULARI------------------------------------------->		
 				<div class="col-12 border-top">
-				<h5 style="padding-left:5px">Datos de Registro</h5>
+				<h3 style="padding-left:5px">Datos de Registro</h3>
 					<div class="row mb-3 border ml-2">
 						<div class="col-lg-4 col-md-6 col-sm-12 border mr-5">	
 							<form novalidate>
@@ -203,8 +203,8 @@
 							<span>DIRECTO A</span>
 							<ul>
 								<li><a href="../centros/index.html">Centros</a></li>
-								<li><a href="#">Oferta <br>Formativa</a></li>
-								<li><a href="#">Biblioteca</a></li>
+								<li><a href="../oferta.html">Oferta <br>Formativa</a></li>
+								<li><a href="../biblioteca.html">Biblioteca</a></li>
 								<li><a href="../contacto/index.html">Contacto</a></li>
 								<li><a href="index.html">eCampus</a></li>
 								<li><a href="index.html">Campus Virtual</a></li>
@@ -242,9 +242,26 @@
 			</div>
 	</div>
 
-<!-- Modal -->
+	<!-- COOKIES
 
-<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	Utilitzem un component predefinit de Bootstrap anomenat Vertically centered.
+	Esborrem la activació del modal des de un button i l'iniciem des del moment 
+	en el que es carrega l'html.
+
+	Bootstrap també ofereix métodes jQuery per aquests casos; en el nostre cas utilitxem:
+	$('#boxRGPD').modal('show');
+
+	Que s'inclou a cookies.js on elaborem la resta de funcions js.
+
+	Em cambiat colors de lletres i botó amb atributs style dintre del própi html,
+	així què tingui total coherencia gráfica coorporativa.
+
+	Linquem "Política de Cookies" a una página on es detallen legalment aquestes.
+	-->
+
+	<!-- Inici del Modal (Vertically Centered) de Bootstrap per les cookies -->
+
+	<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">

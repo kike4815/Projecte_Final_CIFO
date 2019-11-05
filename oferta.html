@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
-<link rel="icon" href="../img/favicon.ico" type="image/png" >
+<link rel="icon" href="img/favicon.ico" type="image/png" >
 <title>Ofertas-eCIFO</title>
 
 </head>
@@ -22,7 +22,7 @@
 
 			<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
 					<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya">
-						<img  class="d-inline-block" src="../img/soc.png" alt="Smiley face">
+						<img  class="d-inline-block" src="img/soc.png" alt="Smiley face">
 						<span style="line-height:1em;" class=" d-none d-sm-inline-block">Servei d'Ocupació <br /> de Catalunya</span>
 					</a>
 					<button class="navbar-toggler ml-auto d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,13 +40,13 @@
 								<a class="nav-link" href="biblioteca.html">Biblioteca</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="../contacto/index.html">Contacto</a>
+								<a class="nav-link" href="contacto/index.html">Contacto</a>
 							</li>
 							<li class="nav-item d-md-none d-lg-block">
-								<a class="nav-link" href="index.html">Campus Virtual</a>
+								<a class="nav-link" href="campus/index.html">Campus Virtual</a>
 							</li>
 							<li class="nav-item d-md-none d-lg-block">
-								<a class="nav-link" href="login.html">Entrar</a>
+								<a class="nav-link" href="campus/login.html">Entrar</a>
 							</li>
 							<li class="nav-item d-md-none d-lg-block pr-3">
 								<a class="nav-link" href="campus/register.html">Registrarse</a>
@@ -224,14 +224,14 @@
 								<div class="col-lg-2 col-md-3 col-sm-12 text-center">
 									<span>DIRECTO A</span>
 									<ul>
-										<li><a href="../centros/index.html">Centros</a></li>
+										<li><a href="centros/index.html">Centros</a></li>
 										<li><a href="oferta.html">Oferta <br>Formativa</a></li>
 										<li><a href="biblioteca.html">Biblioteca</a></li>
-										<li><a href="../contacto/index.html">Contacto</a></li>
+										<li><a href="contacto/index.html">Contacto</a></li>
 										<li><a href="index.html">eCampus</a></li>
-										<li><a href="index.html">Campus Virtual</a></li>
-										<li><a href="login.html">Entrar</a></li>
-										<li><a href="register.html">Registrarse</a></li>							
+										<li><a href="campus/index.html">Campus Virtual</a></li>
+										<li><a href="campus/login.html">Entrar</a></li>
+										<li><a href="campus/register.html">Registrarse</a></li>
 									</ul>
 								</div>
 								<div class="col-lg-2 col-md-3 col-sm-12 text-center">
@@ -248,10 +248,10 @@
 									<p style="padding:20px"><span>Aviso legal :</span> De acuerdo con el artículo 17.1 de la Ley 19/2014, la © Generalidad de Cataluña permite la reutilización de los contenidos y de los datos siempre que se cite la fuente y la fecha de actualización y que no se desnaturalice la información (artículo 8 de la Ley 37/2007) y también que no se contradiga con una licencia específica.</p>
 										<div class="row justify-content-center">
 											<div class="col-4">
-												<img src="../img/sepelogotip.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
+												<img src="img/sepelogotip.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
 											</div>
 											<div class="col-4">
-												<img src="../img/logotip_Iniciativaocupaciojuvenil_bn.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
+												<img src="img/logotip_Iniciativaocupaciojuvenil_bn.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
 											</div>
 										</div>
 								</div>
@@ -263,7 +263,24 @@
 				</div>
 			</div>
 
-			<!-----------------------creem el modal per l'ús de les cookies-------------------->
+			<!-- COOKIES
+
+			Utilitzem un component predefinit de Bootstrap anomenat Vertically centered.
+			Esborrem la activació del modal des de un button i l'iniciem des del moment 
+			en el que es carrega l'html.
+
+			Bootstrap també ofereix métodes jQuery per aquests casos; en el nostre cas utilitxem:
+			$('#boxRGPD').modal('show');
+
+			Que s'inclou a cookies.js on elaborem la resta de funcions js.
+
+			Em cambiat colors de lletres i botó amb atributs style dintre del própi html,
+			així què tingui total coherencia gráfica coorporativa.
+
+			Linquem "Política de Cookies" a una página on es detallen legalment aquestes.
+			-->
+
+			<!-- Inici del Modal (Vertically Centered) de Bootstrap per les cookies -->
 
 			<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="boxRGPD" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered" role="document">
@@ -417,201 +434,206 @@
 				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 				<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
 				<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-				<script src="../cookies.js"></script>
+				<script src="cookies.js"></script>
 				
 				<script>
-				//----------------------------iniciem codi per cridar al AJAX ----------------------------
-				var xhr
-				var xhrBis;
-				var xhrOferta;
 
-				//----------------------------indiquem a la futura taula que es crearà mitjançant el Datatable-----------------	
+					//--------- Iniciem codi per cridar al AJAX ---------
 
-				var tabla=$('#taulaCursos').DataTable({ // definim els paràmetres del Datatable, el llenguatge, i els noms de les columnes
-					language: {
-						url: "languaje.json"
-					},
-					lengthMenu 	: [ 5, 10, 25, 50, 75, 100 ],
-					pageLength  : 10,
-					columnDefs 	: [
-						{ "data": "id"		, "targets": 0 },
-						{ "data": "nombre"	, "targets": 1 },
-						{ "data": "area"	, "targets": 2 },
-						{ "data": "centro"  , "targets": 3 },
-						{ "data": "infoinici"	, "targets": 4 },
-						{ "data": "infofin"	, "targets": 5 }
+					var xhr
+					var xhrBis;
+					var xhrOferta;
 
-					]
-				});
+					//--------- Indiquem a la futura taula que es crearà mitjançant el Datatable ---------		
 
+					var tabla=$('#taulaCursos').DataTable({ // Definim els paràmetres del Datatable, el llenguatge, i els noms de les columnes
+						language: {
+							url: "datatable-spanish.json"
+						},
+						lengthMenu 	: [ 5, 10, 25, 50, 75, 100 ],
+						pageLength  : 10,
+						columnDefs 	: [
+							{ "data": "id"		, "targets": 0 },
+							{ "data": "nombre"	, "targets": 1 },
+							{ "data": "area"	, "targets": 2 },
+							{ "data": "centro"  , "targets": 3 },
+							{ "data": "infoinici"	, "targets": 4 },
+							{ "data": "infofin"	, "targets": 5 }
 
-					//tenim 3 objectes diferents, un amb l'ambit profesional,l'altre amb centres i l'altre amb la Oferta Formativa
+						]
+					});
 
-				if(window.XMLHttpRequest){  
-					xhr = new XMLHttpRequest();
-				}
-				else {
-					xhr = new ActiveXObject("Microsoft.XMLHTTP")
-				}
+						// Tenim 3 objectes diferents, un amb l'ambit profesional, l'altre amb centres i l'altre amb la Oferta Formativa
 
-				if(window.XMLHttpRequest){
-					xhrBis = new XMLHttpRequest();
-				}
-				else {
-					xhrBis = new ActiveXObject("Microsoft.XMLHTTP")
-				}
-				if(window.XMLHttpRequest){
-					xhrOferta = new XMLHttpRequest();
-				}
-				else {
-					xhrOferta = new ActiveXObject("Microsoft.XMLHTTP")
-				}
-
-				function cursClick (id){ //definim la funció per després fer la crida amb el modal de la oferta
-					xhrOferta.onreadystatechange = function(){
-						if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // comprovem que la connexió estigui establerta
-						var ofertaParticular = JSON.parse(xhrOferta.responseText)
-						var arrayOfertaParticular = ofertaParticular.record
-						var objectius = arrayOfertaParticular.curso.objetivos //agafem el valor de l'atribut objetivos, el guardem a una variable i després li enviem al body del accordion de l'objectiu linia 339
-						var programa = arrayOfertaParticular.curso.programa // el mateix amb programa
-						var imatgeCentre = arrayOfertaParticular.centro.media //guardem la imatge a una variable
-						var imatgeGrafica = '<img src="'+ imatgeCentre +'" class="w-100" style="object-fit:cover">' 
-
-						document.getElementById("bodyObjetivos").innerHTML = objectius	
-						document.getElementById("bodyPrograma").innerHTML = programa
-						document.getElementById("nombreCentre").innerHTML = arrayOfertaParticular.centro.nombre
-						document.getElementById("telefonCentre").innerHTML = arrayOfertaParticular.centro.telefono
-						document.getElementById("mailCentre").innerHTML = arrayOfertaParticular.centro.buzon
-						document.getElementById("horariCentre").innerHTML = arrayOfertaParticular.centro.horario
-						document.getElementById("direccioCentre").innerHTML = arrayOfertaParticular.centro.direccion
-						document.getElementById("accesCentre").innerHTML = arrayOfertaParticular.centro.acceso
-						document.querySelector('#imatgeCentros').innerHTML = imatgeGrafica	
-						document.getElementById("textcodi").placeholder = arrayOfertaParticular.codigoferta	
-						document.getElementById("textcurs").placeholder = arrayOfertaParticular.curso.nombre	
-						document.getElementById("textfechaIn").placeholder = arrayOfertaParticular.datainicio	
-						document.getElementById("textFechaOff").placeholder = arrayOfertaParticular.datafin	
-						document.getElementById("textplazas").placeholder = arrayOfertaParticular.plazas	
-						document.getElementById("textProfesor").placeholder = arrayOfertaParticular.profesor.nombre	
-						document.getElementById("textDuracion").placeholder = arrayOfertaParticular.curso.duracion	
-						}
+					if(window.XMLHttpRequest){  
+						xhr = new XMLHttpRequest();
 					}
-					xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ id +"/", true);
-					xhrOferta.send(null);
-		
-					$('#ofertamodal').modal('show')
-				}
+					else {
+						xhr = new ActiveXObject("Microsoft.XMLHTTP")
+					}
 
-				//--------------------------- carreguem totes les àrees dels cursos al primer menú de selecció
-				xhr.onreadystatechange = function(){
-						if(xhr.readyState == 4 && xhr.status == 200){ // comprovem que la connexió estigui establerta i sense errors
-							var ofertaFormativa = JSON.parse(xhr.responseText) //traduim el que ens arriba de la API
-							var arrayAreas = ofertaFormativa.records
-								arrayAreas.forEach(element => { // ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
-									document.getElementById("familiaProfesional").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
-								});
-						}
+					if(window.XMLHttpRequest){
+						xhrBis = new XMLHttpRequest();
 					}
-					xhr.open("GET","http://app.cifo.local/api/public/formacion/areas/"+'?nocache='+Math.random(), true);
-					xhr.send(null);
-				
-				//------------------------ una vegada seleccionat la àrea que ens interesa, filtrem per curs	
-				document.getElementById("familiaProfesional").onchange = function(){
-						xhr.onreadystatechange = function(){
-							if(xhr.readyState == 4 && xhr.status == 200){ // comprovem que la connexió estigui establerta i sense errors
-								var objCursos = JSON.parse(xhr.responseText)
-								var arrayCursos = objCursos.records
-								console.log(arrayCursos)
-								arrayCursos.forEach(element => { // ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
-									document.getElementById("llistaCursos").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
-								});
-							}	
+					else {
+						xhrBis = new ActiveXObject("Microsoft.XMLHTTP")
 					}
-					xhr.open("GET","http://app.cifo.local/api/public/formacion/cursos/area/"+this.value +"/", true);
-					xhr.send(null);
-				}
-				//------------------------------cridem el segon objecte per carregar els CIFO's---------------------------------------
-				xhrBis.onreadystatechange = function(){
-						if(xhrBis.readyState == 4 && xhrBis.status == 200){ // comprovem que la connexió estigui establerta i sense errors
-							var objCentros = JSON.parse(xhrBis.responseText)
-							var arrayCentros = objCentros.records
-								arrayCentros.forEach(element => { // ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
-									document.getElementById("centrosFormacion").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
-								});
+					if(window.XMLHttpRequest){
+						xhrOferta = new XMLHttpRequest();
+					}
+					else {
+						xhrOferta = new ActiveXObject("Microsoft.XMLHTTP")
+					}
+
+					function cursClick (id){ // Definim la funció per després fer la crida amb el modal de la oferta
+						xhrOferta.onreadystatechange = function(){
+							if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // Comprovem que la connexió estigui establerta
+							var ofertaParticular = JSON.parse(xhrOferta.responseText)
+							var arrayOfertaParticular = ofertaParticular.record
+							var objectius = arrayOfertaParticular.curso.objetivos // Agafem el valor de l'atribut objetivos, el guardem a una variable i després li enviem al body del accordion de l'objectiu linia 481
+							var programa = arrayOfertaParticular.curso.programa // El mateix amb programa
+							var imatgeCentre = arrayOfertaParticular.centro.media // Guardem la imatge a una variable
+							var imatgeGrafica = '<img src="'+ imatgeCentre +'" class="w-100" style="object-fit:cover">' 
+
+							document.getElementById("bodyObjetivos").innerHTML = objectius	
+							document.getElementById("bodyPrograma").innerHTML = programa
+							document.getElementById("nombreCentre").innerHTML = arrayOfertaParticular.centro.nombre
+							document.getElementById("telefonCentre").innerHTML = arrayOfertaParticular.centro.telefono
+							document.getElementById("mailCentre").innerHTML = arrayOfertaParticular.centro.buzon
+							document.getElementById("horariCentre").innerHTML = arrayOfertaParticular.centro.horario
+							document.getElementById("direccioCentre").innerHTML = arrayOfertaParticular.centro.direccion
+							document.getElementById("accesCentre").innerHTML = arrayOfertaParticular.centro.acceso
+							document.querySelector('#imatgeCentros').innerHTML = imatgeGrafica	
+							document.getElementById("textcodi").placeholder = arrayOfertaParticular.codigoferta	
+							document.getElementById("textcurs").placeholder = arrayOfertaParticular.curso.nombre	
+							document.getElementById("textfechaIn").placeholder = arrayOfertaParticular.datainicio	
+							document.getElementById("textFechaOff").placeholder = arrayOfertaParticular.datafin	
+							document.getElementById("textplazas").placeholder = arrayOfertaParticular.plazas	
+							document.getElementById("textProfesor").placeholder = arrayOfertaParticular.profesor.nombre	
+							document.getElementById("textDuracion").placeholder = arrayOfertaParticular.curso.duracion	
+							}
 						}
-				}		
-				xhrBis.open("GET","http://app.cifo.local/api/public/formacion/centros/", true);
-				xhrBis.send(null);
+
+						xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ id +"/", true);
+						xhrOferta.send(null);
+			
+						$('#ofertamodal').modal('show')
+					}
+
+					//--------- Carreguem totes les àrees dels cursos al primer menú de selecció
 					
-					//--------------------creem la taula amb les dades del tercer objecte---------------------------
-
-
-				function ofertasPrint (){ //ho posem tot dins d'aquesta funció per després poder-la reutilitzar 
-					var familiaSelect = document.getElementById("familiaProfesional").value
-					var cursSelect = document.getElementById("llistaCursos").value
-					var cifoSelect = document.getElementById("centrosFormacion").value
-
-					xhrOferta.onreadystatechange = function(){
-						if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // comprovem que la connexió estigui establerta i sense errors
-							var oferta = JSON.parse(xhrOferta.responseText) //traduim el que ens arriba de la API
-							var arrayOferta = oferta.records
-
-								for(var i=0; i< arrayOferta.length; i++){ // aquí afegirem amb el mètode add els valors de l'array anterior
-									tabla.row.add({
-										"id" 	: '<a href="javascript:void(0)" onclick="cursClick('+ arrayOferta[i].id +')">  ('+arrayOferta[i].codigoferta+')</a>',
-										"nombre": arrayOferta[i].curso,
-										"area"	: arrayOferta[i].area,
-										"centro": arrayOferta[i].centro,
-										"infoinici"	: arrayOferta[i].datainicio,
-										"infofin"  : arrayOferta[i].datafin
+					xhr.onreadystatechange = function(){
+							if(xhr.readyState == 4 && xhr.status == 200){ // Comprovem que la connexió estigui establerta i sense errors
+								var ofertaFormativa = JSON.parse(xhr.responseText) // Traduïm el que ens arriba de la API
+								var arrayAreas = ofertaFormativa.records
+									arrayAreas.forEach(element => { // Ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+										document.getElementById("familiaProfesional").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
 									});
-								}
-								tabla.draw();
-						} 	
-					} 	
+							}
+						}
 
-					// aquí procedim a filtrar en funció dels criteris que hem escollit : per familia professional, per familia & curs, per familia & curs & cifo, per cifo, per familia & cifo
-						
-					if ( familiaSelect !="" && cursSelect == "" && cifoSelect == ""){
-						xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/", true);
-						xhrOferta.send(null);
+						xhr.open("GET","http://app.cifo.local/api/public/formacion/areas/"+'?nocache='+Math.random(), true);
+						xhr.send(null);
+					
+					//--------- Una vegada seleccionat la àrea que ens interesa, filtrem per curs
+
+					document.getElementById("familiaProfesional").onchange = function(){
+							xhr.onreadystatechange = function(){
+								if(xhr.readyState == 4 && xhr.status == 200){ // Comprovem que la connexió estigui establerta i sense errors
+									var objCursos = JSON.parse(xhr.responseText)
+									var arrayCursos = objCursos.records
+									console.log(arrayCursos)
+									arrayCursos.forEach(element => { // Ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+										document.getElementById("llistaCursos").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+									});
+								}	
+						}
+
+						xhr.open("GET","http://app.cifo.local/api/public/formacion/cursos/area/"+this.value +"/", true);
+						xhr.send(null);
 					}
-					else if (!familiaSelect =="" && !cursSelect == "" && cifoSelect == ""){
-						xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/"+ "curso/"+ cursSelect + "/", true);
-						xhrOferta.send(null);
-						}
-					else	if (!familiaSelect =="" && !cursSelect == "" && !cifoSelect == ""){
-						xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/"+ "curso/"+ cursSelect + "/"+ "centro/" + cifoSelect + "/", true);
-						xhrOferta.send(null);
-						}
-					else	if (familiaSelect =="" && cursSelect == "" && !cifoSelect == ""){
-						xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "centro/"+ cifoSelect + "/", true);
-						xhrOferta.send(null);
-						}
-					else	if (!familiaSelect =="" && cursSelect == "" && !cifoSelect == ""){
-						xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/" + "centro/" + cifoSelect + "/", true);
-						xhrOferta.send(null);
-					}else{
-						xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/", true);
-						xhrOferta.send(null);
-					}	
 
-				}
+					//--------- Cridem el segon objecte per carregar els CIFOs --------- 
 
-				ofertasPrint();
+					xhrBis.onreadystatechange = function(){
+							if(xhrBis.readyState == 4 && xhrBis.status == 200){ // Comprovem que la connexió estigui establerta i sense errors
+								var objCentros = JSON.parse(xhrBis.responseText)
+								var arrayCentros = objCentros.records
+									arrayCentros.forEach(element => { // Ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+										document.getElementById("centrosFormacion").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+									});
+							}
+					}
 
-					//----------------------butó filtrar------------------------------
-				function buttonfiltrar(){
-						tabla.clear().draw(); 
-						//---------agafem el id de la familia professional i del curs i ho guardem en un valor per després usar-lo per pintar en pantalla
-				
-						ofertasPrint()
+					xhrBis.open("GET","http://app.cifo.local/api/public/formacion/centros/", true);
+					xhrBis.send(null);
+						
+					//--------- Creem la taula amb les dades del tercer objecte ---------
+
+					function ofertasPrint (){ // Ho posem tot dins d'aquesta funció per després poder reutilitzar-la
+						var familiaSelect = document.getElementById("familiaProfesional").value
+						var cursSelect = document.getElementById("llistaCursos").value
+						var cifoSelect = document.getElementById("centrosFormacion").value
+
+						xhrOferta.onreadystatechange = function(){
+							if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // Comprovem que la connexió estigui establerta i sense errors
+								var oferta = JSON.parse(xhrOferta.responseText) // Traduïm el que ens arriba de la API
+								var arrayOferta = oferta.records
+
+									for(var i=0; i< arrayOferta.length; i++){ // Aquí afegirem amb el mètode add els valors de l'array anterior
+										tabla.row.add({
+											"id" 	: '<a href="javascript:void(0)" onclick="cursClick('+ arrayOferta[i].id +')">  ('+arrayOferta[i].codigoferta+')</a>',
+											"nombre": arrayOferta[i].curso,
+											"area"	: arrayOferta[i].area,
+											"centro": arrayOferta[i].centro,
+											"infoinici"	: arrayOferta[i].datainicio,
+											"infofin"  : arrayOferta[i].datafin
+										});
+									}
+									tabla.draw();
+							} 	
+						} 	
+
+						// Aquí procedim a filtrar en funció dels criteris que hem escollit: per familia professional, per familia & curs, per familia & curs & cifo, per cifo, per familia & cifo
+							
+						if ( familiaSelect !="" && cursSelect == "" && cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/", true);
+							xhrOferta.send(null);
+						} else if (!familiaSelect =="" && !cursSelect == "" && cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/"+ "curso/"+ cursSelect + "/", true);
+							xhrOferta.send(null);
+						} else if (!familiaSelect =="" && !cursSelect == "" && !cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/"+ "curso/"+ cursSelect + "/"+ "centro/" + cifoSelect + "/", true);
+							xhrOferta.send(null);
+						} else if (familiaSelect =="" && cursSelect == "" && !cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "centro/"+ cifoSelect + "/", true);
+							xhrOferta.send(null);
+						} else if (!familiaSelect =="" && cursSelect == "" && !cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/" + "centro/" + cifoSelect + "/", true);
+							xhrOferta.send(null);
+						} else {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/", true);
+							xhrOferta.send(null);
+						}	
+
+					}
+
+					ofertasPrint();
+
+					//--------- Botó filtrar --------- 
+					function buttonfiltrar() {
+						
+							tabla.clear().draw(); 
+							//--------- Agafem el id de la familia professional i del curs i ho guardem en un valor per després usar-lo per pintar en pantalla
 					
-				}
-					
-					//----------------creació butó per esborrar els filtres-----------------------------
+							ofertasPrint()
+						
+					}
+						
+					//--------- Creació butó per esborrar els filtres ---------
 
 					function esborrarFiltres (){
-						location.reload(); //recarreguem pàgina i deixem els filtres com eren al inici
+						location.reload(); // Recarreguem pàgina i deixem els filtres com eren al inici
 					}
 
 				</script>
