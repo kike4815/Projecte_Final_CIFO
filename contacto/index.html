@@ -313,12 +313,14 @@
 	
 		function initMap() {
 			// Creamos un objeto mapa y especificamos el elemento DOM donde se va a mostrar.
+			var marker;
 
 			xhrMap.onreadystatechange = function(){
 				if(xhrMap.readyState == 4 && xhrMap.status == 200){ // comprovem que la connexió estigui establerta
 					var marksCentro = JSON.parse(xhrMap.responseText)
 					marksCentroRecords = marksCentro.records
 				
+				//creem el mapa i li indiquem les propietas segons el manual de la API de google
 
 				var map = new google.maps.Map(document.getElementById('mapa'), {
 					center: {lat: 41.402675, lng: 2.181181}, 
@@ -332,14 +334,34 @@
 					draggable: true,
 				});
 				
-					for(i=0; i< marksCentroRecords.length; i++){
-
-						var marker = new google.maps.Marker({ //girona
-						position: { lat: parseFloat(marksCentroRecords[i].lat), lng: parseFloat(marksCentroRecords[i].lng)},
-						draggable: false
+				// creem un template per què aparegui en cada infowindow (popup) i per cada marker de cada CIFO, reutilitzant codi per si varia en el temps i senzillesa
+					marksCentroRecords.forEach((element,index) => {
+						var popup = `
+						<div class="card" style="width:490px">
+							<h1>${element.nombre}<h1>
+								<div class="card-body" style="font-size: 1.5rem;">
+									<img src="${element.media}" class="w-100" style="object-fit:cover;max-height:175px" alt="Smiley face">
+									<i class="fas fa-envelope"></i><span> ${element.direccion}</span><br />
+									<i class="fas fa-phone"></i><a href="tel:935241700"> ${element.telefono}</a><br />
+									<i class="fas fa-calendar"></i><a href="mailto:webmaster@example.com"> ${element.buzon}</a><br />
+									<i class="fas fa-map-marked-alt"></i><span> ${element.horario}</span><br />		
+								</div>
+						</div>			
+							`
+						var informacion = new google.maps.InfoWindow({
+							content : popup
+						});
+						marker = new google.maps.Marker({ 
+							position: { lat: parseFloat(element.lat), lng: parseFloat(element.lng)},
+							label: String.fromCharCode(65+index)
+							//draggable: false
 						});
 						marker.setMap(map);
-					}
+						google.maps.event.addListener(marker,'click', function(){
+							informacion.open(map,this)
+						});
+						
+					});
 				}
 			}
 		}
