@@ -61,7 +61,7 @@ footer ul li a{
 	color: white;
 	opacity: 0.5;
 }
-footer span, p {
+footer span, footer p {
 	color: white;
 }
 footer  p >span {
@@ -90,4 +90,10 @@ a span .fa-circle:before{
 }
 div .col-lg-7 {
 	padding: 0!important;
+}
+footer {
+	margin-top: 20px;
+}
+#accesCentre * {
+	color : black!important;
 }

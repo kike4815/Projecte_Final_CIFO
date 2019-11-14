@@ -17,9 +17,11 @@
 
 </head>
 <body>
+	<!-----------------------------------MENÚ DE NAVEGACIÓ-------------------------------------------------->
+
 	<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
 			<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya">
-				<img  class="d-inline-block" src="../img/soc.jpg" alt="Smiley face">
+				<img  class="d-inline-block" src="../img/soc.png" alt="Smiley face">
 				<span style="line-height:1em;" class=" d-none d-sm-inline-block">Servei d'Ocupació <br /> de Catalunya</span>
 			</a>
 			<button class="navbar-toggler ml-auto d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,10 +33,10 @@
 						<a class="nav-link" href="../centros/index.html">Centros <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Oferta formativa</a>
+						<a class="nav-link" href="../oferta.html">Oferta formativa</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Biblioteca</a>
+						<a class="nav-link" href="../biblioteca.html">Biblioteca</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="../contacto/index.html">Contacto</a>
@@ -46,7 +48,7 @@
 						<a class="nav-link" href="login.html">Entrar</a>
 					</li>
 					<li class="nav-item d-md-none d-lg-block pr-3">
-						<a class="nav-link" href="#">Registrarse</a>
+						<a class="nav-link" href="register.html">Registrarse</a>
 					</li>
 					<li class="nav-item dropdown d-lg-none d-md-block d-sm-none pr-3">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -55,7 +57,7 @@
 						<div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
 							<a class="dropdown-item" href="index.html">Campus Virtual</a>
 							<a class="dropdown-item" href="login.html">Entrar</a>
-							<a class="dropdown-item" href="#">Registrarse</a>
+							<a class="dropdown-item" href="register.html">Registrarse</a>
 						</div>
 					</li>
 				</ul>
@@ -69,7 +71,7 @@
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><i class="fas fa-home" style="color:#00ace6"></i><a href="../index.html">Home</a></li>
 					<li class="breadcrumb-item" aria-current="page"><a href="index.html">Campus Virtual</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Entrar</li>
+					<li class="breadcrumb-item active" aria-current="page">Registrar</li>
 				</ol>
 				</nav>  
 				<div style="top:0px; right:0px" class="position-absolute pt-2 d-xs-none"> <!--com fem desapareixer a partir de 350px?-->	 
@@ -99,29 +101,43 @@
 					</span>
 				</div> 
 			</div>
-	<!-------------------------------------NAVEGACIÓ & BREADCRUMP------------------------------------------->		
+	<!-------------------------------------FORMULARI------------------------------------------->		
 				<div class="col-12 border-top">
-				<h5 style="padding-left:5px">Datos de Registro</h5>
+				<h3 style="padding-left:5px">Datos de Registro</h3>
 					<div class="row mb-3 border ml-2">
 						<div class="col-lg-4 col-md-6 col-sm-12 border mr-5">	
-							<form>
-							<div class="form-group">
-								<label for="inputUserame">NOMBRE <i class="fas fa-asterisk" style="color:red"></i></label>
-								<input type="text" id="inputUserame" class="form-control" placeholder="" required autofocus>
-							</div>
-							<div class="form-group">
-								<label for="inputUserSurname">APELLIDOS <i class="fas fa-asterisk" style="color:red"></i></label>
-								<input type="text" id="inputUserSurname" class="form-control" placeholder="" required autofocus>
-							</div>     
-							<div class="form-group">
-								<label for="exampleInputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
-								<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">						    
-							</div>
-							<div class="form-group form-check">
-								<input type="checkbox" class="form-check-input" id="exampleCheck1">
-								<label class="form-check-label" for="exampleCheck1"><small>Acepto los terminos legales </small><i class="fas fa-asterisk" style="color:red"></i></label>
-							</div>
-							<button type="submit" class="btn btn-primary offset-5 mb-4" style="display: block;">Registrarse</button>
+							<form novalidate>
+								<div class="form-group">
+									<label for="nombre">NOMBRE <i class="fas fa-asterisk" style="color:red"></i></label>
+									<input type="text" id="nombre" class="form-control" placeholder="" required>
+									<div class="valid-feedback">Correcto!</div>
+									<div class="invalid-feedback">Por favor no deje en blanco ni ponga números en el nombre</div>
+								</div>
+								<div class="form-group">
+									<label for="apellido">APELLIDOS <i class="fas fa-asterisk" style="color:red"></i></label>
+									<input type="text" id="apellido" class="form-control" placeholder="" required>
+									<div class="valid-feedback">Correcto!</div>
+									<div class="invalid-feedback">Por favor no deje en blanco ni ponga números en el apellido</div>
+								</div>     
+								<div class="form-group">
+									<label for="mail">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
+									<input type="email" class="form-control" id="mail" aria-describedby="mail" required>
+									<div class="valid-feedback">Correcto!</div>
+									<div class="invalid-feedback">Debe poner un correo válido.</div>					    
+								</div>
+								<div class="form-group">
+									<div class="form-check">
+										<input class="form-check-input " name="condiciones" type="checkbox" value="1" id="registro_condiciones" required >
+										<label class="form-check-label " for="registro_condiciones">Acepto las condiciones del servicio.</label>
+											<div class="invalid-feedback">
+												Se requiere aceptar las condiciones del servicio.
+											</div>
+									</div>
+								</div>
+							
+								<button type="submit" class="btn btn-primary offset-5 mb-4" style="display: block;" id="send_Register">Registrarse</button>
+								<div class="alert alert-success" id="alertaRight" role="alert" style= "display:none">¡Datos Enviados!</div>
+								<div class="alert alert-danger" id="alertaWarning" role="alert" style= "display:none">¡Rellene todos los datos!</div>
 							</form>
 						</div>
 						<!--ATENCIÓ EL CLASS COL DEL BOOTSTRAP PORTA DE FABRICA UN PADDING DE 2, FORÇAR AMB CSS I COMENTAR  -->
@@ -187,8 +203,8 @@
 							<span>DIRECTO A</span>
 							<ul>
 								<li><a href="../centros/index.html">Centros</a></li>
-								<li><a href="#">Oferta <br>Formativa</a></li>
-								<li><a href="#">Biblioteca</a></li>
+								<li><a href="../oferta.html">Oferta <br>Formativa</a></li>
+								<li><a href="../biblioteca.html">Biblioteca</a></li>
 								<li><a href="../contacto/index.html">Contacto</a></li>
 								<li><a href="index.html">eCampus</a></li>
 								<li><a href="index.html">Campus Virtual</a></li>
@@ -226,23 +242,128 @@
 			</div>
 	</div>
 
+	<!-- COOKIES
 
+	Utilitzem un component predefinit de Bootstrap anomenat Vertically centered.
+	Esborrem la activació del modal des de un button i l'iniciem des del moment 
+	en el que es carrega l'html.
 
+	Bootstrap també ofereix métodes jQuery per aquests casos; en el nostre cas utilitxem:
+	$('#boxRGPD').modal('show');
 
+	Que s'inclou a cookies.js on elaborem la resta de funcions js.
 
+	Em cambiat colors de lletres i botó amb atributs style dintre del própi html,
+	així què tingui total coherencia gráfica coorporativa.
 
+	Linquem "Política de Cookies" a una página on es detallen legalment aquestes.
+	-->
 
+	<!-- Inici del Modal (Vertically Centered) de Bootstrap per les cookies -->
 
+	<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle" style="color: #00ace6;">Ús de cookies</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                Fem ús de cookies pròpies i de tercers per proporcionar una millor experiència d'usuari. En seguir navegant entenem que accepta la nostra <a href="#" style="color: #00ace6;">Política de Cookies</a>
+            </div>
+            <div class="modal-footer">
+                <button id="btnRGPD" type="button" class="btn btn-primary" style="background-color: #77B41E;">Estic d'acord</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
-
-
-
-	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="../cookies.js"></script>
+	<script>
+	//------------------------VALIDEM TOTS ELS FORMULARIS CADA VEGADA QUE PERDEM EL FOCUS DELS INPUTS----------------	
+	var totOk = false; //aquesta variable la utilitzarem per fer comprovar al final quan fem el submit si totes les opcions required del form són correctes
+		  //--------------comprovem el nom ---------------
+		document.getElementById("nombre").onblur=function(){
+			console.log(this);
+			this.className=this.className.replace(/(is-valid|is-invalid)/g,'');
+			this.value=this.value.trim();
+			var nombreString=this.value;
+			var nombrePattern=/\D/g;
+					if( !nombrePattern.test(nombreString) || nombreString == "" ){
+						this.className+=" is-invalid ";
+						totOk=false;
+					}else{
+						this.className+=" is-valid ";
+						totOk = true;
+					}
+		}
+
+		document.getElementById("apellido").onblur=function(){
+			console.log(this);
+			this.className=this.className.replace(/(is-valid|is-invalid)/g,'');
+			this.value=this.value.trim();
+			var apellidoString=this.value;
+			var apellidoPattern=/\D/g;
+					if( !apellidoPattern.test(apellidoString) || apellidoString == "" ){
+						this.className+=" is-invalid ";
+						totOk=false;
+					}else{
+						this.className+=" is-valid ";
+						totOk = true;
+					}
+		}
+
+
+			//------------comprovem el mail i veiem si compleix la condició assignada -------------------------------
+		document.getElementById("mail").onblur=function(){
+			this.className=this.className.replace(/(is-valid|is-invalid)/g,''); 
+			var emailString=this.value;
+			var emailpattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+				if( !emailpattern.test(emailString) || emailString == " " ){
+					this.className+=" is-invalid ";
+					totOk=false;
+				}else{
+					this.className+=" is-valid ";
+					totOk = true;
+				}
+		}
+		//--------------aqui comprovem el checkbox si està marcat o no tenint en compte que HA DE SER marcat-----------
+
+		document.getElementById("registro_condiciones").onclick= function(){
+			this.form.condiciones.className = this.form.condiciones.className.replace(/(is-invalid|is-valid)/g,"")
+			if(!this.form.condiciones.checked){
+				this.form.condiciones.className += " is-invalid"
+				totOk = false;
+			}else{
+				this.form.condiciones.className += " is-valid"	
+				totOk=true;
+			}
+
+		}
+		//----------aqui la funció varia ja que l'event funciona quan apretem el botó,anullem el submit i ho substituim per un alert del bootstrap 
+
+		document.getElementById("send_Register").onclick = function (evt){
+			evt.preventDefault();		
+			document.getElementById("alertaRight").style.display="none" 
+			document.getElementById("alertaWarning").style.display="none"
+			var validacio = this.form.querySelectorAll("[class~=is-valid]") // fem un array de tots els elements que continguin la class is-valid i fem una comprovació per veure si compleix tots els requisits
+			var auxiliarValidacio = 4;
+				if (totOk == true && validacio.length == auxiliarValidacio){ 
+					document.getElementById("alertaRight").style.display="block";
+				}  else {
+				document.getElementById("alertaWarning").style.display="block";
+				}	
+			}
+
+</script>	
+
+
+
 </body>
 </html>

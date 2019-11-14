@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
+<link rel="icon" href="img/favicon.ico" type="image/png" >
+
+<!-- Datatable CSS -->
+<!-- <link rel="stylesheet"  href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"/> -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
+
+<title>Ofertas-eCIFO</title>
+
+</head>
+<body>
+	<!-----------------------------------MENÚ DE NAVEGACIÓ-------------------------------------------------->
+
+	<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
+			<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya">
+				<img  class="d-inline-block" src="img/soc.png" alt="Smiley face">
+				<span style="line-height:1em;" class=" d-none d-sm-inline-block">Servei d'Ocupació <br /> de Catalunya</span>
+			</a>
+			<button class="navbar-toggler ml-auto d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+				<ul class="navbar-nav d-flex bg-light pl-2">
+					<li class="nav-item active">
+						<a class="nav-link" href="centros/index.html">Centros <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="oferta.html">Oferta formativa</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="biblioteca.html">Biblioteca</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacto/index.html">Contacto</a>
+					</li>
+					<li class="nav-item d-md-none d-lg-block">
+						<a class="nav-link" href="campus/index.html">Campus Virtual</a>
+					</li>
+					<li class="nav-item d-md-none d-lg-block">
+						<a class="nav-link" href="campus/login.html">Entrar</a>
+					</li>
+					<li class="nav-item d-md-none d-lg-block pr-3">
+						<a class="nav-link" href="campus/register.html">Registrarse</a>
+					</li>
+					<li class="nav-item dropdown d-lg-none d-md-block d-sm-none pr-3">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						eCampus
+						</a>
+						<div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
+							<a class="dropdown-item" href="../campus/index.html">Campus Virtual</a>
+							<a class="dropdown-item" href="../campus/login.html">Entrar</a>
+							<a class="dropdown-item" href="../register.html">Registrarse</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+	</nav>
+<!--------------------------- breadcrump & icones de xarxes socials ---------------------------------->
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 p-0">
+				<nav aria-label="breadcrumb">
+				<ol class="breadcrumb border">
+					<li class="breadcrumb-item"><i class="fas fa-home" style="color:#00ace6"></i><a href="index.html">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
+				</ol>
+				</nav>  
+				<div style="top:0px; right:0px" class="position-absolute pt-2 d-xs-none"> 
+					<span class="fa-stack fa-xs" style="color:blue">
+					<i class="fas fa-circle fa-stack-2x"></i>
+					<a href="https://es-es.facebook.com/cifolavioleta" target="_blank" title="facebook"><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></a>
+					</span>
+					<span class="fa-stack fa-xs" style="color:rgb(0, 174, 255)">
+					<i class="fas fa-circle fa-stack-2x"></i>
+					<a href="https://twitter.com/cifo_barcelona" target="_blank" title="twitter"><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
+					</span>
+					<span class="fa-stack fa-xs" style="color:rgb(245, 84, 84)">
+					<i class="fas fa-circle fa-stack-2x"></i>
+					<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" title="google"><i class="fab fa-google-plus fa-stack-1x fa-inverse"></i></a>
+					</span>
+						<span class="fa-stack fa-xs" style="color:rgb(95, 95, 224)">
+					<i class="fas fa-circle fa-stack-2x"></i>
+					<a href="https://www.linkedin.com/company/cifo-la-violeta/" target="_blank" title="linkedin"><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></a>
+					</span>
+						<span class="fa-stack fa-xs">
+					<i class="fas fa-circle fa-stack-2x"></i>
+					<a href="https://www.instagram.com/cifo_hospitalet/?hl=es" target="_blank" title="instagram"><i class="fab fa-instagram fa-stack-1x fa-inverse"></i></a>
+					</span>
+						<span class="fa-stack fa-xs" style="color:red">
+					<i class="fas fa-circle fa-stack-2x"></i>
+					<a href="https://www.pinterest.es/" target="_blank" title="pinterest"><i class="fab fa-pinterest fa-stack-1x fa-inverse"></i></a>
+					</span>
+				</div> 
+            </div>
+            
+            <div class="col-lg-3  p-2">
+                    <h3>Biblioteca</h3>
+                        <div class="accordion mt-3" id="accordion">
+                                <div class="card mb-2">
+                                  <div class="card-header bg-light" id="headingOne">
+                                    <h2 class="mb-0">
+                                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseBuscar" aria-expanded="false" aria-controls="collapseBuscar" style="color:white"><i class="fas fa-search"></i> Buscar</button>
+                                    </h2>
+                                  </div>
+                              
+                                  <div id="collapseBuscar" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <input type="text" class="form-control" placeholder="Escriba aqui ..." aria-label="Username">
+                                    </div>
+                                  </div>
+                                </div>
+                                
+                                <div class="card">
+                                  <div class="card-header bg-light" id="headingTwo">
+                                    <h2 class="mb-0">
+                                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="color:white"><i class="fas fa-stream"></i>
+                                          Filtrar
+                                      </button>
+                                    </h2>
+                                  </div>
+                                  <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                      <form> 
+                                        <fieldset class="form-group mb-4">
+											<label for="tblSecciones">Sección</label>
+
+											<!-- sección -->
+                                            <select class="form-control" id="tblSecciones">
+                                                <option value="">-- Elija una opcion --</option>
+											</select>
+											<!-- / sección -->
+
+                                            <small id="tbSecciones" class="form-text text-muted">Lista de secciones de la biblioteca</small>
+                                        </fieldset>    
+                                        <fieldset class="form-group mb-4">
+												<label for="tblTemas">Temas</label>
+
+											<!-- temas -->
+                                                <select class="form-control" id="tblTemas">
+                                                    <option value="">-- Elija una opcion --</option>
+												</select>
+											<!-- / temas -->
+
+                                                <small id="tbTemas" class="form-text text-muted">Lista de temas de la biblioteca</small>
+                                        </fieldset>
+                                        <fieldset class="form-group mb-4">
+												<label for="tblEditoriales">Editoriales</label>
+
+											<!-- editoriales -->
+                                                <select class="form-control" id="tblEditoriales">
+                                                    <option value="">-- Elija una opcion --</option>
+												</select>
+											<!-- / editoriales -->
+
+                                                <small id="tbEditoriales" class="form-text text-muted">Lista de temas de la biblioteca</small>
+                                        </fieldset>
+                                        <div class="d-flex justify-content-center">
+
+											<button type="button" onclick=esborrarFiltres() class="btn btn-danger mr-2">Borrar</button>
+											
+											<button type="button" onclick=buttonfiltrar() class="btn btn bg-light" style="color:white">Filtrar</button>
+											
+                                        </div>
+                                      </form> 
+                                    </div>
+                                  </div>
+                                </div>
+                        </div> 
+
+			</div>
+
+                <div class="col-lg-9 p-2">
+					<h3>Libros</h3>
+							<table id="tblLibros" class="table table-striped table-bordered" style="width: 100%">
+								<thead>
+									<tr>
+										<th>Isbn</th>
+										<th>Cubierta</th>
+										<th>Título</th>
+										<th>Editorial</th>
+										<th>Sección</th>
+										<th>Tema</th>
+									</tr>
+								</thead>
+								<tbody></tbody>
+							</table>
+				</div>
+								
+				<!-- ======== div#modalAjax ======== -->
+				<div id="ajaxModal" class="modal" data-backdrop="static" tabindex="-1" role="dialog">
+					<div class="modal-dialog modal-dialog-centered justify-content-center" role="document">
+						<div class="spinner-border text-light">
+							<span class="sr-only">Loading...</span>
+						</div>
+					</div>
+				</div>
+
+            <!-------- FOOTER -------->
+            <footer>
+					<div class="row">
+						<div class="col-lg-12 text-center mb-4">
+							<a href="https://es-es.facebook.com/cifolavioleta" target="_blank" title="facebook">
+								<span class="fa-stack fa-xs ">
+									<i class="fal fa-circle fa-stack-2x "></i>
+									<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+							<a href="https://twitter.com/cifo_barcelona" target="_blank" title="twitter">
+								<span class="fa-stack fa-xs">
+									<i class="fal fa-circle fa-stack-2x"></i>
+									<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>	
+							<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" title="google">
+								<span class="fa-stack fa-xs">
+									<i class="fal fa-circle fa-stack-2x"></i>
+									<i class="fab fa-google-plus fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>	
+							<a href="https://www.linkedin.com/company/cifo-la-violeta/" target="_blank" title="linkedin">
+								<span class="fa-stack fa-xs">
+									<i class="fal fa-circle fa-stack-2x"></i>
+									<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+							<a href="https://www.instagram.com/cifo_hospitalet/?hl=es" target="_blank" title="instagram">
+								<span class="fa-stack fa-xs">
+									<i class="fal fa-circle fa-stack-2x"></i>
+									<i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+							<a href="https://www.pinterest.es/" target="_blank" title="pinterest">
+								<span class="fa-stack fa-xs">
+									<i class="fal fa-circle fa-stack-2x"></i>
+									<i class="fab fa-pinterest fa-stack-1x fa-inverse"></i>
+								</span>
+							</a>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+							<span>DIRECTO A</span>
+							<ul>
+								<li><a href="centros/index.html">Centros</a></li>
+								<li><a href="oferta.html">Oferta <br>Formativa</a></li>
+								<li><a href="biblioteca.html">Biblioteca</a></li>
+								<li><a href="contacto/index.html">Contacto</a></li>
+								<li><a href="index.html">eCampus</a></li>
+								<li><a href="campus/index.html">Campus Virtual</a></li>
+								<li><a href="campus/login.html">Entrar</a></li>
+								<li><a href="campus/register.html">Registrarse</a></li>							
+							</ul>
+						</div>
+						<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+							<span>AYUDA</span>
+							<ul>
+								<li><a href="#">Sobre Gencat</a></li>
+								<li><a href="#">Accessibilitat</a></li>
+								<li><a href="#">Mapa Web</a></li>
+								<li><a href="#">Aviso Legal</a></li>
+							</ul>
+						</div>
+						<div class="col-lg-8 col-md-6 col-sm-12 text-center">
+						<a href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya"><span>SERVEI D'OCUPACIÓ DE CATALUNYA</span></a>	
+							<p style="padding:20px"><span>Aviso legal :</span> De acuerdo con el artículo 17.1 de la Ley 19/2014, la © Generalidad de Cataluña permite la reutilización de los contenidos y de los datos siempre que se cite la fuente y la fecha de actualización y que no se desnaturalice la información (artículo 8 de la Ley 37/2007) y también que no se contradiga con una licencia específica.</p>
+								<div class="row justify-content-center">
+									<div class="col-4">
+										<img src="img/sepelogotip.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
+									</div>
+									<div class="col-4">
+										<img src="img/logotip_Iniciativaocupaciojuvenil_bn.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
+									</div>
+								</div>
+						</div>
+						<div class="col-12 text-center">
+							<span>Copyright © Cifo 2018</span>
+						</div>	 	
+					</div>
+				</footer>
+		</div>
+	</div>
+
+	<!-- COOKIES
+
+	Utilitzem un component predefinit de Bootstrap anomenat Vertically centered.
+	Esborrem la activació del modal des de un button i l'iniciem des del moment 
+	en el que es carrega l'html.
+
+	Bootstrap també ofereix métodes jQuery per aquests casos; en el nostre cas utilitxem:
+	$('#boxRGPD').modal('show');
+
+	Que s'inclou a cookies.js on elaborem la resta de funcions js.
+
+	Em cambiat colors de lletres i botó amb atributs style dintre del própi html,
+	així què tingui total coherencia gráfica coorporativa.
+
+	Linquem "Política de Cookies" a una página on es detallen legalment aquestes.
+	-->
+
+	<!-- Inici del Modal (Vertically Centered) de Bootstrap per les cookies -->
+
+    <div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle" style="color: #00ace6;">Ús de cookies</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    Fem ús de cookies pròpies i de tercers per proporcionar una millor experiència d'usuari. En seguir navegant entenem que accepta la nostra <a href="#" style="color: #00ace6;">Política de Cookies</a>
+                </div>
+                <div class="modal-footer">
+                    <button id="btnRGPD" type="button" class="btn btn-primary" style="background-color: #77B41E;">Estic d'acord</button>
+                </div>
+            </div>
+            </div>
+	</div>
+	
+
+            <!--------------- LIBRO MODAL --------------->
+
+			<div class="modal fade bd-ofertamodal-modal-lg" id="ofertamodal" tabindex="-1" role="dialog" aria-labelledby="libromodalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h5 class="modal-title" id="libromodalLabel">Libro</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						</div>
+						<div class="modal-body">
+								<form id="celesModal">
+										<div class="row">
+
+											<div class="col-sm-8">
+												<div class="form-group row">
+													<label for="textisbn" class="col-sm-2 col-form-label">Isbn</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textisbn" placeholder="" style="background:#8080804a"> 
+													</div>
+													<label for="texttitulo" class="col-sm-2 col-form-label">Título</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="texttitulo" placeholder="" style="background:#8080804a"> 
+													</div>
+													<label for="textsubtitulo" class="col-sm-2 col-form-label">Subtítulo</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textsubtitulo" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="textnumpaginas" class="col-sm-2 col-form-label">Nº Páginas</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textnumpaginas" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="texteditoriales" class="col-sm-2 col-form-label">Editorial</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="texteditoriales" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="textpublicacion" class="col-sm-2 col-form-label">Año publicación</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textpublicacion" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="texttemas" class="col-sm-2 col-form-label">Tema</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="texttemas" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="textsecciones" class="col-sm-2 col-form-label">Sección</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textsecciones" placeholder="" style="background:#8080804a">
+													</div>
+													<label for="textnivel" class="col-sm-2 col-form-label">Nivel</label>
+													<div class="col-sm-10 pb-2">
+														<input type="text" class="form-control" id="textnivel" placeholder="" style="background:#8080804a">
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-4" id="ImagenLibro"></div>
+										</div>
+								</form>
+								<div class="accordion" id="objetivos">
+									<div class="card">
+										<div class="card-header" id="hOne">
+											<h5 class="mb-0">
+											<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseDescripcion" aria-expanded="false" aria-controls="collapseDescripcion">
+												<i class="fas fa-book"></i> Descripción
+											</button>
+											</h5>
+										</div>
+									
+										<div id="collapseDescripcion" class="collapse" aria-labelledby="headingOne" data-parent="#objetivos">
+											<div class="card-body" id="bodydescripcion"></div>
+											<div class="modal-footer" style="border: none;">
+												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseDescripcion" aria-expanded="false" aria-controls="collapseDescripcion">Cerrar
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="card">
+										<div class="card-header" id="autores">
+											<h5 class="mb-0">
+											<button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+												<i class="fas fa-feather-alt"></i> Autores
+											</button>
+											</h5>
+										</div>
+										<div id="collapse2" class="collapse" aria-labelledby="autores" data-parent="#autores">
+											<div class="card-body">
+												<div class="row" id="bodyautores">
+
+												</div>
+											</div>
+											<div class="modal-footer" style="border: none;">
+												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Cerrar
+												</button>
+											</div>	
+										</div>
+									</div>
+
+								</div>
+						</div>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+					</div>
+			</div>
+    
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="cookies.js"></script>
+
+		<!-- Datatable -->
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+		<!-- <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script> -->
+
+		<script>
+
+				//--------- Iniciem codi per cridar al AJAX ---------
+
+				var xhr
+				var xhr2;
+				var xhr3;
+
+				//--------- Indiquem a la futura taula que es crearà mitjançant el Datatable ---------	
+
+				var tabla=$('#tblLibros').DataTable({ 
+					// Definim els paràmetres del Datatable, el llenguatge, i els noms de les columnes
+					language: {
+						url: "datatable-spanish.json"
+					},
+					lengthMenu 	: [ 5, 10, 25, 50, 75, 100 ],
+					pageLength  : 5,
+					columnDefs 	: [
+						{ "data": "isbn"		, "targets": 0 },
+						{ "data": "cubierta"	, "targets": 1 },
+						{ "data": "titulo"		, "targets": 2 },
+						{ "data": "editorial"	, "targets": 3 },
+						{ "data": "seccion"		, "targets": 4 },
+						{ "data": "tema"		, "targets": 5 }
+
+					]
+				});
+
+
+				// Tenim 3 objectes diferents, un amb la Secció, l'altre amb Temes i l'altre amb la Editorial
+
+				if(window.XMLHttpRequest){  
+					xhr = new XMLHttpRequest();
+				} else {
+					xhr = new ActiveXObject("Microsoft.XMLHTTP")
+				}
+
+				if(window.XMLHttpRequest){
+					xhr2 = new XMLHttpRequest();
+				} else {
+					xhr2 = new ActiveXObject("Microsoft.XMLHTTP")
+				}
+
+				if(window.XMLHttpRequest){
+					xhr3 = new XMLHttpRequest();
+				} else {
+					xhr3 = new ActiveXObject("Microsoft.XMLHTTP")
+				}
+
+				// Modal Libro Detall
+
+				function libroClick (id) { // Definim la funció per després fer la crida amb el modal del llibre
+					xhr3.onreadystatechange = function() {
+						if(xhr3.readyState == 4 && xhr3.status == 200) { // Comprovem que la connexió estigui establerta i sense errors
+						var libroParticular = JSON.parse(xhr3.responseText)
+						console.log(libroParticular);
+						var arrayLibroParticular = libroParticular.record
+						var arrAutores = arrayLibroParticular.autores
+						console.log(arrAutores);
+
+						var ImagenLibro = arrayLibroParticular.cubierta //guardem la imatge a una variable
+						var imgLibro = '<img src="'+ ImagenLibro +'" class="w-100" style="object-fit:cover">' 
+
+
+						// Template literal Js Autores
+
+						var autores = arrayLibroParticular.autores
+						// console.log(autores);
+						// debugger;
+
+						document.getElementById("bodyautores").innerHTML = "";
+
+						for(var i=0; i < autores.length; i++) {
+							console.log( autores[i].nombre );
+							var cardautores = `
+								<div class="col-lg-2">
+									<img src="${autores[i].foto}" alt="" style="width: 100%"">
+								</div>
+								<div class="col-lg-10">
+									<h5>${autores[i].nombre}</h5>
+									<h5>${autores[i].apellidos}</h5>
+									<p class="text-dark">${autores[i].biografia}</p>
+								</div>
+							`
+							document.getElementById("bodyautores").innerHTML += cardautores;
+						}
+
+						document.getElementById("textisbn").placeholder = arrayLibroParticular.isbn
+						document.getElementById("texttitulo").placeholder = arrayLibroParticular.titulo	
+						document.getElementById("textsubtitulo").placeholder = arrayLibroParticular.subtitulo
+						document.getElementById("textnumpaginas").placeholder = arrayLibroParticular.numero_paginas
+						document.getElementById("texteditoriales").placeholder = arrayLibroParticular.editorial.nombre
+						document.getElementById("textpublicacion").placeholder = arrayLibroParticular.anio_publicacion
+						document.getElementById("texttemas").placeholder = arrayLibroParticular.tema.nombre
+						document.getElementById("textsecciones").placeholder = arrayLibroParticular.seccion.nombre
+						document.getElementById("textnivel").placeholder = arrayLibroParticular.nivel
+						document.getElementById("bodydescripcion").innerHTML = arrayLibroParticular.descripcion
+						document.getElementById("ImagenLibro").innerHTML = imgLibro
+						// document.getElementById("bodyautores").innerHTML = cardautores
+
+						// document.getElementById("autoresImg").innerHTML = arrAutores[0].foto
+						// document.getElementById("autoresNom").innerHTML = arrAutores[0].nombre
+						// document.getElementById("autoresApe").innerHTML = arrAutores[0].apellidos
+						// document.getElementById("autoresBio").innerHTML = arrAutores[0].biografia
+
+						}
+					}
+					
+					xhr3.open("GET","http://app.cifo.local/api/public/biblioteca/libros/"+ id +"/", true);
+					xhr3.send(null);
+		
+					$('#ofertamodal').modal('show')
+				}
+
+				//--------- Carreguem totes les àrees dels cursos al primer menú de selecció
+
+				xhr.onreadystatechange = function(){
+						if(xhr.readyState == 4 && xhr.status == 200){ // Comprovem que la connexió estigui establerta i sense errors
+							var ofertaFormativa = JSON.parse(xhr.responseText) //traduim el que ens arriba de la API
+							var arrayAreas = ofertaFormativa.records
+								arrayAreas.forEach(element => { // ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+									document.getElementById("tblSecciones").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+								});
+						}
+					}
+					xhr.open("GET","http://app.cifo.local/api/public/biblioteca/secciones/"+'?nocache='+Math.random(), true);
+					xhr.send(null);
+				
+				//--------- Una vegada seleccionat la secció que ens interesa, filtrem per temas
+	
+				document.getElementById("tblSecciones").onchange = function() {
+						xhr.onreadystatechange = function() {
+							if(xhr.readyState == 4 && xhr.status == 200) { // Comprovem que la connexió estigui establerta i sense errors
+								var objLibros = JSON.parse(xhr.responseText)
+								var arrayLibros = objLibros.records
+								console.log(arrayLibros)
+								arrayLibros.forEach(element => { // Ja que tenim un array d'objectes, fem el mètode forEach per insertar tant els id's com a valors com els noms de les seccions al primer desplegable
+									document.getElementById("tblTemas").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+								});
+							}	
+					}
+					xhr.open("GET","http://app.cifo.local/api/public/biblioteca/temas/", true);
+					// xhr.open("GET","http://app.cifo.local/api/public/biblioteca/temas/"+this.value +"/", true);
+					xhr.send(null);
+				}
+				
+				//--------- Cridem el segon objecte per carregar les Editorials
+
+				xhr2.onreadystatechange = function() {
+						if(xhr2.readyState == 4 && xhr2.status == 200) { // Comprovem que la connexió estigui establerta i sense errors
+							var objEditoriales = JSON.parse(xhr2.responseText)
+							var arrayEditoriales = objEditoriales.records
+								arrayEditoriales.forEach(element => { // Ja que tenim un array d'objectes, fem el mètode forEach per insertar tant els id's com a valors com els noms de les seccions al primer desplegable
+									document.getElementById("tblEditoriales").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+								});
+						}
+				}		
+				xhr2.open("GET","http://app.cifo.local/api/public/biblioteca/editoriales/", true);
+				xhr2.send(null);
+					
+				//--------- Creem la taula amb les dades del tercer objecte ---------
+
+				function librosPrint () { // Ho posem tot dins d'aquesta funció per després poder reutilitzar-la 
+					var seccionSelect = document.getElementById("tblSecciones").value
+					var temaSelect = document.getElementById("tblTemas").value
+					var EditorialSelect = document.getElementById("tblEditoriales").value
+
+					xhr3.onreadystatechange = function() {
+						if(xhr3.readyState == 4 && xhr3.status == 200) { // Comprovem que la connexió estigui establerta i sense errors
+							var libro = JSON.parse(xhr3.responseText) // Traduïm el que ens arriba de la API
+							var arrayLibro = libro.records
+
+								for(var i=0; i< arrayLibro.length; i++) { // Aquí afegirem amb el mètode add els valors de l'array anterior
+									tabla.row.add({
+										"isbn" 		: '<a href="javascript:void(0)" onclick="libroClick('+arrayLibro[i].id+')">'+arrayLibro[i].isbn+'</a>',
+										"cubierta"	: '<img src="'+arrayLibro[i].cubierta+'" style="width:50%">',
+										"titulo"	: arrayLibro[i].titulo,
+										"editorial": arrayLibro[i].editorial,
+										"seccion"	: arrayLibro[i].seccion,
+										"tema"  : arrayLibro[i].tema
+									});
+								}
+								tabla.draw();
+						} 	
+					} 	
+
+					// Filtrarem en funció dels criteris que hem escollit: per secció, per secció & tema, per secció & tema & editorial, per editorial, per secció & editorial
+						
+					if ( seccionSelect !="" && temaSelect == "" && EditorialSelect == "") {
+						xhr3.open("GET","http://app.cifo.local/api/public/biblioteca/libros/"+ "seccion/"+ seccionSelect + "/", true);
+						xhr3.send(null);
+					} else if (!seccionSelect =="" && !temaSelect == "" && EditorialSelect == "") {
+						xhr3.open("GET","http://app.cifo.local/api/public/biblioteca/libros/"+ "seccion/"+ seccionSelect + "/"+ "tema/"+ temaSelect + "/", true);
+						xhr3.send(null);
+					} else if (!seccionSelect =="" && !temaSelect == "" && !EditorialSelect == "") {
+						xhr3.open("GET","http://app.cifo.local/api/public/biblioteca/libros/"+ "seccion/"+ seccionSelect + "/"+ "tema/"+ temaSelect + "/"+ "centro/" + EditorialSelect + "/", true);
+						xhr3.send(null);
+					} else if (seccionSelect =="" && temaSelect == "" && !EditorialSelect == "") {
+						xhr3.open("GET","http://app.cifo.local/api/public/biblioteca/libros/"+ "editorial/"+ EditorialSelect + "/", true);
+						xhr3.send(null);
+					} else if (!seccionSelect =="" && temaSelect == "" && !EditorialSelect == "") {
+						xhr3.open("GET","http://app.cifo.local/api/public/biblioteca/libros/"+ "seccion/"+ seccionSelect + "/" + "editorial/" + EditorialSelect + "/", true);
+						xhr3.send(null);
+					} else {
+						xhr3.open("GET","http://app.cifo.local/api/public/biblioteca/libros/", true);
+						xhr3.send(null);
+					}	
+
+				}
+
+				librosPrint();
+
+				//--------- Botó filtrar ---------
+
+				function buttonfiltrar(){
+					tabla.clear().draw(); 
+					//--------- Agafem el id de la secció i del tema i ho guardem en un valor per després usar-ho per pintar en pantalla
+				
+					librosPrint()
+					
+				}
+					
+				//--------- Creació del botó per esborrar els filtres ---------
+
+				function esborrarFiltres (){
+					location.reload(); // Recarreguem pàgina i deixem els filtres com estaven inicialment
+				}
+
+		</script>
+
+</body>
+</html>    

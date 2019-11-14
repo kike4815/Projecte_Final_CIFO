@@ -17,11 +17,16 @@
         
 <title>Contacto-eCIFO</title>
 <!-- <script type="text/javascript" src="//maps.google.com/maps/api/js"></script> -->
+
+<!--================reCAPTCHA v3 link ===================-->
+<!-- Llibreria proporcionada per Google per a fer-hi us d'aquest sistema-->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 </head>
 	<body onload="initMap()">
 		<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
 				<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya">
-					<img  class="d-inline-block" src="../img/soc.jpg" alt="Smiley face">
+					<img  class="d-inline-block" src="../img/soc.png" alt="Smiley face">
 					<span style="line-height:1em;" class=" d-none d-sm-inline-block">Servei d'Ocupació <br /> de Catalunya</span>
 				</a>
 				<button class="navbar-toggler ml-auto d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,13 +38,13 @@
 							<a class="nav-link" href="../centros/index.html">Centros <span class="sr-only">(current)</span></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Oferta formativa</a>
+							<a class="nav-link" href="../oferta.html">Oferta formativa</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Biblioteca</a>
+							<a class="nav-link" href="../biblioteca.html">Biblioteca</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Contacto</a>
+							<a class="nav-link" href="index.html">Contacto</a>
 						</li>
 						<li class="nav-item d-md-none d-lg-block">
 							<a class="nav-link" href="../campus/index.html">Campus Virtual</a>
@@ -102,48 +107,52 @@
 				</div>
 		<!-------------------------------------NAVEGACIÓ & BREADCRUMP------------------------------------------->		
 					<div class="col-12 border-top">
-					<h5 style="padding-left:5px">Contacto</h5>
+					<h3 style="padding-left:5px">Contacto</h3>
 						<div class="row mb-3 border">
 							<div class="col-lg-7 col-md-6 col-sm-12 border" style="padding: 1rem!important;">	<!--posem aquest !important ja que al css li tenim tret degut al register carrousel-->
-							  <form class="needs-validation" novalidate>
-								<div class="form-row">  
-									<div class="col-md-12 mb-3">
-											<label for="inputUserame">NOMBRE COMPLETO <i class="fas fa-asterisk" style="color:red"></i></label>
-											<input type="text" class="form-control" id="inputUserame" placeholder="Nombre y Apellidos" value="" required>
-											<div class="valid-feedback">
-											  ¡Correcto!
-											</div>
-											<div class="invalid-feedback">
-											  Debes poner Nombre y Apellidos
-											</div>
+								<form novalidate>
+								<div class="form-group">
+									<label for="inputUserame">NOMBRE COMPLETO <i class="fas fa-asterisk" style="color:red"></i></label>
+									<input type="text" id="inputUserame" class="form-control" placeholder="" required >
+									<div class="valid-feedback">Correcto!</div>
+									<div class="invalid-feedback">Por favor no deje en blanco ni ponga números en el nombre</div>
+								</div>
+								<div class="form-group">
+									<label for="inputUserphone">NUMERO DE TELÉFONO </label>
+									<input type="tel" id="inputUserphone" class="form-control" placeholder="">
+								</div>     
+								<div class="form-group">
+									<label for="InputEmail1">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
+									<input type="email" class="form-control" id="InputEmail1" aria-describedby="InputEmail1" required>	
+									<div class="valid-feedback">
+									Correcto!
 									</div>
-									<div class="col-md-12 mb-3">
-										<label for="inputUserphone">TELÉFONO  </label>
-										<input type="tel" id="inputUserphone" class="form-control" placeholder="">
-									</div>     
-									<div class="col-md-12 mb-3">
-										<label for="inputemail">DIRECCIÓN DE CORREO <i class="fas fa-asterisk" style="color:red"></i></label>
-										<input type="text" class = "form-control" id = "inputemail" placeholder = "name@example.com" value="" required>
+									<div class="invalid-feedback">
+									Debe poner un correo válido.
+									</div>					    
+								</div>
+								<div class="form-group">
+										<label for="mensajeDeTexto">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
+										<textarea class="form-control" id="mensajeDeTexto" rows="6"></textarea>
 										<div class="valid-feedback">
-										  ¡Correcto!
+												Correcto!
 										</div>
 										<div class="invalid-feedback">
-										  Debes poner un email correcto
+												Por favor introduzca un comentario y con una longitud máxima de 50 palabras
 										</div>
-									</div>	
-								</div>	
-								<div class="form-group">
-										<label for="exampleFormControlTextarea1">MENSAJE <i class="fas fa-asterisk" style="color:red"></i></label>
-										<textarea class="form-control" id="exampleFormControlTextarea1" rows="6" required></textarea>
 								</div>
 								<div class="input-group mb-3">
-									<div class="input-group-prepend ">
-										<button class="btn btn-outline-secondary bg-light" style="color:white" type="button" id="button-refresh"><i class="fas fa-sync-alt" style="color:white"></i> Refrescar</button>
-									</div>
-									<input type="text" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+							<!--================reCAPTCHA v3===================-->
+								<!-- S'ha registrat la web en l'administració de reCaptcha i s'ha optes una clau vinculada en el comte de Google (dominio:localohst; 127.0.0.1)-->
+
+									<div class="g-recaptcha" data-sitekey="6LcVE78UAAAAALIkZPE9EtN2_nr-6w8hafV1stTp">
+									</div>	
+								<!--================reCAPTCHA v3===================-->
 								</div>
-								<button type="submit" class="btn btn-primary offset-5 mt-4 mb-4" id = "btnMessage" style = "display: block;">Enviar Mensaje</button>
-							  </form>
+								<button type="submit" id="enviar" class="btn btn-primary offset-5 mt-4 mb-4" style="display: block;">Enviar Mensaje</button>
+								<div class="alert alert-success" id="alertaRight" role="alert" style= "display:none">¡Datos Enviados!</div>
+								<div class="alert alert-danger" id="alertaWarning" role="alert" style= "display:none">¡Rellene todos los datos!</div>
+								</form>
 							</div>
 							<script>
 							//------------------------NOM I COGNOMS COMPROVACIÓ---------------------------------		
@@ -220,9 +229,9 @@
 								<span>DIRECTO A</span>
 								<ul>
 									<li><a href="../centros/index.html">Centros</a></li>
-									<li><a href="#">Oferta <br>Formativa</a></li>
-									<li><a href="#">Biblioteca</a></li>
-									<li><a href="contacto/index.html">Contacto</a></li>
+									<li><a href="../oferta.html">Oferta <br>Formativa</a></li>
+									<li><a href="../biblioteca.html">Biblioteca</a></li>
+									<li><a href="index.html">Contacto</a></li>
 									<li><a href="../campus/index.html">eCampus</a></li>
 									<li><a href="../campus/index.html">Campus Virtual</a></li>
 									<li><a href="../campus/login.html">Entrar</a></li>
@@ -259,72 +268,188 @@
 				</div>
 		</div>
 
+	<!-- COOKIES
+
+	Utilitzem un component predefinit de Bootstrap anomenat Vertically centered.
+	Esborrem la activació del modal des de un button i l'iniciem des del moment 
+	en el que es carrega l'html.
+
+	Bootstrap també ofereix métodes jQuery per aquests casos; en el nostre cas utilitxem:
+	$('#boxRGPD').modal('show');
+
+	Que s'inclou a cookies.js on elaborem la resta de funcions js.
+
+	Em cambiat colors de lletres i botó amb atributs style dintre del própi html,
+	així què tingui total coherencia gráfica coorporativa.
+
+	Linquem "Política de Cookies" a una página on es detallen legalment aquestes.
+	-->
+
+	<!-- Inici del Modal (Vertically Centered) de Bootstrap per les cookies -->
+
+	<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle" style="color: #00ace6;">Ús de cookies</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                Fem ús de cookies pròpies i de tercers per proporcionar una millor experiència d'usuari. En seguir navegant entenem que accepta la nostra <a href="#" style="color: #00ace6;">Política de Cookies</a>
+            </div>
+            <div class="modal-footer">
+                <button id="btnRGPD" type="button" class="btn btn-primary" style="background-color: #77B41E;">Estic d'acord</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../cookies.js"></script>
+
 	<!-- Script per el mapa de google maps -->
 		<script>
-			function initMap() {
+			var xhrMap;
+
+			if(window.XMLHttpRequest){  
+					xhrMap = new XMLHttpRequest();
+				}
+				else {
+					xhrMap = new ActiveXObject("Microsoft.XMLHTTP")
+				}
+
+
+	
+		function initMap() {
 			// Creamos un objeto mapa y especificamos el elemento DOM donde se va a mostrar.
-			var map = new google.maps.Map(document.getElementById('mapa'), {
-			center: {lat: 41.402675, lng: 2.181181}, 
-			scrollwheel: false,
-			zoom: 8,
-			zoomControl: true,
-			rotateControl : true,
-			mapTypeControl: true,
-			streetViewControl: false,
-			navigationControl: true,
-			draggable: true,
-			});
-			// Creem d8 marcadors.
-			var marker1 = new google.maps.Marker({ //la violeta
-			position: {lat: 41.4168484, lng: 2.1314468},
-			draggable: false
-			});
-			var marker2 = new google.maps.Marker({ //hospitalet
-			position: {lat: 41.359884, lng: 2.114171},
-			draggable: false
-			});
-			var marker3 = new google.maps.Marker({ //santa COLOMA
-			position: { lat:41.464582, lng:2.208681},
-			draggable: false
-			});
-			var marker4 = new google.maps.Marker({//sant feliu
-			position: { lat:41.386115, lng :2.041346},
-			draggable: false
-			});
-			var marker5 = new google.maps.Marker({ //girona
-			position: { lat:42.322059, lng:2.341132},
-			draggable: false
-			});
-			var marker6 = new google.maps.Marker({//lleida
-			position: { lat:41.624220, lng : 0.611538},
-			draggable: false
-			});
-			var marker7 = new google.maps.Marker({ //tarragona
-			position: { lat:41.126026, lng:1.280642},
-			draggable: false
-			});
-			var marker8 = new google.maps.Marker({//terrassa
-			position: { lat:41.555383, lng : 2.058496},
-			draggable: false
-			});
-			// Le asignamos el mapa a los marcadores.
-			marker1.setMap(map);
-			marker2.setMap(map);
-			marker3.setMap(map);
-			marker4.setMap(map);
-			marker5.setMap(map);
-			marker6.setMap(map);
-			marker7.setMap(map);
-			marker8.setMap(map);
+			var marker;
+
+			xhrMap.onreadystatechange = function(){
+				if(xhrMap.readyState == 4 && xhrMap.status == 200){ // comprovem que la connexió estigui establerta
+					var marksCentro = JSON.parse(xhrMap.responseText)
+					marksCentroRecords = marksCentro.records
+				
+				//creem el mapa i li indiquem les propietas segons el manual de la API de google
+
+				var map = new google.maps.Map(document.getElementById('mapa'), {
+					center: {lat: 41.402675, lng: 2.181181}, 
+					scrollwheel: false,
+					zoom: 8,
+					zoomControl: true,
+					rotateControl : true,
+					mapTypeControl: true,
+					streetViewControl: false,
+					navigationControl: true,
+					draggable: true,
+				});
+				
+				// creem un template per què aparegui en cada infowindow (popup) i per cada marker de cada CIFO, reutilitzant codi per si varia en el temps i senzillesa
+					marksCentroRecords.forEach((element,index) => {
+						var popup = `
+						<div class="card" style="width:490px">
+							<h1>${element.nombre}<h1>
+								<div class="card-body" style="font-size: 1.5rem;">
+									<img src="${element.media}" class="w-100" style="object-fit:cover;max-height:175px" alt="Smiley face">
+									<i class="fas fa-envelope"></i><span> ${element.direccion}</span><br />
+									<i class="fas fa-phone"></i><a href="tel:935241700"> ${element.telefono}</a><br />
+									<i class="fas fa-calendar"></i><a href="mailto:webmaster@example.com"> ${element.buzon}</a><br />
+									<i class="fas fa-map-marked-alt"></i><span> ${element.horario}</span><br />		
+								</div>
+						</div>			
+							`
+						var informacion = new google.maps.InfoWindow({
+							content : popup
+						});
+						marker = new google.maps.Marker({ 
+							position: { lat: parseFloat(element.lat), lng: parseFloat(element.lng)},
+							label: String.fromCharCode(65+index)
+							//draggable: false
+						});
+						marker.setMap(map);
+						google.maps.event.addListener(marker,'click', function(){
+							informacion.open(map,this)
+						});
+						
+					});
+				}
 			}
-		</script>
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-		<script
-			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		}
+		xhrMap.open("GET","http://app.cifo.local/api/public/formacion/centros/", true);
+		xhrMap.send(null);
+
+
+		
+ 		</script>
+			
+		<script>
+
+		//------------------------VALIDEM TOTS ELS FORMULARIS CADA VEGADA QUE PERDEM EL FOCUS DELS INPUTS----------------	
+			  var totOk = false; //aquesta variable la utilitzarem per fer comprovar al final quan fem el submit si totes les opcions required del form són correctes
+					//--------------comprovem el nom ---------------
+			document.getElementById("inputUserame").onblur=function(){
+				console.log(this);
+				this.className=this.className.replace(/(is-valid|is-invalid)/g,'');
+				this.value=this.value.trim();
+				var nombreString=this.value;
+				var nombrePattern=/\D/g;
+						if( !nombrePattern.test(nombreString) || nombreString == "" ){
+							this.className+=" is-invalid ";
+							totOk=false;
+						}else{
+							this.className+=" is-valid ";
+							totOk = true;
+						}
+			}
+				//------------comprovem el mail i veiem si compleix la condició assignada -------------------------------
+			document.getElementById("InputEmail1").onblur=function(){
+				this.className=this.className.replace(/(is-valid|is-invalid)/g,''); 
+				var emailString=this.value;
+				var emailpattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+					if( !emailpattern.test(emailString) || emailString == " " ){
+						this.className+=" is-invalid ";
+						totOk=false;
+					}else{
+						this.className+=" is-valid ";
+						totOk = true;
+					}
+			}
+			//----------- el missatge de text hem posat una validació de mínim una paraula i maxima 50 perquè no quedi en blanc
+			document.getElementById("mensajeDeTexto").onblur=function(){  
+				this.className=this.className.replace(/(is-valid|is-invalid)/g,'');
+				var comentariosString=this.value;
+				var comentariosMax = 50;
+				var comentariosPattern=/(\<|\>)/;
+					if( comentariosPattern.test(comentariosString) || comentariosString == "" || comentariosString.length > comentariosMax ){
+						this.className+=" is-invalid ";
+						totOk=false;
+					}else{
+						this.className+=" is-valid ";
+						totOk = true;
+					}
+		   }
+
+		   //----------aqui la funció varia ja que l'event funciona quan apretem el botó,anullem el submit i ho substituim per un alert del bootstrap 
+
+		   document.getElementById("enviar").onclick = function (evt){
+			evt.preventDefault();
+			document.getElementById("alertaRight").style.display="none" //COM MILLORAR AIXÒ?
+			document.getElementById("alertaWarning").style.display="none"
+			var validacio = this.form.querySelectorAll("[class~=is-valid]") // fem un array de tots els elements que continguin la class is-valid i fem una comprovació per veure si compleix tots els requisits
+			var auxiliarValidacio = 3;
+				if (totOk == true && validacio.length == auxiliarValidacio){ 
+					document.getElementById("alertaRight").style.display="block";
+			}  else {
+				document.getElementById("alertaWarning").style.display="block";
+			}
+		}
+
+		</script>	
 			
 	</body>
 </html>

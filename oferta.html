@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/v4-shims.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"/>
+<link rel="icon" href="img/favicon.ico" type="image/png" >
+<title>Ofertas-eCIFO</title>
+
+</head>
+		<body>
+			<!-----------------------------------MENÚ DE NAVEGACIÓ-------------------------------------------------->
+
+			<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light p-0 m-0">
+					<a style="line-height: 0px;"  class="navbar-brand p-0 m-0" href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya">
+						<img  class="d-inline-block" src="img/soc.png" alt="Smiley face">
+						<span style="line-height:1em;" class=" d-none d-sm-inline-block">Servei d'Ocupació <br /> de Catalunya</span>
+					</a>
+					<button class="navbar-toggler ml-auto d-md-none d-lg-none d-sm-block mr-4" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+						<ul class="navbar-nav d-flex bg-light pl-2">
+							<li class="nav-item active">
+								<a class="nav-link" href="../centros/index.html">Centros <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="oferta.html">Oferta formativa</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="biblioteca.html">Biblioteca</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="contacto/index.html">Contacto</a>
+							</li>
+							<li class="nav-item d-md-none d-lg-block">
+								<a class="nav-link" href="campus/index.html">Campus Virtual</a>
+							</li>
+							<li class="nav-item d-md-none d-lg-block">
+								<a class="nav-link" href="campus/login.html">Entrar</a>
+							</li>
+							<li class="nav-item d-md-none d-lg-block pr-3">
+								<a class="nav-link" href="campus/register.html">Registrarse</a>
+							</li>
+							<li class="nav-item dropdown d-lg-none d-md-block d-sm-none pr-3">
+								<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								eCampus
+								</a>
+								<div class="dropdown-menu bg-white" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" href="index.html">Campus Virtual</a>
+									<a class="dropdown-item" href="login.html">Entrar</a>
+									<a class="dropdown-item" href="/campus/register.html">Registrarse</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+			</nav>
+		<!--------------------------- breadcrump & icones de xarxes socials ---------------------------------->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-12 p-0">
+						<nav aria-label="breadcrumb">
+						<ol class="breadcrumb border">
+							<li class="breadcrumb-item"><i class="fas fa-home" style="color:#00ace6"></i><a href="../index.html">Home</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Oferta Formativa</li>
+						</ol>
+						</nav>  
+						<div style="top:0px; right:0px" class="position-absolute pt-2 d-xs-none"> 
+							<span class="fa-stack fa-xs" style="color:blue">
+							<i class="fas fa-circle fa-stack-2x"></i>
+							<a href="https://es-es.facebook.com/cifolavioleta" target="_blank" title="facebook"><i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i></a>
+							</span>
+							<span class="fa-stack fa-xs" style="color:rgb(0, 174, 255)">
+							<i class="fas fa-circle fa-stack-2x"></i>
+							<a href="https://twitter.com/cifo_barcelona" target="_blank" title="twitter"><i class="fab fa-twitter fa-stack-1x fa-inverse"></i></a>
+							</span>
+							<span class="fa-stack fa-xs" style="color:rgb(245, 84, 84)">
+							<i class="fas fa-circle fa-stack-2x"></i>
+							<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" title="google"><i class="fab fa-google-plus fa-stack-1x fa-inverse"></i></a>
+							</span>
+								<span class="fa-stack fa-xs" style="color:rgb(95, 95, 224)">
+							<i class="fas fa-circle fa-stack-2x"></i>
+							<a href="https://www.linkedin.com/company/cifo-la-violeta/" target="_blank" title="linkedin"><i class="fab fa-linkedin fa-stack-1x fa-inverse"></i></a>
+							</span>
+								<span class="fa-stack fa-xs">
+							<i class="fas fa-circle fa-stack-2x"></i>
+							<a href="https://www.instagram.com/cifo_hospitalet/?hl=es" target="_blank" title="instagram"><i class="fab fa-instagram fa-stack-1x fa-inverse"></i></a>
+							</span>
+								<span class="fa-stack fa-xs" style="color:red">
+							<i class="fas fa-circle fa-stack-2x"></i>
+							<a href="https://www.pinterest.es/" target="_blank" title="pinterest"><i class="fab fa-pinterest fa-stack-1x fa-inverse"></i></a>
+							</span>
+						</div> 
+					</div>
+					
+						<div class="col-lg-3  p-2">
+							<!----------------------creació dels selectors per buscar i filtrar les ofertes------------------>
+							<h3>Oferta Formativa</h3>
+								<div class="accordion mt-3" id="accordion">
+										<div class="card mb-2">
+											<div class="card-header bg-light" id="headingOne">
+												<h2 class="mb-0">
+												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseuno" aria-expanded="false" aria-controls="col·lapseOne" style="color:white"><i class="fas fa-search"></i> Buscar</button>
+												</h2>
+											</div>
+										
+											<div id="col·lapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+												<div class="card-body">
+													<input type="text" class="form-control" placeholder="Escriba aqui ..." aria-label="Username" aria-describedby="headingOne">
+												</div>
+											</div>
+										</div>
+										
+										<div class="card">
+											<div class="card-header bg-light" id="headingTwo">
+												<h2 class="mb-0">
+												<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="color:white"><i class="fas fa-stream"></i>
+													Filtrar
+												</button>
+												</h2>
+											</div>
+										<div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordion">
+											<div class="card-body">
+											<form> 
+												<fieldset class="form-group mb-4">
+													<label for="familiaProfesional">Familia Profesional</label>
+													<select class="form-control" id="familiaProfesional">
+														<option value="">-- Elija una opcion --</option> 
+													</select>
+													<small id="familiaProfesional1" class="form-text text-muted">Lista de Familias profesionales</small>
+												</fieldset>    
+												<fieldset class="form-group mb-4">
+														<label for="llistaCursos">Cursos</label>
+														<select class="form-control" id="llistaCursos">
+															<option value="">-- Elija una opcion --</option>
+														</select>
+														<small id="llistaCursos1" class="form-text text-muted">Lista de Cursos</small>
+												</fieldset>
+												<fieldset class="form-group mb-4">
+														<label for="centrosFormacion">Centros de Formacion</label>
+														<select class="form-control" id="centrosFormacion">
+															<option value="">-- Elija una opcion --</option>
+														</select>
+														<small id="centrosFormacion1" class="form-text text-muted">Lista de Centros de Formacion</small>
+												</fieldset>
+												<div class="d-flex justify-content-center">    
+													<button type="button" onclick=esborrarFiltres() class="btn btn-danger mr-2">Borrar</button>
+													<button type="button" onclick=buttonfiltrar() class="btn btn bg-light" style="color:white">Filtrar</button>
+												</div>
+											</form> 
+											</div>
+										</div>
+										</div>
+								</div>
+						</div>
+						<div class="col-lg-8 text-center">
+							<h3>Cursos</h3>
+							<table id= "taulaCursos" class="table table-striped table-bordered" style="width:100%">
+								<thead>
+								<tr>
+									<th>Codigo</th>
+									<th>Curso</th>
+									<th>Area</th>
+									<th>Centro</th>
+									<th>Inicio</th>
+									<th>Fin</th>
+								</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+
+					<!-------------------------------------------FOOTER------------------------------------------------------->
+					<footer>
+							<div class="row">
+								<div class="col-lg-12 text-center mb-4">
+									<a href="https://es-es.facebook.com/cifolavioleta" target="_blank" title="facebook">
+										<span class="fa-stack fa-xs ">
+											<i class="fal fa-circle fa-stack-2x "></i>
+											<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+										</span>
+									</a>
+									<a href="https://twitter.com/cifo_barcelona" target="_blank" title="twitter">
+										<span class="fa-stack fa-xs">
+											<i class="fal fa-circle fa-stack-2x"></i>
+											<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+										</span>
+									</a>	
+									<a href="https://accounts.google.com/ServiceLogin/signinchooser?elo=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin" target="_blank" title="google">
+										<span class="fa-stack fa-xs">
+											<i class="fal fa-circle fa-stack-2x"></i>
+											<i class="fab fa-google-plus fa-stack-1x fa-inverse"></i>
+										</span>
+									</a>	
+									<a href="https://www.linkedin.com/company/cifo-la-violeta/" target="_blank" title="linkedin">
+										<span class="fa-stack fa-xs">
+											<i class="fal fa-circle fa-stack-2x"></i>
+											<i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+										</span>
+									</a>
+									<a href="https://www.instagram.com/cifo_hospitalet/?hl=es" target="_blank" title="instagram">
+										<span class="fa-stack fa-xs">
+											<i class="fal fa-circle fa-stack-2x"></i>
+											<i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+										</span>
+									</a>
+									<a href="https://www.pinterest.es/" target="_blank" title="pinterest">
+										<span class="fa-stack fa-xs">
+											<i class="fal fa-circle fa-stack-2x"></i>
+											<i class="fab fa-pinterest fa-stack-1x fa-inverse"></i>
+										</span>
+									</a>
+								</div>
+								<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+									<span>DIRECTO A</span>
+									<ul>
+										<li><a href="centros/index.html">Centros</a></li>
+										<li><a href="oferta.html">Oferta <br>Formativa</a></li>
+										<li><a href="biblioteca.html">Biblioteca</a></li>
+										<li><a href="contacto/index.html">Contacto</a></li>
+										<li><a href="index.html">eCampus</a></li>
+										<li><a href="campus/index.html">Campus Virtual</a></li>
+										<li><a href="campus/login.html">Entrar</a></li>
+										<li><a href="campus/register.html">Registrarse</a></li>
+									</ul>
+								</div>
+								<div class="col-lg-2 col-md-3 col-sm-12 text-center">
+									<span>AYUDA</span>
+									<ul>
+										<li><a href="#">Sobre Gencat</a></li>
+										<li><a href="#">Accessibilitat</a></li>
+										<li><a href="#">Mapa Web</a></li>
+										<li><a href="#">Aviso Legal</a></li>
+									</ul>
+								</div>
+								<div class="col-lg-8 col-md-6 col-sm-12 text-center">
+								<a href="https://serveiocupacio.gencat.cat/ca/inici" target="_blank" title="Servei Ocupació de Catalunya"><span>SERVEI D'OCUPACIÓ DE CATALUNYA</span></a>	
+									<p style="padding:20px"><span>Aviso legal :</span> De acuerdo con el artículo 17.1 de la Ley 19/2014, la © Generalidad de Cataluña permite la reutilización de los contenidos y de los datos siempre que se cite la fuente y la fecha de actualización y que no se desnaturalice la información (artículo 8 de la Ley 37/2007) y también que no se contradiga con una licencia específica.</p>
+										<div class="row justify-content-center">
+											<div class="col-4">
+												<img src="img/sepelogotip.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
+											</div>
+											<div class="col-4">
+												<img src="img/logotip_Iniciativaocupaciojuvenil_bn.jpg" class=w-100 style="object-fit:cover" alt="Smiley face">
+											</div>
+										</div>
+								</div>
+								<div class="col-12 text-center">
+									<span>Copyright © Cifo 2018</span>
+								</div>	 	
+							</div>
+					</footer>
+				</div>
+			</div>
+
+			<!-- COOKIES
+
+			Utilitzem un component predefinit de Bootstrap anomenat Vertically centered.
+			Esborrem la activació del modal des de un button i l'iniciem des del moment 
+			en el que es carrega l'html.
+
+			Bootstrap també ofereix métodes jQuery per aquests casos; en el nostre cas utilitxem:
+			$('#boxRGPD').modal('show');
+
+			Que s'inclou a cookies.js on elaborem la resta de funcions js.
+
+			Em cambiat colors de lletres i botó amb atributs style dintre del própi html,
+			així què tingui total coherencia gráfica coorporativa.
+
+			Linquem "Política de Cookies" a una página on es detallen legalment aquestes.
+			-->
+
+			<!-- Inici del Modal (Vertically Centered) de Bootstrap per les cookies -->
+
+			<div class="modal fade" id="boxRGPD" tabindex="-1" role="dialog" aria-labelledby="boxRGPD" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLongTitle" style="color: #00ace6;">Ús de cookies</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						</div>
+						<div class="modal-body">
+							Fem ús de cookies pròpies i de tercers per proporcionar una millor experiència d'usuari. En seguir navegant entenem que accepta la nostra <a href="#" style="color: #00ace6;">Política de Cookies</a>
+						</div>
+						<div class="modal-footer">
+							<button id="btnRGPD" type="button" class="btn btn-primary" style="background-color: #77B41E;">Estic d'acord</button>
+						</div>
+					</div>
+					</div>
+			</div>
+			
+			<!--creem el modal per quan fem el onclick de la funció de JS per veure el detall de les ofertes------------------------>	
+
+			<div class="modal fade bd-ofertamodal-modal-lg" id="ofertamodal" tabindex="-1" role="dialog" aria-labelledby="ofertamodalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h5 class="modal-title" id="ofertamodalLabel">Oferta</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						</div>
+						<div class="modal-body">
+								<form id="celesModal">
+										<div class="form-group row">
+											<label for="textcodi" class="col-sm-2 col-form-label">Código Oferta</label>
+											<div class="col-sm-10 pb-2">
+												<input type="text" class="form-control" id="textcodi" placeholder="" style="background:#8080804a"> 
+											</div>
+											<label for="textcurs" class="col-sm-2 col-form-label">Curso</label>
+											<div class="col-sm-10 pb-2">
+												<input type="text" class="form-control" id="textcurs" placeholder="" style="background:#8080804a">
+											</div>
+											<label for="textfechaIn" class="col-sm-2 col-form-label">Fecha Inicio</label>
+											<div class="col-sm-10 pb-2">
+												<input type="text" class="form-control" id="textfechaIn" placeholder="" style="background:#8080804a">
+											</div>
+											<label for="textFechaOff" class="col-sm-2 col-form-label">Fecha Fin</label>
+											<div class="col-sm-10 pb-2">
+												<input type="text" class="form-control" id="textFechaOff" placeholder="" style="background:#8080804a">
+											</div>
+											<label for="textplazas" class="col-sm-2 col-form-label">Plazas</label>
+											<div class="col-sm-10 pb-2">
+												<input type="text" class="form-control" id="textplazas" placeholder="" style="background:#8080804a">
+											</div>
+											<label for="textProfesor" class="col-sm-2 col-form-label">Profesor</label>
+											<div class="col-sm-10 pb-2">
+												<input type="text" class="form-control" id="textProfesor" placeholder="" style="background:#8080804a">
+											</div>
+											<label for="textDuracion" class="col-sm-2 col-form-label">Duración</label>
+											<div class="col-sm-10 pb-2">
+												<input type="text" class="form-control" id="textDuracion" placeholder="" style="background:#8080804a">
+											</div>
+										</div>
+								</form>
+								<div class="accordion" id="objetivos">
+									<div class="card">
+										<div class="card-header" id="hOne">
+											<h5 class="mb-0">
+											<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+													<i class="fas fa-thumbs-up"></i> Objetivos
+											</button>
+											</h5>
+										</div>
+									
+										<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#objetivos">
+											<div class="card-body" id="bodyObjetivos"></div>
+											<div class="modal-footer" style="border: none;">
+												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Cerrar
+												</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="card">
+										<div class="card-header" id="programa">
+											<h5 class="mb-0">
+											<button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+												<i class="fas fa-stream"></i> Programa
+											</button>
+											</h5>
+										</div>
+										<div id="collapse2" class="collapse" aria-labelledby="programa" data-parent="#programa">
+											<div class="card-body" id="bodyPrograma"></div>
+											<div class="modal-footer" style="border: none;">
+												<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Cerrar
+												</button>
+											</div>	
+										</div>
+									</div>
+
+									<div class="card">
+										<div class="card-header" id="centros">
+											<h5 class="mb-0">
+											<button class="btn btn-link " type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+												<i class="fas fa-landmark"></i>	Centros
+											</button>
+											</h5>
+										</div>
+										<div id="collapseThree" class="collapse" aria-labelledby="centros" data-parent="#centros">
+											<div class="card-body">
+												<div class="row">
+													<div class="col-6" id="imatgeCentros"></div>
+													<div class="col-6">
+															<div class="card-body">
+																	<h5 class="card-title" style="color:#00ace6" id="nombreCentre"></h5>
+																	<p class="card-text border-top" >
+																		<i class="fas fa-phone"></i>
+																		<a href="tel:935241700" id="telefonCentre"></a><br />
+																		<i class="fas fa-envelope"></i>
+																		<a href="mailto:webmaster@example.com" id="mailCentre"></a><br />
+																		<i class="fas fa-calendar"></i>
+																		<span id="horariCentre"></span><br />
+																		<a href="https://goo.gl/maps/6WQaRYaVmLTrj6oJA" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+																		<span id="direccioCentre"></span>
+																	</p>
+																	<p class="card-text border-top">
+																			<i class="fas fa-map-marked-alt"></i>
+																			<span>Acceso</span>
+																			<span id="accesCentre"></span>						     		
+																	</p>
+															</div>
+													</div>
+													<a href="#" class="btn btn-primary offset-4">Más Información...</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+						</div>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+						</div>
+					</div>
+					</div>
+			</div>
+
+
+				<!-- jQuery first, then Popper.js, then Bootstrap JS && Datatable for Bootstrap 4-->
+				<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+				<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+				<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+				<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+				<script src="cookies.js"></script>
+				
+				<script>
+
+					//--------- Iniciem codi per cridar al AJAX ---------
+
+					var xhr
+					var xhrBis;
+					var xhrOferta;
+
+					//--------- Indiquem a la futura taula que es crearà mitjançant el Datatable ---------		
+
+					var tabla=$('#taulaCursos').DataTable({ // Definim els paràmetres del Datatable, el llenguatge, i els noms de les columnes
+						language: {
+							url: "datatable-spanish.json"
+						},
+						lengthMenu 	: [ 5, 10, 25, 50, 75, 100 ],
+						pageLength  : 10,
+						columnDefs 	: [
+							{ "data": "id"		, "targets": 0 },
+							{ "data": "nombre"	, "targets": 1 },
+							{ "data": "area"	, "targets": 2 },
+							{ "data": "centro"  , "targets": 3 },
+							{ "data": "infoinici"	, "targets": 4 },
+							{ "data": "infofin"	, "targets": 5 }
+
+						]
+					});
+
+						// Tenim 3 objectes diferents, un amb l'ambit profesional, l'altre amb centres i l'altre amb la Oferta Formativa
+
+					if(window.XMLHttpRequest){  
+						xhr = new XMLHttpRequest();
+					}
+					else {
+						xhr = new ActiveXObject("Microsoft.XMLHTTP")
+					}
+
+					if(window.XMLHttpRequest){
+						xhrBis = new XMLHttpRequest();
+					}
+					else {
+						xhrBis = new ActiveXObject("Microsoft.XMLHTTP")
+					}
+					if(window.XMLHttpRequest){
+						xhrOferta = new XMLHttpRequest();
+					}
+					else {
+						xhrOferta = new ActiveXObject("Microsoft.XMLHTTP")
+					}
+
+					function cursClick (id){ // Definim la funció per després fer la crida amb el modal de la oferta
+						xhrOferta.onreadystatechange = function(){
+							if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // Comprovem que la connexió estigui establerta
+							var ofertaParticular = JSON.parse(xhrOferta.responseText)
+							var arrayOfertaParticular = ofertaParticular.record
+							var objectius = arrayOfertaParticular.curso.objetivos // Agafem el valor de l'atribut objetivos, el guardem a una variable i després li enviem al body del accordion de l'objectiu linia 481
+							var programa = arrayOfertaParticular.curso.programa // El mateix amb programa
+							var imatgeCentre = arrayOfertaParticular.centro.media // Guardem la imatge a una variable
+							var imatgeGrafica = '<img src="'+ imatgeCentre +'" class="w-100" style="object-fit:cover">' 
+
+							document.getElementById("bodyObjetivos").innerHTML = objectius	
+							document.getElementById("bodyPrograma").innerHTML = programa
+							document.getElementById("nombreCentre").innerHTML = arrayOfertaParticular.centro.nombre
+							document.getElementById("telefonCentre").innerHTML = arrayOfertaParticular.centro.telefono
+							document.getElementById("mailCentre").innerHTML = arrayOfertaParticular.centro.buzon
+							document.getElementById("horariCentre").innerHTML = arrayOfertaParticular.centro.horario
+							document.getElementById("direccioCentre").innerHTML = arrayOfertaParticular.centro.direccion
+							document.getElementById("accesCentre").innerHTML = arrayOfertaParticular.centro.acceso
+							document.querySelector('#imatgeCentros').innerHTML = imatgeGrafica	
+							document.getElementById("textcodi").placeholder = arrayOfertaParticular.codigoferta	
+							document.getElementById("textcurs").placeholder = arrayOfertaParticular.curso.nombre	
+							document.getElementById("textfechaIn").placeholder = arrayOfertaParticular.datainicio	
+							document.getElementById("textFechaOff").placeholder = arrayOfertaParticular.datafin	
+							document.getElementById("textplazas").placeholder = arrayOfertaParticular.plazas	
+							document.getElementById("textProfesor").placeholder = arrayOfertaParticular.profesor.nombre	
+							document.getElementById("textDuracion").placeholder = arrayOfertaParticular.curso.duracion	
+							}
+						}
+
+						xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ id +"/", true);
+						xhrOferta.send(null);
+			
+						$('#ofertamodal').modal('show')
+					}
+
+					//--------- Carreguem totes les àrees dels cursos al primer menú de selecció
+					
+					xhr.onreadystatechange = function(){
+							if(xhr.readyState == 4 && xhr.status == 200){ // Comprovem que la connexió estigui establerta i sense errors
+								var ofertaFormativa = JSON.parse(xhr.responseText) // Traduïm el que ens arriba de la API
+								var arrayAreas = ofertaFormativa.records
+									arrayAreas.forEach(element => { // Ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+										document.getElementById("familiaProfesional").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+									});
+							}
+						}
+
+						xhr.open("GET","http://app.cifo.local/api/public/formacion/areas/"+'?nocache='+Math.random(), true);
+						xhr.send(null);
+					
+					//--------- Una vegada seleccionat la àrea que ens interesa, filtrem per curs
+
+					document.getElementById("familiaProfesional").onchange = function(){
+							xhr.onreadystatechange = function(){
+								if(xhr.readyState == 4 && xhr.status == 200){ // Comprovem que la connexió estigui establerta i sense errors
+									var objCursos = JSON.parse(xhr.responseText)
+									var arrayCursos = objCursos.records
+									console.log(arrayCursos)
+									arrayCursos.forEach(element => { // Ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+										document.getElementById("llistaCursos").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+									});
+								}	
+						}
+
+						xhr.open("GET","http://app.cifo.local/api/public/formacion/cursos/area/"+this.value +"/", true);
+						xhr.send(null);
+					}
+
+					//--------- Cridem el segon objecte per carregar els CIFOs --------- 
+
+					xhrBis.onreadystatechange = function(){
+							if(xhrBis.readyState == 4 && xhrBis.status == 200){ // Comprovem que la connexió estigui establerta i sense errors
+								var objCentros = JSON.parse(xhrBis.responseText)
+								var arrayCentros = objCentros.records
+									arrayCentros.forEach(element => { // Ja que tenim un array d'objectes, fem el mètode forEach per insertar tant les id's com a valors com els noms de les àrees al primer desplegable
+										document.getElementById("centrosFormacion").innerHTML += '<option value="'+ element.id + '">'+ element.nombre + '</option>' 
+									});
+							}
+					}
+
+					xhrBis.open("GET","http://app.cifo.local/api/public/formacion/centros/", true);
+					xhrBis.send(null);
+						
+					//--------- Creem la taula amb les dades del tercer objecte ---------
+
+					function ofertasPrint (){ // Ho posem tot dins d'aquesta funció per després poder reutilitzar-la
+						var familiaSelect = document.getElementById("familiaProfesional").value
+						var cursSelect = document.getElementById("llistaCursos").value
+						var cifoSelect = document.getElementById("centrosFormacion").value
+
+						xhrOferta.onreadystatechange = function(){
+							if(xhrOferta.readyState == 4 && xhrOferta.status == 200){ // Comprovem que la connexió estigui establerta i sense errors
+								var oferta = JSON.parse(xhrOferta.responseText) // Traduïm el que ens arriba de la API
+								var arrayOferta = oferta.records
+
+									for(var i=0; i< arrayOferta.length; i++){ // Aquí afegirem amb el mètode add els valors de l'array anterior
+										tabla.row.add({
+											"id" 	: '<a href="javascript:void(0)" onclick="cursClick('+ arrayOferta[i].id +')">  ('+arrayOferta[i].codigoferta+')</a>',
+											"nombre": arrayOferta[i].curso,
+											"area"	: arrayOferta[i].area,
+											"centro": arrayOferta[i].centro,
+											"infoinici"	: arrayOferta[i].datainicio,
+											"infofin"  : arrayOferta[i].datafin
+										});
+									}
+									tabla.draw();
+							} 	
+						} 	
+
+						// Aquí procedim a filtrar en funció dels criteris que hem escollit: per familia professional, per familia & curs, per familia & curs & cifo, per cifo, per familia & cifo
+							
+						if ( familiaSelect !="" && cursSelect == "" && cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/", true);
+							xhrOferta.send(null);
+						} else if (!familiaSelect =="" && !cursSelect == "" && cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/"+ "curso/"+ cursSelect + "/", true);
+							xhrOferta.send(null);
+						} else if (!familiaSelect =="" && !cursSelect == "" && !cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/"+ "curso/"+ cursSelect + "/"+ "centro/" + cifoSelect + "/", true);
+							xhrOferta.send(null);
+						} else if (familiaSelect =="" && cursSelect == "" && !cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "centro/"+ cifoSelect + "/", true);
+							xhrOferta.send(null);
+						} else if (!familiaSelect =="" && cursSelect == "" && !cifoSelect == "") {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/"+ "area/"+ familiaSelect + "/" + "centro/" + cifoSelect + "/", true);
+							xhrOferta.send(null);
+						} else {
+							xhrOferta.open("GET","http://app.cifo.local/api/public/formacion/ofertas/", true);
+							xhrOferta.send(null);
+						}	
+
+					}
+
+					ofertasPrint();
+
+					//--------- Botó filtrar --------- 
+					function buttonfiltrar() {
+						
+							tabla.clear().draw(); 
+							//--------- Agafem el id de la familia professional i del curs i ho guardem en un valor per després usar-lo per pintar en pantalla
+					
+							ofertasPrint()
+						
+					}
+						
+					//--------- Creació butó per esborrar els filtres ---------
+
+					function esborrarFiltres (){
+						location.reload(); // Recarreguem pàgina i deixem els filtres com eren al inici
+					}
+
+				</script>
+
+	</body>
+</html>    
