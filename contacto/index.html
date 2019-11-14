@@ -154,7 +154,22 @@
 								<div class="alert alert-danger" id="alertaWarning" role="alert" style= "display:none">¡Rellene todos los datos!</div>
 								</form>
 							</div>
-
+							<script>
+							//------------------------NOM I COGNOMS COMPROVACIÓ---------------------------------		
+							document.getElementById("btnMessage").onclick = function(evt){
+							evt.preventDefault();
+							//netegem clases de estils is-valid / is-invalid
+							document.getElementById("inputUserame").className = document.getElementById("inputUserame").className.replace(/(is-valid|is-invalid)/g,"");	
+							var nombre = document.getElementById("inputUserame").value;	
+							var regexp = /^([a-z ñáéíóú]{2,60})$/i;
+							regexp.test(nombre)? document.getElementById("inputUserame").className += " is-valid" : document.getElementById("inputUserame").className += " is-invalid"	
+							}
+							//----------------------REFRESCAR LA PÀGINA ----------------------------------------
+							document.getElementById("button-refresh").onclick = function (){
+							window.location.reload();
+							}
+							</script>
+							
 							<!--ATENCIÓ EL CLASS COL DEL BOOTSTRAP PORTA DE FABRICA UN PADDING DE 2, FORÇAR AMB CSS I COMENTAR  -->
 							<div class="col-lg-5 col-md-6 col-sm-12" >	
 								<div class="row h-100">
